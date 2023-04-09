@@ -1,1 +1,10 @@
 // Specific CSS for your home-page
+
+
+.home-main-img {
+  background-image: url(asset_path('alfaMainImg.jpg'));
+  background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+  height: 80vh;
+}
