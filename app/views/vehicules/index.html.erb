@@ -2,18 +2,38 @@
 
   <div class="grid-index">
     <% @vehicules.each do |vehicule| %>
+
       <%= link_to vehicule_path(vehicule), class: "link-card" do%>
+
         <div class="index-card">
 
+
           <% if vehicule.photo.present? %>
-            <%= cl_image_tag vehicule.photo.key, height: 200, width: 280, crop: :fill %>
+            <%= cl_image_tag vehicule.photo.key, height: 200, width: 280, crop: :fill, class: "index-img" %>
           <% else %>
             <p>Image non disponible</p>
           <% end %>
 
-          <p><%= vehicule.marque %></p>
-          <p><%= vehicule.modele %></p>
 
+          <p><%= vehicule.marque %> <%= vehicule.modele %></p>
+          <p><strong>2.0 TB VELOCE 4d 277 BHP</strong></p>
+          <p>3000€ D’EXTRAS</p>
+
+
+          <div class="index-card-tag">
+            <p>2019</p>
+            <p>Automatique</p>
+            <p>2ltr</p>
+            <p>29,000 kms</p>
+          </div>
+
+
+          <p>30 000€</p>
+          <p>432.73€ / par mois</p>
+
+          <div class="index-card-btn">
+            <p>Détail</p>
+          </div>
         </div>
 
         <br><br><br>
