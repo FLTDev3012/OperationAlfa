@@ -11,4 +11,26 @@ class VehiculesController < ApplicationController
     @vehicule = Vehicule.find(params[:id])
   end
 
+
+  def new
+    @vehicule = Vehicule.new
+  end
+
+  def create
+    @vehicule = Vehicule.new(vehicule_params)
+    @vehicule.user = current_user
+    if @vehicule.save
+      redirect_to vehicule_path(@vehicule)
+    else
+      render :new, status: :unprocessable_entity
+    end
+
+  end
+
+  private
+
+  def vehicule_params
+    params.require(:vehicule).permit(:marque, :modele, :photo)
+  end
+
 end

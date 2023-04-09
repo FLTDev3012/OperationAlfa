@@ -1,0 +1,7 @@
+<h1>ajoutez votre vehicules</h1>
+<%= simple_form_for @vehicule do |f| %>
+  <%= f.input :marque, placeholder: 'Marque' %>
+  <%= f.input :modele, placeholder: 'Modele' %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit %>
+<% end %>
