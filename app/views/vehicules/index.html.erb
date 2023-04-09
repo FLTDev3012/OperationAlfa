@@ -5,6 +5,14 @@
 
 <% @vehicules.each do |vehicule| %>
   <h1>------</h1>
+
+
+  <% if vehicule.photo.present? %>
+    <%= cl_image_tag vehicule.photo.key, height: 200, width: 280, crop: :fill %>
+  <% else %>
+    <p>Image non disponible</p>
+  <% end %>
+
   <p><%= vehicule.marque %></p>
   <p><%= vehicule.modele %></p>
   <%= link_to "details", vehicule_path(vehicule) %>

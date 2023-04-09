@@ -2,5 +2,6 @@
 
 <p><%= @vehicule.marque %></p>
 <p><%= @vehicule.modele %></p>
+<%= cl_image_tag @vehicule.photo.key, height: 200, width: 280, crop: :fill %>
 
 <p><%= link_to "revoir tout les vehicules", vehicules_path %></p>
