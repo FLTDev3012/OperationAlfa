@@ -1,10 +1,19 @@
 .blacknav-container {
-  background-color: #111;
-  color: #fff;
-  height: 90px;
+  background-color: $noir;
+  color: $blanc;
+  min-height: 90px;
+  padding: 25px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 
 .blacknav-container p{
   margin-bottom: 0;
+}
+
+.blacknav-droite {
+  border-left: solid 1px $rouge;
+  padding-left: 10px;
 }
