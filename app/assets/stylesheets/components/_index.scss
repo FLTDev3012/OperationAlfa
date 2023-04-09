@@ -4,10 +4,20 @@
 @import "form_legend_clear";
 @import "navbar";
 @import "blacknavbar";
+@import "vrainavbar";
 
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: $blanc;
+}
+
+a:hover {
+  color: $blanc;
 }

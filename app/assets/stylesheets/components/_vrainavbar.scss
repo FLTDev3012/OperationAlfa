@@ -1,0 +1,26 @@
+.vrainav-container {
+  background-color: $grisf;
+  color: $blanc;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-bottom: 6px solid $rouge;
+}
+
+.vrainav-container a {
+  margin-bottom: 0;
+  height: 100%;
+  line-height: 52px;
+  padding: 0 10px;
+
+}
+
+
+.vrainav-container a:hover {
+
+  background-color: #595959;
+}
+
+.vrainav-container a.active {
+  background-color: $rouge;
+}
