@@ -1,0 +1,28 @@
+.index-container {
+  background-color: $noir;
+  min-height: 80vh;
+  padding-top: 10vh;
+}
+
+.index-card {
+  background-color: $blanc;
+  width: 280px;
+}
+
+.index-card p {
+  color: #111;
+}
+
+.grid-index{
+  padding: 1em;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+  gap: 10px
+}
+
+a.link-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

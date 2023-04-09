@@ -1,20 +1,24 @@
-<h1>index vehicules</h1>
+<div class="index-container">
 
-<br>
-<br>
+  <div class="grid-index">
+    <% @vehicules.each do |vehicule| %>
+      <%= link_to vehicule_path(vehicule), class: "link-card" do%>
+        <div class="index-card">
 
-<% @vehicules.each do |vehicule| %>
-  <h1>------</h1>
+          <% if vehicule.photo.present? %>
+            <%= cl_image_tag vehicule.photo.key, height: 200, width: 280, crop: :fill %>
+          <% else %>
+            <p>Image non disponible</p>
+          <% end %>
 
+          <p><%= vehicule.marque %></p>
+          <p><%= vehicule.modele %></p>
 
-  <% if vehicule.photo.present? %>
-    <%= cl_image_tag vehicule.photo.key, height: 200, width: 280, crop: :fill %>
-  <% else %>
-    <p>Image non disponible</p>
-  <% end %>
+        </div>
 
-  <p><%= vehicule.marque %></p>
-  <p><%= vehicule.modele %></p>
-  <%= link_to "details", vehicule_path(vehicule) %>
-  <br><br><br>
-<% end %>
+        <br><br><br>
+      <% end %>
+    <% end %>
+
+  </div>
+</div>
