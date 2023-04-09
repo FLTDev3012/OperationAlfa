@@ -1,3 +1,4 @@
 <div class="vrainav-container">
-  <p>vrainavbarmdrrrr</p>
+  <%= link_to "Accueil", root_path, class: ("active" if current_page?(root_path)) %>
+  <%= link_to "Nos occasions", vehicules_path, class: ("active" if current_page?(vehicules_path)) %>
 </div>
