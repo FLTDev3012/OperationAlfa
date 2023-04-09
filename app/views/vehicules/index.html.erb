@@ -1,0 +1,12 @@
+<h1>index vehicules</h1>
+
+<br>
+<br>
+
+<% @vehicules.each do |vehicule| %>
+  <h1>------</h1>
+  <p><%= vehicule.marque %></p>
+  <p><%= vehicule.modele %></p>
+  <%= link_to "details", vehicule_path(vehicule) %>
+  <br><br><br>
+<% end %>
