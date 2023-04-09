@@ -3,3 +3,11 @@
 @import "avatar";
 @import "form_legend_clear";
 @import "navbar";
+@import "blacknavbar";
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
