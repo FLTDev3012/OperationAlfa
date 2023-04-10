@@ -61,7 +61,18 @@ a.link-card {
 
   background-color: $rouge;
   padding-left: 0;
-  padding: 4px 16px;
   margin: 5px 0;
   color: $blanc;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+
+.grisclair {
+  color: $grisc !important;
 }
