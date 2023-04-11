@@ -1,0 +1,21 @@
+<h1>dashboard</h1>
+<h2> <%= Vehicule.count %> articles en ventes</h2>
+<%= link_to "Ajouter +", new_vehicule_path %> |
+
+<div class="dash-all-vehicule-content">
+  <div class="dash-all-vehicules">
+
+    <% @vehicules.each do |vehicule| %>
+        <div class="testdash dashborder deco-none">
+
+          <%= link_to "#{vehicule.marque} #{vehicule.modele}", vehicule_path(vehicule), class: "deco-none dash-nom" %>
+          <%= link_to "Modifier", edit_vehicule_path(vehicule), class: "deco-none" %>
+          <%= link_to "Supprimer", vehicule_path(vehicule), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" }, class: "deco-none" %>
+
+        </div>
+
+
+    <% end %>
+
+  </div>
+</div>

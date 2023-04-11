@@ -1,0 +1,50 @@
+.dash-all-vehicule-content {
+  display: flex;
+  justify-content: center;
+}
+
+.dash-all-vehicules {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashborder {
+
+  padding-top: 1rem;
+
+
+}
+
+.dashborder:hover{
+  color: #fff;
+
+}
+
+.dashborder a:hover{
+  color: #fff;
+
+}
+
+.testdash {
+  border-bottom: 1px solid $grisc;
+  background-color: #7a7a7a; /* ou une autre couleur */
+}
+
+.dashborder:nth-child(2n) {
+  background-color: #d02525; /* ou une autre couleur */
+}
+
+
+
+
+
+.deco-none{
+  text-decoration: none;
+  color: #111;
+}
+
+
+.dash-nom {
+  min-width:3000px;
+}
