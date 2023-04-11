@@ -1,6 +1,7 @@
 .dash-all-vehicule-content {
   display: flex;
   justify-content: center;
+
 }
 
 .dash-all-vehicules {
@@ -18,7 +19,6 @@
 
 .dashborder:hover{
   color: #fff;
-
 }
 
 .dashborder a:hover{
@@ -28,9 +28,12 @@
 
 .testdash {
   border-bottom: 1px solid $grisc;
-  background-color: #7a7a7a; /* ou une autre couleur */
+  background-color: $rouge; /* ou une autre couleur */
   margin: 5px;
   transition: transform 0.3s ease;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
 }
 
 .testdash img{
@@ -44,14 +47,18 @@
 
 
 .testdash:hover {
-  background-color: #c3c3c3;
+  background-color: #fff;
 }
 
 
 .dashborder:nth-child(2n) {
-  background-color: #d02525; /* ou une autre couleur */
+  background-color: #b0b0b0; /* ou une autre couleur */
 }
 
+
+.dashborder:nth-child(2n):hover {
+  background-color: #fff; /* ou une autre couleur */
+}
 
 
 
@@ -69,4 +76,30 @@
 
 .dash-supp {
   display: flex;
+}
+
+.dash-croix {
+  display: inline-block;
+  background-color: #fff;
+  min-width: 25px;
+  min-height: 25px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+
+.dash-croix:hover {
+  background-color: $rouge;
+
+}
+
+.dash-modif {
+  background-color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.dash-modif:hover {
+  background-color: #ff9c11;
+  color: #fff;
 }
