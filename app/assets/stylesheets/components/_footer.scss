@@ -1,6 +1,7 @@
 .footer-container {
   background-color: $grisf;
   border-top: 4px solid #BC0100;
+  padding: 10px 0;
 
 }
 
@@ -18,12 +19,21 @@
 
 .footer-adresse {
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
 }
 
 .footer-local {
   display: flex;
   flex-direction: column;
 }
+
+.footer-local p:first-child {
+  margin-bottom: 0rem;
+}
+
 
 .footer-social {
   display: flex;
@@ -52,4 +62,12 @@
   margin-top: 0.2rem;
 
 
+}
+
+.footer-fb {
+  color: #fff;
+}
+
+.footer-fb:hover {
+  color: $grisc;
 }
