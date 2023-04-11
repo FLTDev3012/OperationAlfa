@@ -1,0 +1,29 @@
+.footer-container {
+  background-color: $grisf;
+  border-top: 4px solid #BC0100;
+
+}
+
+.footer-container p{
+  color:  #fff;
+}
+
+.footer-haut {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-jour {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.footer-adresse {
+  width: 40%;
+}
+
+.footer-calendrier {
+  width: 40%;
+  text-align: end;
+}
