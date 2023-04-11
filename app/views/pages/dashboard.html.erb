@@ -7,10 +7,10 @@
 
     <% @vehicules.each do |vehicule| %>
         <div class="testdash dashborder deco-none">
-
-          <%= link_to "#{vehicule.marque} #{vehicule.modele}", vehicule_path(vehicule), class: "deco-none dash-nom" %>
+          <%= link_to "X", vehicule_path(vehicule), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" }, class: "deco-none" %>
           <%= link_to "Modifier", edit_vehicule_path(vehicule), class: "deco-none" %>
-          <%= link_to "Supprimer", vehicule_path(vehicule), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" }, class: "deco-none" %>
+          <%= cl_image_tag vehicule.photo.key, height: 50, width: 70, crop: :fill, class: "index-img" %>
+          <%= link_to "#{vehicule.marque} #{vehicule.modele}", vehicule_path(vehicule), class: "deco-none dash-nom" %>
 
         </div>
 
