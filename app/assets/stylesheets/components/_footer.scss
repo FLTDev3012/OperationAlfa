@@ -20,6 +20,15 @@
   width: 40%;
 }
 
+.footer-local {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-social {
+  display: flex;
+}
+
 .footer-calendrier {
   width: 40%;
   text-align: end;
