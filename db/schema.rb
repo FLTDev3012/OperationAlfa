@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_09_153306) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_11_081159) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -61,6 +61,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_09_153306) do
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
     t.string "image_url"
+    t.integer "enregistrement"
+    t.float "kilometrage"
+    t.float "taille"
+    t.integer "puissancech"
+    t.integer "puissancecv"
+    t.string "carburant"
+    t.string "boite"
+    t.float "prix"
+    t.string "carrosserie"
+    t.string "couleur"
+    t.integer "proprietaires"
+    t.float "dioxy"
+    t.integer "portes"
+    t.integer "places"
     t.index ["user_id"], name: "index_vehicules_on_user_id"
   end
 
