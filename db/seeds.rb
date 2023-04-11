@@ -36,44 +36,44 @@ vehicule3.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "i
 vehicule3.save
 
 file = Rails.root.join('app', 'assets', 'images', 'car2.jpg')
-vehicule3 = Vehicule.create(marque: "ALFA ROMEO", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
-vehicule3.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
-vehicule3.save
+vehicule4 = Vehicule.create(marque: "ALFA ROMEO", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
+vehicule4.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
+vehicule4.save
 
 file = Rails.root.join('app', 'assets', 'images', 'car3.jpg')
-vehicule3 = Vehicule.create(marque: "ALFA ROMEO", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
-vehicule3.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
-vehicule3.save
+vehicule5 = Vehicule.create(marque: "ALFA ROMEO", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
+vehicule5.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
+vehicule5.save
 
 file = Rails.root.join('app', 'assets', 'images', 'car4.jpg')
-vehicule3 = Vehicule.create(marque: "ALFA ROMEO", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
-vehicule3.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
-vehicule3.save
+vehicule6 = Vehicule.create(marque: "ALFA ROMEO", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
+vehicule6.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
+vehicule6.save
 
 file = Rails.root.join('app', 'assets', 'images', 'car5.jpg')
-vehicule3 = Vehicule.create(marque: "ALFA ROMEO", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
-vehicule3.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
-vehicule3.save
+vehicule7 = Vehicule.create(marque: "ALFA ROMEO", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
+vehicule7.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
+vehicule7.save
 
 file = Rails.root.join('app', 'assets', 'images', 'car6.jpg')
-vehicule3 = Vehicule.create(marque: "FIAT", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
-vehicule3.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
-vehicule3.save
+vehicule8 = Vehicule.create(marque: "FIAT", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
+vehicule8.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
+vehicule8.save
 
 file = Rails.root.join('app', 'assets', 'images', 'car7.jpg')
-vehicule3 = Vehicule.create(marque: "PORSCHE", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
-vehicule3.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
-vehicule3.save
+vehicule9 = Vehicule.create(marque: "PORSCHE", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
+vehicule9.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
+vehicule9.save
 
 file = Rails.root.join('app', 'assets', 'images', 'car8.jpg')
-vehicule3 = Vehicule.create(marque: "FIAT", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
-vehicule3.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
-vehicule3.save
+vehicule10 = Vehicule.create(marque: "FIAT", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
+vehicule10.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
+vehicule10.save
 
 file = Rails.root.join('app', 'assets', 'images', 'car9.jpg')
-vehicule3 = Vehicule.create(marque: "ALFA ROMEO", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
-vehicule3.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
-vehicule3.save
+vehicule11 = Vehicule.create(marque: "ALFA ROMEO", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
+vehicule11.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
+vehicule11.save
 
 
 
