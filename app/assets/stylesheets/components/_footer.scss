@@ -71,3 +71,18 @@
 .footer-fb:hover {
   color: $grisc;
 }
+
+
+.footer-bas {
+  background-color: $grisf;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid $grisc;
+  height: 60px;
+}
+
+.footer-bas p{
+  margin-bottom: 0rem;
+}
