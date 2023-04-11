@@ -10,6 +10,13 @@
   border-radius: 8px;
   border: 1px solid $grisc;
   margin: 20px 10px;
+  transition: transform 0.3s ease;
+
+}
+
+.index-card:hover {
+  transform: scale(1.05);
+
 }
 
 .index-card p {
@@ -70,6 +77,8 @@ a.link-card {
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
+  border-radius: 2px;
+
 }
 
 
