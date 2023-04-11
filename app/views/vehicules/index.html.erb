@@ -22,14 +22,16 @@
 
 
           <div class="index-card-tag little-font">
-            <p>2019</p>
-            <p>Automatique</p>
-            <p>2ltr</p>
-            <p>29,000 kms</p>
+            <p><%= vehicule.enregistrement %></p>
+            <p><%= vehicule.boite %></p>
+            <p><%= vehicule.taille %> ltr</p>
+            <p><%= vehicule.kilometrage %> kms</p>
+
+
           </div>
 
 
-          <p class="big-font">30 000€</p>
+          <p class="big-font"><p><%= vehicule.prix %>€</p>
           <p class="little-font grisclair">432.73€ / par mois</p>
 
           <div class="index-card-btn little-font">
