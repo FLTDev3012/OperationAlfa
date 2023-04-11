@@ -1,0 +1,55 @@
+.footer-container {
+  background-color: $grisf;
+  border-top: 4px solid #BC0100;
+
+}
+
+.footer-container p{
+  color:  #fff;
+}
+
+.footer-haut {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+.footer-adresse {
+  width: 40%;
+}
+
+.footer-local {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-social {
+  display: flex;
+}
+
+.footer-calendrier {
+  width: 40%;
+  text-align: end;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer-jour {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $grisc;
+}
+
+.footer-jour:last-child {
+  border-bottom: none;
+}
+
+.footer-jour p{
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+
+
+}
