@@ -33,4 +33,9 @@ vehicule2 = Vehicule.create(marque: "Jeep", modele: "750q", user_id: user1.id)
 vehicule2.photo.attach(io: file, filename: "v2.png", content_type: "image/png")
 vehicule2.save
 
+file = Rails.root.join('app', 'assets', 'images', 'car1.jpg')
+vehicule3 = Vehicule.create(marque: "test", modele: "test", user_id: user1.id)
+vehicule3.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
+vehicule3.save
+
 p "------ #{Vehicule.count} vehicule created ----------"
