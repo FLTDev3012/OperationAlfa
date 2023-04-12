@@ -68,13 +68,57 @@
 
 
       <% @vehicules.each do |vehicule| %>
-        <div class="card" id="1">
-          <div class="image-container" <%= cl_image_tag vehicule.photo.key, style: "background-image: url('#{cl_image_path(vehicule.photo.key)}');", crop: :fill %>>
+        <div class="card">
+
+
+
+
+
+
+
+
+        <div class="index-card-stacy">
+
+
+          <% if vehicule.photo.present? %>
+            <%= cl_image_tag vehicule.photo.key, height: 200, width: 280, crop: :fill, class: "index-img" %>
+          <% else %>
+            <p>Image non disponible</p>
+          <% end %>
+
+          <div class="big-font">
+            <p><%= vehicule.marque %> <%= vehicule.modele %></p>
+            <p><strong>2.0 TB VELOCE 4d 277 BHP</strong></p>
+            <p>3000€ D’EXTRAS</p>
+          </div>
+
+
+          <div class="index-card-tag little-font">
+            <p><%= vehicule.enregistrement %></p>
+            <p><%= vehicule.boite %></p>
+            <p><%= vehicule.taille %> ltr</p>
+            <p><%= vehicule.kilometrage %> kms</p>
+
 
           </div>
-          <p><%= vehicule.modele %></p>
+
+
+          <p class="big-font"><p><%= vehicule.prix %>€</p>
+          <p class="little-font grisclair">432.73€ / par mois</p>
+
+          <div class="index-card-btn little-font">
+
+            <p><%= link_to "Détail", vehicule_path(vehicule)%></p>
+          </div>
         </div>
+
+        <br><br><br>
+        </div>
+
+
       <% end %>
+
+
 
 
 
