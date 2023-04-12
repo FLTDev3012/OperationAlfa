@@ -5,6 +5,6 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @vehicules = Vehicule.all
+    @vehicules = Vehicule.order(:marque)
   end
 end

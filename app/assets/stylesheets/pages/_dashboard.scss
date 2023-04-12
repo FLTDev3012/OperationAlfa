@@ -3,6 +3,57 @@
   padding: 30px 0 200px 0;
 }
 
+// parti titre h1 h2 a
+
+.dash-title {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.dash-titre-haut {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+
+}
+
+.dash-titre-haut h1{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  color: $grisf;
+  text-shadow: #FFF 0px 0px 5px;
+
+}
+
+.dash-titre-bas {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+
+.dash-titre-bas h6{
+  color: #e6e6e6;
+  text-shadow: #1c1c1c 0px 0px 5px;
+}
+
+.dash-title a{
+  color: #fff;
+}
+
+
+// parti list Vehicules
+
 .dash-all-vehicule-content {
   display: flex;
   justify-content: center;
@@ -17,20 +68,10 @@
   border-radius: 5px;
 }
 
-.dashborder {
 
-  // padding-top: 1rem;
+// une ligne Vehicule
 
-
-}
-
-
-
-.dashborder a:hover{
-  color: #fff;
-
-}
-
+// une ligne style
 .testdash {
   background-color: #6d2321; /* ou une autre couleur */
   // margin: 5px;
@@ -42,22 +83,9 @@
   border: 2px solid #2c32308f;
 }
 
-.testdash img{
-  margin-left: 50px;
-}
-
-.testdash a{
-  margin-left: 50px;
-}
-
-.testdash a:last-child{
-  color: #fff;
-}
-
-
 
 .testdash:hover {
- background-color: #6d2321de;
+  background-color: #6d2321de;
 }
 
 
@@ -73,20 +101,41 @@
 
 
 
+// une ligne item
+
+.testdash img{
+  margin-left: 50px;
+}
+
+.testdash a{
+  margin-left: 50px;
+}
+
+.dashborder a:hover{
+  color: #fff;
+
+}
+
+.testdash a:last-child{
+  color: #fff;
+}
+
+
+
+
+
 .deco-none{
   text-decoration: none;
   color: #111;
 }
 
 
-.dash-nom {
-  min-width:3000px;
-}
 
 
 .dash-supp {
   display: flex;
 }
+
 
 .dash-croix {
   display: inline-block;
@@ -104,18 +153,41 @@
 
 }
 
+
 .dash-modif {
-  background-color: #fff;
-  padding: 8px 16px;
-  border-radius: 5px;
+  //background-color: #fff;
+  //padding: 8px 16px;
+  //border-radius: 5px;
 }
 
 .dash-modif:hover {
-  background-color: $grisf;
-  color: #fff;
+  //background-color: $grisf;
+  //color: #fff;
 }
 
 
 .dash-img {
   border-radius: 5px;
+}
+
+
+.dash-nom {
+  min-width:3000px;
+}
+
+
+.dash-corbeille a img{
+  color: #fff;
+}
+
+.dash-add-btn {
+  background-color: #DDAD1E;
+  padding: 8px 16px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 2px solid #fff;
+}
+
+.dash-add-btn:hover {
+  background-color: #EAC454;
 }
