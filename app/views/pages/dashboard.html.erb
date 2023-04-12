@@ -1,18 +1,32 @@
 <div class="dash-content">
-  <h1>dashboard</h1>
-  <h2> <%= Vehicule.count %> articles en ventes</h2>
-  <%= link_to "Ajouter +", new_vehicule_path %> |
+  <div class="dash-title">
+
+    <div class="dash-titre-haut">
+      <h1>Tableau de bord</h1>
+    </div>
+
+
+    <div class="dash-titre-bas">
+      <%= link_to "Ajouter +", new_vehicule_path, class: "dash-add-btn" %>
+      <h6> <%= Vehicule.count %> articles en vente</h6>
+    </div>
+
+
+  </div>
 
   <div class="dash-all-vehicule-content">
     <div class="dash-all-vehicules">
 
       <% @vehicules.each do |vehicule| %>
           <div class="testdash dashborder deco-none">
-            <%= link_to "X", vehicule_path(vehicule), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" }, class: "deco-none dash-croix" %>
-            <%= link_to "Modifier", edit_vehicule_path(vehicule), class: "deco-none dash-modif" %>
-            <%= cl_image_tag vehicule.photo.key, height: 50, width: 70, crop: :fill, class: "index-img" %>
+            <%= link_to vehicule_path(vehicule), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" }, class: "deco-none dash-corbeille" do %>
+              <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
+            <% end %>
+            <%= link_to edit_vehicule_path(vehicule), class: "deco-none dash-modif" do %>
+              <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+            <% end %>
+            <%= cl_image_tag vehicule.photo.key, height: 40, width: 60, crop: :fill, class: "dash-img" %>
             <%= link_to "#{vehicule.marque} #{vehicule.modele}", vehicule_path(vehicule), class: "deco-none dash-nom" %>
-
           </div>
 
 
