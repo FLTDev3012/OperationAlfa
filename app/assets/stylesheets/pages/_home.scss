@@ -6,7 +6,17 @@
   background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-  height: 80vh;
+  height: 82vh;
+}
+
+.home-main-img::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to top, $grisc, transparent);
+  z-index: 10000;
 }
 
 .home-main-img a{
@@ -15,6 +25,8 @@
   border-radius: 50px;
   border: 4px solid #606060;
 }
+
+
 
 .home-carrou {
   background-color: $grisc;
