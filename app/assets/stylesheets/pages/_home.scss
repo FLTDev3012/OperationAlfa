@@ -16,12 +16,21 @@
   border: 4px solid #606060;
 }
 
-.home-black-part {
-  height: 100vh;
-  background-color: $noir;
+.home-carrou {
+  background-color: $grisc;
 }
 
 // carrousel
+
+.home-carrou-title {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.home-carrou-title h2{
+  color: $grisf;
+}
 
 @mixin aspect-ratio($width, $height) {
   position: relative;
