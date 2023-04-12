@@ -1,7 +1,7 @@
 .footer-container {
   background-color: $grisf;
   border-top: 4px solid #BC0100;
-  padding: 10px 0;
+  padding: 25px 0;
 
 }
 
@@ -25,10 +25,22 @@
 
 }
 
+.footer-adrss-longue {
+  display: flex;
+}
+
 .footer-local {
   display: flex;
   flex-direction: column;
 }
+
+.footer-local i{
+  margin-right: 20px;
+  min-width: 16px;
+}
+
+
+
 
 .footer-local p:first-child {
   margin-bottom: 0rem;
@@ -37,6 +49,10 @@
 
 .footer-social {
   display: flex;
+}
+
+.footer-social i{
+  margin-right: 15px;
 }
 
 .footer-calendrier {
