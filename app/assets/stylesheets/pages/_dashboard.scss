@@ -10,9 +10,11 @@
 }
 
 .dash-all-vehicules {
-  width: 90%;
+  width: 60%;
   display: flex;
   flex-direction: column;
+  border: 5px solid #fff;
+  border-radius: 5px;
 }
 
 .dashborder {
@@ -30,10 +32,10 @@
 }
 
 .testdash {
-  background-color: $rouge; /* ou une autre couleur */
-  margin: 5px;
+  background-color: #6d2321; /* ou une autre couleur */
+  // margin: 5px;
   transition: transform 0.3s ease;
-  border-radius: 5px;
+  // border-radius: 5px;
   display: flex;
   align-items: center;
 }
@@ -46,20 +48,24 @@
   margin-left: 50px;
 }
 
+.testdash a:last-child{
+  color: #fff;
+}
+
 
 
 .testdash:hover {
-  background-color: #ff5b5a;
+ // background-color: #ff00008a;
 }
 
 
 .dashborder:nth-child(2n) {
-  background-color: #b0b0b0; /* ou une autre couleur */
+  background-color: #9e1716; /* ou une autre couleur */
 }
 
 
 .dashborder:nth-child(2n):hover {
-  background-color: #ddd; /* ou une autre couleur */
+  background-color: #ff00008a; /* ou une autre couleur */
 }
 
 
