@@ -1,5 +1,51 @@
 <div class="home-main-img">
     <!-- <%= link_to "Visitez", vehicules_path %> -->
 </div>
+
+
+
 <div class="home-black-part">
+
+  <section>
+    <div class="container">
+        <div class="carousel">
+
+          <% @vehicules.each do |vehicule| %>
+            <input type="radio" name="slides" id="slide-<%= vehicule.id %>" <%= 'checked="checked"' if vehicule == @vehicules.first %>>
+          <% end %>
+
+            <ul class="carousel__slides">
+
+                <% @vehicules.each do |vehicule| %>
+
+                  <li class="carousel__slide">
+                      <figure>
+                          <div>
+                              <%= cl_image_tag vehicule.photo.key, crop: :fill %>
+                          </div>
+                          <figcaption>
+                              <p> <%= vehicule.marque %> </p>
+                              <span class="credit"><%= vehicule.modele %></span>
+                          </figcaption>
+                      </figure>
+                  </li>
+
+                <% end %>
+
+            </ul>
+
+
+            <ul class="carousel__thumbnails">
+              <% @vehicules.each do |vehicule| %>
+                <li>
+                  <label for="slide-<%= vehicule.id %>"><%= cl_image_tag vehicule.photo.key, crop: :fill, width: 150, height: 150 %></label>
+                </li>
+              <% end %>
+            </ul>
+
+        </div>
+    </div>
+</section>
+
+
 </div>
