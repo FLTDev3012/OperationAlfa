@@ -36,6 +36,7 @@
                           <figcaption>
                               <p> <%= vehicule.marque %> </p>
                               <span class="credit"><%= vehicule.modele %></span>
+                              <%= link_to "Voir +", vehicule_path(vehicule) %>
                           </figcaption>
                       </figure>
                   </li>
@@ -62,3 +63,21 @@
 
 
 </div>
+
+<script>
+  function autoClick() {
+  var thumbnails = document.querySelectorAll('.carousel__thumbnails li label');
+  var index = 0;
+
+  setInterval(function() {
+    thumbnails[index].click();
+    index++;
+
+    if (index >= thumbnails.length) {
+      index = 0;
+    }
+  }, 3000);
+}
+
+window.onload = autoClick;
+</script>
