@@ -1,11 +1,13 @@
-<div class="home-main-img">
-    <!-- <%= link_to "Visitez", vehicules_path %> -->
-</div>
 
-<div class="hero-video">
+<% if video_path("mainvideo.mp4").present? %>
+  <div class="hero-video">
     <%= video_tag "mainvideo.mp4", autoplay: true, loop: true, muted: true %>
-</div>
-
+  </div>
+<% else %>
+  <div class="hero-image">
+    <%= image_tag "alfaMainImg.jpg" %>
+  </div>
+<% end %>
 
 <div class="home-carrou">
 
