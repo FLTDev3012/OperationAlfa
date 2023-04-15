@@ -1,7 +1,12 @@
 <h1>ici ca com sec 🥵</h1>
 
 <% @commentaires.each do |commentaire| %>
-  <p> <%= commentaire.nom %> </p>
+  <br><br><br>
+  <p> <%= commentaire.nom %> <%= commentaire.prenom %></p>
+  <p> <%= commentaire.text %> </p>
+  <p> <%= commentaire.created_at %> </p>
+
+
 <% end %>
 
 
