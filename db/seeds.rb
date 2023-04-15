@@ -16,6 +16,11 @@ Vehicule.destroy_all
 
 p "------  vehicule destroy ----------"
 
+Commentaire.destroy_all
+
+p "------  commentaire destroy ----------"
+
+
 user1 = User.create(email: "dorian@gmail.com", password: "coucou")
 user2 = User.create(email: "dorian2@gmail.com", password: "coucou")
 
@@ -78,3 +83,10 @@ vehicule11.save
 
 
 p "------ #{Vehicule.count} vehicule created ----------"
+
+commentaire1 = Commentaire.create(nom: "mickael", prenom: "Jackson", email: "mickael62@gmail.com", text: "voici le trestres tres tres tres tres tres tres tres tres tres tres long text!", reponse: "voici la reponse")
+
+commentaire2 = Commentaire.create(nom: "mickael", prenom: "Jackson", email: "mickael62@gmail.com", text: "voici le trestres tres tres tres tres tres tres tres tres tres tres long text!")
+
+
+p "------ #{Commentaire.count} commentaire created ----------"

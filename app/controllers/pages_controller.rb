@@ -8,4 +8,5 @@ class PagesController < ApplicationController
   def dashboard
     @vehicules = Vehicule.order(:marque)
   end
+
 end

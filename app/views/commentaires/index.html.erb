@@ -1,0 +1,15 @@
+<h1>ici ca com sec 🥵</h1>
+
+<% @commentaires.each do |commentaire| %>
+  <p> <%= commentaire.nom %> </p>
+<% end %>
+
+
+<h1>ajoutez votre commentaire</h1>
+<%= simple_form_for @commentaire do |f| %>
+  <%= f.input :nom, placeholder: 'Nom', input_html: { maxlength: 20 } %>
+  <%= f.input :prenom, placeholder: 'Prenom', input_html: { maxlength: 20 } %>
+  <%= f.input :email, placeholder: 'exemple@gmail.com' %>
+  <%= f.input :text, placeholder: 'Votre text...' %>
+  <%= f.submit %>
+<% end %>

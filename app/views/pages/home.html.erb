@@ -1,8 +1,10 @@
 
 <% if video_path("mainvideo.mp4").present? %>
+
   <div class="hero-video">
-    <%= video_tag "mainvideo.mp4", autoplay: true, controls: true, loop: true, muted: true, id: "home-videoo", preload: "auto", playsinline: true %>
+    <%= video_tag "mainvideo.mp4", type: "video/mp4", autoplay: true, controls: true, loop: true, muted: true, id: "home-videoo", preload: "auto", playsinline: true %>
   </div>
+
 <% else %>
   <div class="hero-image">
     <%= image_tag "alfaMainImg.jpg" %>
