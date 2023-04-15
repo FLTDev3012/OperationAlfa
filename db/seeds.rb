@@ -20,6 +20,9 @@ Commentaire.destroy_all
 
 p "------  commentaire destroy ----------"
 
+Piece.destroy_all
+
+p "------  piece destroy ----------"
 
 user1 = User.create(email: "dorian@gmail.com", password: "coucou")
 user2 = User.create(email: "dorian2@gmail.com", password: "coucou")
@@ -120,3 +123,26 @@ commentaire4 = Commentaire.create(nom: "philippe", prenom: "Jackson", email: "ph
 commentaire5 = Commentaire.create(nom: "andre", prenom: "Jackson", email: "andre@gmail.com", text: "voici le trestres tres tres tres tres tres tres tres tres tres tres long text!")
 
 p "------ #{Commentaire.count} commentaire created ----------"
+
+
+file = URI.open("https://images.unsplash.com/photo-1563760836797-bf5d5f9d2243?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80")
+piece1 = Piece.create(nom: "Piece1", description: "Magnifique piece...", prix: 35)
+piece1.photo.attach(io: file, filename: "p1.png", content_type: "image/png")
+piece1.save
+
+p "------ #{Piece.count} commentaire created ----------"
+
+
+file = URI.open("https://dam-media.mister-auto.com/gates/kit-de-distribution-pompe-a-eau/kp15503xs-2/624x390/033KP15503XS-2-14-5.JPG")
+piece2 = Piece.create(nom: "Piece2", description: "Magnifique piece...", prix: 45)
+piece2.photo.attach(io: file, filename: "p2.png", content_type: "image/png")
+piece2.save
+
+p "------ #{Piece.count} commentaire created ----------"
+
+file = URI.open("https://dam-media.mister-auto.com/gates/kit-de-distribution-pompe-a-eau/kp15503xs-2/624x390/033KP15503XS-2-14-5.JPG")
+piece3 = Piece.create(nom: "Piece3", description: "Magnifique piece...", prix: 55)
+piece3.photo.attach(io: file, filename: "p3.png", content_type: "image/png")
+piece3.save
+
+p "------ #{Piece.count} piece created ----------"
