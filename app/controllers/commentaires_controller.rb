@@ -24,8 +24,13 @@ class CommentairesController < ApplicationController
   def update
     @commentaire = Commentaire.find(params[:id])
     @commentaire.update(commentaire_params)
-    @commentaire.save
-    redirect_to commentaire_path(@commentaire)
+    if @commentaire.save
+      flash[:notice] = "Commentaire modifié avec succès !"
+      redirect_to dashboard_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
+
   end
 
   def destroy
@@ -37,7 +42,7 @@ class CommentairesController < ApplicationController
   private
 
   def commentaire_params
-    params.require(:commentaire).permit(:nom, :prenom, :email, :text)
+    params.require(:commentaire).permit(:nom, :prenom, :email, :text, :reponse)
   end
 
 end

@@ -7,6 +7,7 @@ class PagesController < ApplicationController
 
   def dashboard
     @vehicules = Vehicule.order(:marque)
+    @commentaires = Commentaire.all
   end
 
 end
