@@ -1,7 +1,7 @@
 
 <% if video_path("mainvideo.mp4").present? %>
   <div class="hero-video">
-    <%= video_tag "mainvideo.mp4", autoplay: true, loop: true, muted: true %>
+    <%= video_tag "mainvideo.mp4", autoplay: true, controls: true, loop: true, muted: true, id: "home-videoo", preload: "auto", playsinline: true %>
   </div>
 <% else %>
   <div class="hero-image">
@@ -9,6 +9,8 @@
   </div>
 <% end %>
 
+
+<!--
 <div class="home-carrou">
 
 
@@ -59,12 +61,14 @@
   </section>
 
 
-
-
-
 </div>
 
+ -->
+
+
+
 <script>
+
   function autoClick() {
   var thumbnails = document.querySelectorAll('.carousel__thumbnails li label');
   var index = 0;
@@ -82,5 +86,60 @@
 
 window.onload = autoClick;
 
+
+
+</script>
+
+
+
+
+<!-- test carrou -->
+<div class="carrou-body">
+  <div class="carousel">
+    <figure>
+      <% @vehicules.each do |vehicule| %>
+        <%= cl_image_tag vehicule.photo.key, crop: :fill %>
+      <% end %>
+    </figure>
+    <nav>
+      <button class="nav prev">Prev</button>
+      <button class="nav next">Next</button>
+    </nav>
+  </div>
+</div>
+<script>
+  var
+    carousel = document.querySelector('.carousel'),
+    figure = carousel.querySelector('figure'),
+    nav = carousel.querySelector('nav'),
+    numImages = figure.childElementCount,
+    theta =  2 * Math.PI / numImages,
+    currImage = 0
+  ;
+
+  nav.addEventListener('click', onClick, true);
+
+  function onClick(e) {
+    e.stopPropagation();
+
+    var t = e.target;
+    if (t.tagName.toUpperCase() != 'BUTTON')
+      return;
+
+    if (t.classList.contains('next')) {
+      currImage++;
+    }
+    else {
+      currImage--;
+    }
+
+    figure.style.transform = `rotateY(${currImage * -theta}rad)`;
+  }
+
+    // Ajouter une fonction qui déclenche le clic sur le bouton "Next" toutes les 3 secondes
+  setInterval(function() {
+    var nextButton = nav.querySelector('.next');
+    nextButton.click();
+  }, 3000);
 
 </script>
