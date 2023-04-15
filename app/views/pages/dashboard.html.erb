@@ -39,14 +39,17 @@
 
     <% @commentaires.each do |commentaire| %>
       <br><br><br>
-      <p> <%= commentaire.nom %> <%= commentaire.prenom %></p>
-      <p> <%= commentaire.email %> </p>
-      <p> <%= commentaire.text %> </p>
-      <p> reponse :<%= commentaire.reponse %> </p>
+      <p>-------------------------------------</p>
+      <p>Nom: <%= commentaire.nom %> <%= commentaire.prenom %></p>
+      <p>Prenom: <%= commentaire.email %> </p>
+      <p>Text: <%= commentaire.text %> </p>
+      <p>Reponse: <%= commentaire.reponse %> </p>
 
-      <p> <%= commentaire.created_at %> </p>
+      <p>Date: <%= commentaire.created_at %> </p>
       <%= link_to "Modifier", edit_commentaire_path(commentaire), class: "btn-noir"%>
       <%= link_to "Supprimer", commentaire_path(commentaire), class: "btn-noir", data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" } %>
+      <p>-------------------------------------</p>
+
     <% end %>
 
   </div>
