@@ -97,7 +97,7 @@ window.onload = autoClick;
 <div class="carrou-body">
   <div class="carousel">
     <figure>
-      <% @vehicules.each do |vehicule| %>
+      <% @vehicules.each_with_index do |vehicule, index| %>
         <%= cl_image_tag vehicule.photo.key, crop: :fill %>
       <% end %>
     </figure>
@@ -105,9 +105,18 @@ window.onload = autoClick;
       <button class="nav prev">Prev</button>
       <button class="nav next">Next</button>
     </nav>
-    <p>wesh</p>
   </div>
+
+  <div>
+    <% @vehicules.each_with_index do |vehicule, index| %>
+      <%= vehicule.id %>
+    <% end %>
+  </div>
+
 </div>
+
+
+
 <script>
   var
     carousel = document.querySelector('.carousel'),

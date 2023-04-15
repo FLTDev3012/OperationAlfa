@@ -294,6 +294,17 @@ $apothem: 723.842712474619px;
 		transition: transform 0.5s;
 		transform-origin: 50% 50% (-$apothem);
 
+    p {
+      display: none;
+      /* Masque initialement le modèle de véhicule */
+    }
+    &:first-child {
+      /* Affiche le modèle de véhicule uniquement si c'est le premier enfant */
+      p {
+        display: block;
+      }
+    }
+
 		img {
 			width: 100%;
       height: 370px;
@@ -303,16 +314,7 @@ $apothem: 723.842712474619px;
       border: 1px solid $grisc;
 			opacity: 1;
 
-      p {
-        display: none;
-        /* Masque initialement le modèle de véhicule */
-      }
-      &:first-child {
-        /* Affiche le modèle de véhicule uniquement si c'est le premier enfant */
-        p {
-          display: block;
-        }
-      }
+
 
 			&:not(:first-of-type) {
 				position: absolute;
