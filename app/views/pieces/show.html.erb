@@ -1,0 +1,7 @@
+<h1>show de pieces</h1>
+
+  <p> <%= @piece.nom %> </p>
+  <%= cl_image_tag @piece.photo.key, height: 200, width: 280, crop: :fill, class: "index-img" %>
+  <p> <%= @piece.description %> </p>
+  <p> <%= @piece.prix %> </p>
+  <%= link_to "retour aux pieces", pieces_path %>
