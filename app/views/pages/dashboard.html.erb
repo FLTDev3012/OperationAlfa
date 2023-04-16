@@ -64,8 +64,9 @@
 
   <!-- pieces -->
 
+
+  <%= link_to "Ajouter +", new_piece_path, class: "dash-add-btn" %>
   <% @pieces.each do |piece| %>
-    <%= link_to piece_path(piece) do%>
       <br><br><br>
       <p>------------------</p>
 
@@ -75,14 +76,12 @@
       <%= link_to edit_piece_path(piece), class: "deco-none dash-modif" do %>
         <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
       <% end %>
+      <%= link_to "#{piece.nom}", piece_path(piece), class: "deco-none dash-nom" %>
 
-      <p> <%= piece.nom %> </p>
       <%= cl_image_tag piece.photo.key, height: 200, width: 280, crop: :fill, class: "index-img" %>
       <p> <%= piece.description %> </p>
       <p> <%= piece.prix %> </p>
-      <p style="background-color: #666; padding: 16px 8px;">plus d'info</p>
       <p>------------------</p>
-    <% end %>
   <% end %>
 
 </div>

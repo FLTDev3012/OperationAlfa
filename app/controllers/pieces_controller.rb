@@ -16,7 +16,6 @@ class PiecesController < ApplicationController
 
   def create
     @piece = Piece.new(piece_params)
-    @piece.user = current_user
     if @piece.save
       redirect_to piece_path(@piece)
     else
@@ -45,7 +44,7 @@ class PiecesController < ApplicationController
   private
 
   def piece_params
-    params.require(:piece).permit(:marque, :modele, :photo)
+    params.require(:piece).permit(:nom, :description, :photo, :prix)
   end
 
 end
