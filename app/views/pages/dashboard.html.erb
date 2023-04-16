@@ -6,6 +6,9 @@
     </div>
 
 
+    <!-- vehicules -->
+
+
     <div class="dash-titre-bas">
       <%= link_to "Ajouter +", new_vehicule_path, class: "dash-add-btn" %>
       <h6> <%= Vehicule.count %> articles en vente</h6>
@@ -13,6 +16,8 @@
 
 
   </div>
+
+
 
   <div class="dash-all-vehicule-content">
     <div class="dash-all-vehicules">
@@ -35,6 +40,9 @@
     </div>
   </div>
 
+
+  <!-- commentaires -->
+
   <div class="dash-commentaire-content">
 
     <% @commentaires.each do |commentaire| %>
@@ -54,5 +62,27 @@
 
   </div>
 
+  <!-- pieces -->
+
+  <% @pieces.each do |piece| %>
+    <%= link_to piece_path(piece) do%>
+      <br><br><br>
+      <p>------------------</p>
+
+      <%= link_to piece_path(piece), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" }, class: "deco-none dash-corbeille" do %>
+        <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
+      <% end %>
+      <%= link_to edit_piece_path(piece), class: "deco-none dash-modif" do %>
+        <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+      <% end %>
+
+      <p> <%= piece.nom %> </p>
+      <%= cl_image_tag piece.photo.key, height: 200, width: 280, crop: :fill, class: "index-img" %>
+      <p> <%= piece.description %> </p>
+      <p> <%= piece.prix %> </p>
+      <p style="background-color: #666; padding: 16px 8px;">plus d'info</p>
+      <p>------------------</p>
+    <% end %>
+  <% end %>
 
 </div>
