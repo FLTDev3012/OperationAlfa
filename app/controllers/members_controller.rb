@@ -12,9 +12,8 @@ class MembersController < ApplicationController
 
   def create
     @member = Member.new(member_params)
-    @member.user = current_user
     if @member.save
-      redirect_to member_path(@member)
+      redirect_to members_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -29,7 +28,7 @@ class MembersController < ApplicationController
     @member = Member.find(params[:id])
     @member.update(member_params)
     @member.save
-    redirect_to member_path(@member)
+    redirect_to members_path
   end
 
   def destroy

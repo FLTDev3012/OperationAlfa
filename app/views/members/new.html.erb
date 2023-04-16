@@ -1,0 +1,9 @@
+<h1>ajoutez votre nouvel recrue</h1>
+
+<%= simple_form_for @member do |f| %>
+  <%= f.input :nom, placeholder: 'Nom' %>
+  <%= f.input :prenom, placeholder: 'Prenom' %>
+  <%= f.input :job, placeholder: 'Place dans l entreprise' %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit %>
+<% end %>

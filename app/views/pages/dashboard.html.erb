@@ -84,4 +84,33 @@
       <p>------------------</p>
   <% end %>
 
+    <!-- vehicules -->
+
+
+
+    <%= link_to "Ajouter +", new_member_path, class: "dash-add-btn" %>
+
+
+
+  <div class="dash-all-vehicule-content">
+    <div class="dash-all-vehicules">
+
+      <% @members.each do |member| %>
+          <div class="testdash dashborder deco-none">
+            <%= link_to member_path(member), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" }, class: "deco-none dash-corbeille" do %>
+              <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
+            <% end %>
+            <%= link_to edit_member_path(member), class: "deco-none dash-modif" do %>
+              <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+            <% end %>
+            <%= cl_image_tag member.photo.key, height: 40, width: 60, crop: :fill, class: "dash-img" %>
+            <p> <%= member.nom %> <%= member.prenom %> </p>
+          </div>
+
+
+      <% end %>
+
+    </div>
+  </div>
+
 </div>
