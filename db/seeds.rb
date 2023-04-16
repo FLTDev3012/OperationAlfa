@@ -146,3 +146,29 @@ piece3.photo.attach(io: file, filename: "p3.png", content_type: "image/png")
 piece3.save
 
 p "------ #{Piece.count} piece created ----------"
+
+file = URI.open("https://cdn.pixabay.com/photo/2018/08/28/13/29/avatar-3637561_1280.png")
+member1 = Member.create(nom: "Dujardin", prenom: "Jean", job: "job1")
+member1.photo.attach(io: file, filename: "m1.png", content_type: "image/png")
+member1.save
+
+file = URI.open("https://cdn.pixabay.com/photo/2018/08/28/13/29/avatar-3637561_1280.png")
+member2 = Member.create(nom: "yun", prenom: "zing", job: "job2")
+member2.photo.attach(io: file, filename: "m2.png", content_type: "image/png")
+member2.save
+
+file = URI.open("https://cdn.pixabay.com/photo/2018/08/28/13/29/avatar-3637561_1280.png")
+member3 = Member.create(nom: "Barthez", prenom: "Fabien", job: "job3")
+member3.photo.attach(io: file, filename: "m3.png", content_type: "image/png")
+member3.save
+
+file = URI.open("https://cdn.pixabay.com/photo/2018/08/28/13/29/avatar-3637561_1280.png")
+member4 = Member.create(nom: "Rocher", prenom: "Yves", job: "job4")
+member4.photo.attach(io: file, filename: "m4.png", content_type: "image/png")
+member4.save
+
+file = URI.open("https://cdn.pixabay.com/photo/2018/08/28/13/29/avatar-3637561_1280.png")
+member5 = Member.create(nom: "Iop", prenom: "Feu", job: "job5")
+member5.photo.attach(io: file, filename: "m5.png", content_type: "image/png")
+member5.save
+p "------ #{Member.count} member created ----------"

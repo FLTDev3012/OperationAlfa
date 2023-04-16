@@ -9,6 +9,7 @@ class PagesController < ApplicationController
     @vehicules = Vehicule.order(:marque)
     @commentaires = Commentaire.all
     @pieces = Piece.all
+    @members = Member.all
   end
 
 end
