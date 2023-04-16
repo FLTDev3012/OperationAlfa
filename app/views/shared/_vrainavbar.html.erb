@@ -1,6 +1,7 @@
 <div class="vrainav-container">
   <%= link_to "Accueil", root_path, class: ("active" if current_page?(root_path)) %>
   <%= link_to "Nos occasions", vehicules_path, class: ("active" if current_page?(vehicules_path)) %>
+  <%= link_to "Nos piéces", pieces_path, class: ("active" if current_page?(pieces_path)) %>
   <%= link_to "Commentaires", commentaires_path, class: ("active" if current_page?(commentaires_path)) %>
   <%= link_to "Dashboard", dashboard_path, class: ("active" if current_page?(dashboard_path)) %>
 

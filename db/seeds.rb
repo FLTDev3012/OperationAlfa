@@ -130,7 +130,7 @@ piece1 = Piece.create(nom: "Piece1", description: "Magnifique piece...", prix: 3
 piece1.photo.attach(io: file, filename: "p1.png", content_type: "image/png")
 piece1.save
 
-p "------ #{Piece.count} commentaire created ----------"
+
 
 
 file = URI.open("https://dam-media.mister-auto.com/gates/kit-de-distribution-pompe-a-eau/kp15503xs-2/624x390/033KP15503XS-2-14-5.JPG")
@@ -138,10 +138,10 @@ piece2 = Piece.create(nom: "Piece2", description: "Magnifique piece...", prix: 4
 piece2.photo.attach(io: file, filename: "p2.png", content_type: "image/png")
 piece2.save
 
-p "------ #{Piece.count} commentaire created ----------"
 
-file = URI.open("https://dam-media.mister-auto.com/gates/kit-de-distribution-pompe-a-eau/kp15503xs-2/624x390/033KP15503XS-2-14-5.JPG")
-piece3 = Piece.create(nom: "Piece3", description: "Magnifique piece...", prix: 55)
+
+file = URI.open("https://img.reparcar.fr/ks4YNNoKZiku8lrkM7nP1qxz2nA=/full-fit-in/1624x1218/https%3A%2F%2Freparcar.s3.eu-west-3.amazonaws.com%2Fmedia%2F13%2F56%2Fcd1eb7d88e68451c87b306c82dc3.jpg")
+piece3 = Piece.create(nom: "Piece3", description: "Magnifique piece...", prix: 550)
 piece3.photo.attach(io: file, filename: "p3.png", content_type: "image/png")
 piece3.save
 
