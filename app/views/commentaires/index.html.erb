@@ -23,7 +23,8 @@
         <%= f.input :nom, placeholder: 'Nom', input_html: { maxlength: 20 } %>
         <%= f.input :prenom, placeholder: 'Prenom', input_html: { maxlength: 20 } %>
         <%= f.input :email, placeholder: 'exemple@gmail.com' %>
-        <%= f.input :text, placeholder: 'Votre text...' %>
+        <p>Votre text</p>
+        <%= f.text_area :text, placeholder: 'Votre text...', class: "com-textarea" %>
         <%= f.submit %>
       <% end %>
     </div>
