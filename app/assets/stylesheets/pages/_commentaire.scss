@@ -1,9 +1,11 @@
-
+.com-contener {
+  background-color: $grisf;
+}
 
 .com-titre {
   display: flex;
   justify-content: center;
-  margin: 60px 0;
+  padding: 60px 0;
 }
 
 .com-droite-gauche-content {
@@ -11,6 +13,25 @@
   justify-content: space-around;
 }
 
+.com-part-droite {
+  color: #fff;
+}
+
+.com-form {
+  background-color: $noir;
+  padding: 15px;
+  border-radius: 5px;
+}
+
 .com-textarea {
   width: 100%;
+  margin-bottom: 1rem;
+}
+
+.com-submit input {
+  color: #fff;
+  background-color: $rouge;
+  border: 1px solid #fff;
+  padding: 8px 16px;
+  border-radius: 3px;
 }
