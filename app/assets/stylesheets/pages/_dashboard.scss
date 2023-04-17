@@ -57,6 +57,7 @@
 .dash-all-vehicule-content {
   display: flex;
   justify-content: center;
+  margin-bottom: 60px;
 
 }
 
@@ -196,7 +197,25 @@
 // commentaires
 
 .dash-commentaire-content {
-  background-color: $grisf;
+  background-color: pink;
   color: #fff;
-  margin-top: 40px;
+}
+
+.one-com {
+  background-color: $grisf;
+}
+
+.dash-all-vehicule-content {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+
+}
+
+.dash-all-vehicules {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  border: 5px solid #2c3230;
+  border-radius: 5px;
 }
