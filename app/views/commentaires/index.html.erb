@@ -1,20 +1,32 @@
-<h1>ici ca com sec 🥵</h1>
+<div class="com-contener">
 
-<% @commentaires.each do |commentaire| %>
-  <br><br><br>
-  <p> <%= commentaire.nom %> <%= commentaire.prenom %></p>
-  <p> <%= commentaire.text %> </p>
-  <p> <%= commentaire.created_at %> </p>
+  <div class="com-titre">
+    <h1>ici ca com sec 🥵</h1>
+  </div>
 
 
-<% end %>
+  <div class="com-droite-gauche-content">
+
+    <div class="com-part-gauche">
+      <% @commentaires.each do |commentaire| %>
+        <br><br><br>
+        <p> <%= commentaire.nom %> <%= commentaire.prenom %></p>
+        <p> <%= commentaire.text %> </p>
+        <p> <%= commentaire.created_at %> </p>
+      <% end %>
+    </div>
 
 
-<h1>ajoutez votre commentaire</h1>
-<%= simple_form_for @commentaire do |f| %>
-  <%= f.input :nom, placeholder: 'Nom', input_html: { maxlength: 20 } %>
-  <%= f.input :prenom, placeholder: 'Prenom', input_html: { maxlength: 20 } %>
-  <%= f.input :email, placeholder: 'exemple@gmail.com' %>
-  <%= f.input :text, placeholder: 'Votre text...' %>
-  <%= f.submit %>
-<% end %>
+    <div class="com-part-droite">
+      <h1>ajoutez votre commentaire</h1>
+      <%= simple_form_for @commentaire do |f| %>
+        <%= f.input :nom, placeholder: 'Nom', input_html: { maxlength: 20 } %>
+        <%= f.input :prenom, placeholder: 'Prenom', input_html: { maxlength: 20 } %>
+        <%= f.input :email, placeholder: 'exemple@gmail.com' %>
+        <%= f.input :text, placeholder: 'Votre text...' %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+
+  </div>
+</div>
