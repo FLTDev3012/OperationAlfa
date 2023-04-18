@@ -24,6 +24,10 @@ Piece.destroy_all
 
 p "------  piece destroy ----------"
 
+Member.destroy_all
+
+p "------  member destroy ----------"
+
 user1 = User.create(email: "dorian@gmail.com", password: "coucou")
 user2 = User.create(email: "dorian2@gmail.com", password: "coucou")
 
