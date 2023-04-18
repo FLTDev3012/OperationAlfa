@@ -1,7 +1,39 @@
+.member-titre {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
 .grid-com{
   padding: 1em;
   padding-bottom: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 100px
+}
+
+.member-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #fff;
+  background-color: $grisf;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.member-card img {
+  border-radius: 50%;
+  height: 140px;
+  width: 140px;
+  background-color: $grisc;
+  box-shadow: 1px 5px 5px #eb0000;
+  margin-bottom: 30px;
+}
+
+.member-card-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #eb0000;
 }
