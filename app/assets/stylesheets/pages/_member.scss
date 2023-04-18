@@ -1,39 +1,55 @@
+.member-container {
+  background-color: $grisf;
+  padding: 0 80px;
+}
+
 .member-titre {
   display: flex;
   justify-content: center;
-  padding: 30px;
+  padding: 60px;
+  color: #fff;
 }
 
 .grid-com{
   padding: 1em;
-  padding-bottom: 50px;
+  padding-bottom: 200px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 100px
 }
 
 .member-card {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border: 1px solid #fff;
-  background-color: $grisf;
-  padding: 15px;
+  box-shadow: 1px 5px 5px #111;
+  background-color: $grisc;
   border-radius: 5px;
 }
 
-.member-card img {
+.member-card p{
+  margin-top: 1rem;
+  text-shadow: 2px 3px 3px $grisf;
+  font-size: 22px;
+}
+
+.member-card .member-name {
+  color: #fff;
+  font-size: 20px;
+}
+
+.member-photo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.member-photo img {
   border-radius: 50%;
-  height: 140px;
-  width: 140px;
   background-color: $grisc;
-  box-shadow: 1px 5px 5px #eb0000;
-  margin-bottom: 30px;
+  box-shadow: 3px 5px 5px $grisf;
 }
 
 .member-card-text {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  color: #eb0000;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
 }
