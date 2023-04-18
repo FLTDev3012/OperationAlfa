@@ -17,7 +17,9 @@
           </div>
           <% if commentaire.reponse.present? %>
             <div class="com-part-gauche-com-rep-seul">
-              <p class="com-admin"><strong>Planète Alfa:</strong></p>
+              <div class="com-rep-nom">
+                <p class="com-admin"><strong>Planète Alfa</strong></p>
+              </div>
               <p> <%= commentaire.reponse.capitalize %></p>
             </div>
           <% end %>
@@ -29,7 +31,7 @@
     <div class="com-part-droite">
       <%= simple_form_for @commentaire, html: { class: "com-form" } do |f| %>
         <div class="com-votrecom">
-          <h2>Votre commentaire ✏️</h2>
+          <p>✨ Votre commentaire ✨</p>
         </div>
         <%= f.input :nom, placeholder: 'Nom', input_html: { maxlength: 20 } %>
         <%= f.input :prenom, placeholder: 'Prenom', input_html: { maxlength: 20 } %>

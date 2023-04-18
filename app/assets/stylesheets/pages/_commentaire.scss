@@ -27,7 +27,7 @@
 }
 
 .com-all-one-w-rep {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 
@@ -70,6 +70,11 @@
 //   border: 1px solid #ffffff30;
 // }
 
+.com-rep-nom {
+  display: flex;
+  justify-content: end;
+}
+
 .com-admin {
   color: #e50000e8;
 }
@@ -95,9 +100,20 @@
   justify-content: center;
 }
 
+.com-votrecom p {
+  font-size: 22px;
+}
+
+
 .com-textarea {
   width: 100%;
   margin-bottom: 1rem;
+  min-height: 100px;
+}
+
+.com-submit {
+  display: flex;
+  justify-content: center;
 }
 
 .com-submit input {
