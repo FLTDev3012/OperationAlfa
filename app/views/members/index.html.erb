@@ -1,14 +1,13 @@
 <h1>index team</h1>
 
 
-<% @members.each do |member| %>
-  <br><br><br>
-  <p>--------------</p>\
-  <%= cl_image_tag member.photo.key, height: 200, width: 280, crop: :fill, class: "index-img" %>
-  <%= member.nom %>
-  <%= member.prenom %>
-  <%= member.job %>
-
-  <p>--------------</p>
-
-<% end %>
+<div class="grid-com">
+  <% @members.each do |member| %>
+    <div class="member-card">
+      <%= cl_image_tag member.photo.key, height: 200, width: 280, crop: :fill, class: "index-img" %>
+      <%= member.nom %>
+      <%= member.prenom %>
+      <%= member.job %>
+    </div>
+  <% end %>
+</div>
