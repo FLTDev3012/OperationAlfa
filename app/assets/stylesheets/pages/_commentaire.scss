@@ -2,6 +2,8 @@
   background-color: $grisf;
 }
 
+
+
 .com-titre {
   display: flex;
   justify-content: center;
@@ -13,8 +15,58 @@
   justify-content: space-around;
 }
 
+.com-part-gauche {
+  color: #fff;
+  width: 50%;
+}
+
+.com-part-gauche-com-seul {
+  background-color: $grisc;
+  padding: 15px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+
+.com-part-gauche-com-seul:nth-child(2n) {
+  background-color: #9e1716; /* ou une autre couleur */
+}
+
+.com-nom {
+  color: #fff;
+}
+
+.com-date {
+  font-size: small;
+  color: $noir;
+  display: flex;
+  justify-content: end;
+}
+
+.com-part-gauche-com-rep-seul {
+  margin-top: 15px;
+  background-color: #b5b5b5;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ffffff30;
+}
+
+.com-part-gauche-com-rep-seul:nth-child(2n) {
+  margin-top: 15px;
+  background-color: #b5b5b5;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ffffff30;
+}
+
+.com-admin {
+  color: #ffffffe8;
+}
+
+
 .com-part-droite {
   color: #fff;
+  min-width: 30%;
 }
 
 .com-form {
