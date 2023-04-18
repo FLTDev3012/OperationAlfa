@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   padding: 60px 0;
+  color: #fff;
 }
 
 .com-droite-gauche-content {
@@ -16,24 +17,34 @@
 }
 
 .com-part-gauche {
-  color: #fff;
   width: 50%;
 }
 
 .com-part-gauche-com-seul {
-  background-color: $grisc;
   padding: 15px;
-  margin-bottom: 40px;
   border-radius: 5px;
-  border: 1px solid #fff;
+  color: $noir;
 }
 
-.com-part-gauche-com-seul:nth-child(2n) {
+.com-all-one-w-rep {
+  margin-bottom: 40px;
+}
+
+
+.com-bg-red {
   background-color: #9e1716; /* ou une autre couleur */
+}
+
+.com-bg-grey {
+  background-color: $grisc;
 }
 
 .com-nom {
   color: #fff;
+}
+
+.com-text {
+ color: #fff;
 }
 
 .com-date {
@@ -44,24 +55,33 @@
 }
 
 .com-part-gauche-com-rep-seul {
-  margin-top: 15px;
-  background-color: #b5b5b5;
+  background-color: #fff;
   padding: 15px;
   border-radius: 5px;
-  border: 1px solid #ffffff30;
+  margin-top: 8px;
+
 }
 
-.com-part-gauche-com-rep-seul:nth-child(2n) {
-  margin-top: 15px;
-  background-color: #b5b5b5;
-  padding: 15px;
-  border-radius: 5px;
-  border: 1px solid #ffffff30;
+// .com-part-gauche .com-part-gauche-com-rep-seul:nth-child(2n) {
+//   margin-top: 15px;
+//   background-color: #ad2a2a;
+//   padding: 15px;
+//   border-radius: 5px;
+//   border: 1px solid #ffffff30;
+// }
+
+.com-rep-nom {
+  display: flex;
+  justify-content: end;
 }
 
 .com-admin {
-  color: #ffffffe8;
+  color: #e50000e8;
 }
+
+
+
+
 
 
 .com-part-droite {
@@ -75,9 +95,25 @@
   border-radius: 5px;
 }
 
+.com-votrecom {
+  display: flex;
+  justify-content: center;
+}
+
+.com-votrecom p {
+  font-size: 22px;
+}
+
+
 .com-textarea {
   width: 100%;
   margin-bottom: 1rem;
+  min-height: 100px;
+}
+
+.com-submit {
+  display: flex;
+  justify-content: center;
 }
 
 .com-submit input {

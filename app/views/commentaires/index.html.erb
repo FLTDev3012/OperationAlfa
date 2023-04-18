@@ -1,42 +1,45 @@
 <div class="com-contener">
 
   <div class="com-titre">
-    <h1>ici ca com sec 🥵</h1>
+    <h1>Espace commentaire</h1>
   </div>
 
 
   <div class="com-droite-gauche-content">
 
     <div class="com-part-gauche">
-      <% @commentaires.each do |commentaire| %>
-        <div class="com-part-gauche-com-seul">
-          <p> <strong><span class="com-nom"><%= commentaire.prenom.capitalize %>:</span></strong></p>
-          <p> <%= commentaire.text.capitalize %> </p>
-          <div class="com-date">
-
+      <% @commentaires.each_with_index do |commentaire, index| %>
+        <div class="com-all-one-w-rep">
+          <div class="com-part-gauche-com-seul <%= index.even? ? 'com-bg-red' : 'com-bg-grey' %>">
+            <p> <strong><span class="com-nom"><%= commentaire.prenom.capitalize %>:</span></strong></p>
+            <p class="com-text"> <%= commentaire.text.capitalize %> </p>
+            <div class="com-date"></div>
           </div>
           <% if commentaire.reponse.present? %>
             <div class="com-part-gauche-com-rep-seul">
-              <p class="com-admin"><strong>Admin:</strong></p>
+              <div class="com-rep-nom">
+                <p class="com-admin"><strong>Planète Alfa</strong></p>
+              </div>
               <p> <%= commentaire.reponse.capitalize %></p>
             </div>
           <% end %>
         </div>
-
       <% end %>
     </div>
 
 
     <div class="com-part-droite">
       <%= simple_form_for @commentaire, html: { class: "com-form" } do |f| %>
-        <h2>Votre commentaire</h2>
+        <div class="com-votrecom">
+          <p>✨ Votre commentaire ✨</p>
+        </div>
         <%= f.input :nom, placeholder: 'Nom', input_html: { maxlength: 20 } %>
         <%= f.input :prenom, placeholder: 'Prenom', input_html: { maxlength: 20 } %>
         <%= f.input :email, placeholder: 'exemple@gmail.com' %>
         <p>Votre text</p>
         <%= f.text_area :text, placeholder: 'Votre text...', class: "com-textarea" %>
         <div class="com-submit">
-          <%= f.submit %>
+          <%= f.submit "Publier"%>
         </div>
       <% end %>
     </div>

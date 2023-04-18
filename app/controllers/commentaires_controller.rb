@@ -3,7 +3,7 @@ class CommentairesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index new create]
 
   def index
-    @commentaires = Commentaire.all
+    @commentaires = Commentaire.all.order(created_at: :desc)
     @commentaire = Commentaire.new
   end
 
