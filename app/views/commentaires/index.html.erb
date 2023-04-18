@@ -8,12 +8,12 @@
   <div class="com-droite-gauche-content">
 
     <div class="com-part-gauche">
-      <% @commentaires.each do |commentaire| %>
-        <div class="com-part-gauche-com-seul">
-          <p> <strong><span class="com-nom"><%= commentaire.prenom.capitalize %>:</span></strong></p>
-          <p class="com-text"> <%= commentaire.text.capitalize %> </p>
-          <div class="com-date">
-
+      <% @commentaires.each_with_index do |commentaire, index| %>
+        <div class="com-all-one-w-rep">
+          <div class="com-part-gauche-com-seul <%= index.even? ? 'com-bg-red' : 'com-bg-grey' %>">
+            <p> <strong><span class="com-nom"><%= commentaire.prenom.capitalize %>:</span></strong></p>
+            <p class="com-text"> <%= commentaire.text.capitalize %> </p>
+            <div class="com-date"></div>
           </div>
           <% if commentaire.reponse.present? %>
             <div class="com-part-gauche-com-rep-seul">
@@ -22,7 +22,6 @@
             </div>
           <% end %>
         </div>
-
       <% end %>
     </div>
 
@@ -38,7 +37,7 @@
         <p>Votre text</p>
         <%= f.text_area :text, placeholder: 'Votre text...', class: "com-textarea" %>
         <div class="com-submit">
-          <%= f.submit %>
+          <%= f.submit "Publier"%>
         </div>
       <% end %>
     </div>

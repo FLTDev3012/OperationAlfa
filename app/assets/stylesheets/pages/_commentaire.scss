@@ -21,16 +21,22 @@
 }
 
 .com-part-gauche-com-seul {
-  background-color: $grisc;
   padding: 15px;
-  margin-bottom: 40px;
   border-radius: 5px;
-  border: 1px solid #fff;
   color: $noir;
 }
 
-.com-part-gauche-com-seul:nth-child(2n) {
+.com-all-one-w-rep {
+  margin-bottom: 60px;
+}
+
+
+.com-bg-red {
   background-color: #9e1716; /* ou une autre couleur */
+}
+
+.com-bg-grey {
+  background-color: $grisc;
 }
 
 .com-nom {
@@ -49,11 +55,11 @@
 }
 
 .com-part-gauche-com-rep-seul {
-  margin-top: 15px;
   background-color: #fff;
   padding: 15px;
   border-radius: 5px;
-  border: 1px solid #ffffff30;
+  margin-top: 8px;
+
 }
 
 // .com-part-gauche .com-part-gauche-com-rep-seul:nth-child(2n) {
