@@ -45,10 +45,22 @@
 
 .com-part-gauche-com-rep-seul {
   margin-top: 15px;
+  background-color: #b5b5b5;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ffffff30;
+}
+
+.com-part-gauche-com-rep-seul:nth-child(2n) {
+  margin-top: 15px;
+  background-color: #b5b5b5;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ffffff30;
 }
 
 .com-admin {
-  color: green;
+  color: #ffffffe8;
 }
 
 
