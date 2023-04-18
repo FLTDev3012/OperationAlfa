@@ -9,17 +9,22 @@
 
     <div class="com-part-gauche">
       <% @commentaires.each do |commentaire| %>
-        <br><br><br>
-        <p> <%= commentaire.nom %> <%= commentaire.prenom %></p>
-        <p> <%= commentaire.text %> </p>
-        <p> <%= commentaire.created_at %> </p>
+        <div class="com-part-gauche-com-seul">
+          <p> <strong><span class="com-nom"><%= commentaire.nom %> <%= commentaire.prenom %></span></strong></p>
+          <p> <%= commentaire.text %> </p>
+          <p> <span class="com-date"><%= commentaire.created_at %></span> </p>
+          <div class="com-part-gauche-com-rep-seul">
+            <p>Admin: <%= commentaire.reponse %></p>
+          </div>
+        </div>
+
       <% end %>
     </div>
 
 
     <div class="com-part-droite">
       <%= simple_form_for @commentaire, html: { class: "com-form" } do |f| %>
-        <h2>ajoutez votre commentaire</h2>
+        <h2>Votre commentaire</h2>
         <%= f.input :nom, placeholder: 'Nom', input_html: { maxlength: 20 } %>
         <%= f.input :prenom, placeholder: 'Prenom', input_html: { maxlength: 20 } %>
         <%= f.input :email, placeholder: 'exemple@gmail.com' %>

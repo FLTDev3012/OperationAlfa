@@ -112,7 +112,7 @@ vehicule11.save
 
 p "------ #{Vehicule.count} vehicule created !!!!!!----------"
 
-commentaire1 = Commentaire.create(nom: "mickael", prenom: "Jackson", email: "mickael62@gmail.com", text: "voici le trestres tres tres tres tres tres tres tres tres tres tres long text!", reponse: "voici la reponse")
+commentaire1 = Commentaire.create(nom: "mickael", prenom: "Jackson", email: "mickael62@gmail.com", text: "voici le trestres tres tres tres tres tres tres tres tres tres tres long text! voici le trestres tres tres tres tres tres tres tres tres tres tres long text! voici le trestres tres tres tres tres tres tres tres tres tres tres long text! voici le trestres tres tres tres tres tres tres tres tres tres tres long text! voici le trestres tres tres tres tres tres tres tres tres tres tres long text! voici le trestres tres tres tres tres tres tres tres tres tres tres long text!", reponse: "voici la reponse voici le trestres tres tres tres tres tres tres tres tres tres tres long text! voici le trestres tres tres tres tres tres tres tres tres tres tres long text! voici le trestres tres tres tres tres tres tres tres tres tres tres long text! voici le trestres tres tres tres tres tres tres tres tres tres tres long text!")
 
 commentaire2 = Commentaire.create(nom: "jean", prenom: "Jackson", email: "jean62@gmail.com", text: "voici le trestres tres tres tres tres tres tres tres tres tres tres long text!")
 
