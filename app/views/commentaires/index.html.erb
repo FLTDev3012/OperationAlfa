@@ -10,12 +10,17 @@
     <div class="com-part-gauche">
       <% @commentaires.each do |commentaire| %>
         <div class="com-part-gauche-com-seul">
-          <p> <strong><span class="com-nom"><%= commentaire.nom %> <%= commentaire.prenom %></span></strong></p>
-          <p> <%= commentaire.text %> </p>
-          <p> <span class="com-date"><%= commentaire.created_at %></span> </p>
-          <div class="com-part-gauche-com-rep-seul">
-            <p>Admin: <%= commentaire.reponse %></p>
+          <p> <strong><span class="com-nom"><%= commentaire.prenom.capitalize %>:</span></strong></p>
+          <p> <%= commentaire.text.capitalize %> </p>
+          <div class="com-date">
+
           </div>
+          <% if commentaire.reponse.present? %>
+            <div class="com-part-gauche-com-rep-seul">
+              <p class="com-admin"><strong>Admin:</strong></p>
+              <p> <%= commentaire.reponse.capitalize %></p>
+            </div>
+          <% end %>
         </div>
 
       <% end %>

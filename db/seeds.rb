@@ -114,13 +114,13 @@ p "------ #{Vehicule.count} vehicule created !!!!!!----------"
 
 commentaire1 = Commentaire.create(nom: "mickael", prenom: "Jackson", email: "mickael62@gmail.com", text: "voici le trestres tres tres tres tres tres tres tres tres tres tres long text! voici le trestres tres tres tres tres tres tres tres tres tres tres long text! voici le trestres tres tres tres tres tres tres tres tres tres tres long text! voici le trestres tres tres tres tres tres tres tres tres tres tres long text! voici le trestres tres tres tres tres tres tres tres tres tres tres long text! voici le trestres tres tres tres tres tres tres tres tres tres tres long text!", reponse: "voici la reponse voici le trestres tres tres tres tres tres tres tres tres tres tres long text! voici le trestres tres tres tres tres tres tres tres tres tres tres long text! voici le trestres tres tres tres tres tres tres tres tres tres tres long text! voici le trestres tres tres tres tres tres tres tres tres tres tres long text!")
 
-commentaire2 = Commentaire.create(nom: "jean", prenom: "Jackson", email: "jean62@gmail.com", text: "voici le trestres tres tres tres tres tres tres tres tres tres tres long text!")
+commentaire2 = Commentaire.create(nom: "jean", prenom: "mickael", email: "jean62@gmail.com", text: "voici le trestres tres tres tres tres tres tres tres tres tres tres long text!", reponse: "tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres tres")
 
 commentaire3 = Commentaire.create(nom: "rene", prenom: "Jackson", email: "rene62@gmail.com", text: "voici le trestres tres tres tres tres tres tres tres tres tres tres long text!")
 
 commentaire4 = Commentaire.create(nom: "philippe", prenom: "Jackson", email: "phiphi62@gmail.com", text: "voici le trestres tres tres tres tres tres tres tres tres tres tres long text!")
 
-commentaire5 = Commentaire.create(nom: "andre", prenom: "Jackson", email: "andre@gmail.com", text: "voici le trestres tres tres tres tres tres tres tres tres tres tres long text!")
+commentaire5 = Commentaire.create(nom: "andre", prenom: "philippe", email: "andre@gmail.com", text: "voici le trestres tres tres tres tres tres tres tres tres tres tres long text!")
 
 p "------ #{Commentaire.count} commentaire created ----------"
 

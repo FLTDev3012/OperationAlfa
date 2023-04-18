@@ -17,6 +17,7 @@
 
 .com-part-gauche {
   color: #fff;
+  width: 50%;
 }
 
 .com-part-gauche-com-seul {
@@ -38,6 +39,16 @@
 .com-date {
   font-size: small;
   color: $noir;
+  display: flex;
+  justify-content: end;
+}
+
+.com-part-gauche-com-rep-seul {
+  margin-top: 15px;
+}
+
+.com-admin {
+  color: green;
 }
 
 
