@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   padding: 60px 0;
+  color: #fff;
 }
 
 .com-droite-gauche-content {
@@ -16,7 +17,6 @@
 }
 
 .com-part-gauche {
-  color: #fff;
   width: 50%;
 }
 
@@ -26,6 +26,7 @@
   margin-bottom: 40px;
   border-radius: 5px;
   border: 1px solid #fff;
+  color: $noir;
 }
 
 .com-part-gauche-com-seul:nth-child(2n) {
@@ -34,6 +35,10 @@
 
 .com-nom {
   color: #fff;
+}
+
+.com-text {
+ color: #fff;
 }
 
 .com-date {
@@ -45,23 +50,27 @@
 
 .com-part-gauche-com-rep-seul {
   margin-top: 15px;
-  background-color: #b5b5b5;
+  background-color: #fff;
   padding: 15px;
   border-radius: 5px;
   border: 1px solid #ffffff30;
 }
 
-.com-part-gauche-com-rep-seul:nth-child(2n) {
-  margin-top: 15px;
-  background-color: #b5b5b5;
-  padding: 15px;
-  border-radius: 5px;
-  border: 1px solid #ffffff30;
-}
+// .com-part-gauche .com-part-gauche-com-rep-seul:nth-child(2n) {
+//   margin-top: 15px;
+//   background-color: #ad2a2a;
+//   padding: 15px;
+//   border-radius: 5px;
+//   border: 1px solid #ffffff30;
+// }
 
 .com-admin {
-  color: #ffffffe8;
+  color: #e50000e8;
 }
+
+
+
+
 
 
 .com-part-droite {
@@ -73,6 +82,11 @@
   background-color: $noir;
   padding: 15px;
   border-radius: 5px;
+}
+
+.com-votrecom {
+  display: flex;
+  justify-content: center;
 }
 
 .com-textarea {

@@ -1,7 +1,7 @@
 <div class="com-contener">
 
   <div class="com-titre">
-    <h1>ici ca com sec 🥵</h1>
+    <h1>Espace commentaire</h1>
   </div>
 
 
@@ -11,13 +11,13 @@
       <% @commentaires.each do |commentaire| %>
         <div class="com-part-gauche-com-seul">
           <p> <strong><span class="com-nom"><%= commentaire.prenom.capitalize %>:</span></strong></p>
-          <p> <%= commentaire.text.capitalize %> </p>
+          <p class="com-text"> <%= commentaire.text.capitalize %> </p>
           <div class="com-date">
 
           </div>
           <% if commentaire.reponse.present? %>
             <div class="com-part-gauche-com-rep-seul">
-              <p class="com-admin"><strong>Admin:</strong></p>
+              <p class="com-admin"><strong>Planète Alfa:</strong></p>
               <p> <%= commentaire.reponse.capitalize %></p>
             </div>
           <% end %>
@@ -29,7 +29,9 @@
 
     <div class="com-part-droite">
       <%= simple_form_for @commentaire, html: { class: "com-form" } do |f| %>
-        <h2>Votre commentaire</h2>
+        <div class="com-votrecom">
+          <h2>Votre commentaire ✏️</h2>
+        </div>
         <%= f.input :nom, placeholder: 'Nom', input_html: { maxlength: 20 } %>
         <%= f.input :prenom, placeholder: 'Prenom', input_html: { maxlength: 20 } %>
         <%= f.input :email, placeholder: 'exemple@gmail.com' %>
