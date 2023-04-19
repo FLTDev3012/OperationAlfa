@@ -1,0 +1,49 @@
+.piece-container {
+  background-color: $grisf;
+  min-height: 80vh;
+}
+
+.piece-titre {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  padding: 60px 0;
+}
+
+
+.piece-card {
+  background-color: $grisc;
+  width: 280px;
+  border-radius: 8px;
+  margin: 20px 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 1px 5px 5px #111;
+}
+
+.piece-card:hover {
+  transform: scale(1.05);
+}
+
+.piece-margin-b {
+  margin-bottom: 1rem;
+}
+
+.piece-card p {
+  text-align: center;
+  color: #fff;
+}
+
+
+.piece-index {
+  padding: 1em;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 10px
+}
+
+a.link-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
