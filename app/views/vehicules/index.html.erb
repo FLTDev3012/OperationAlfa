@@ -38,9 +38,9 @@
 
           </div>
 
-
-          <p class="big-font"><p><%= vehicule.prix %>€</p>
-          <p class="little-font grisclair">432.73€ / par mois</p>
+          <div class="index-card-prix">
+            <p class="big-font"><p><%= sprintf("%.2f", vehicule.prix) %>€</p>
+          </div>
 
           <div class="index-card-btn little-font">
             <p>Détail</p>

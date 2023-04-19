@@ -7,8 +7,15 @@
   display: flex;
   justify-content: center;
   padding: 60px 0;
-  color: #fff;
+
 }
+
+.index-titre h1 {
+  background-image: linear-gradient(180deg, #ffffff57 0%, #ffffff 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* pour Safari */
+}
+
 
 .index-card {
   background-color: $blanc;
@@ -30,6 +37,12 @@
 
 .index-card:hover {
   transform: scale(1.05);
+}
+
+.index-card-prix {
+  display: flex;
+  justify-content: end;
+  padding-right: 15px;
 }
 
 .index-card-titre {

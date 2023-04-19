@@ -11,8 +11,11 @@ class CommentairesController < ApplicationController
   def create
     @commentaire = Commentaire.new(commentaire_params)
     if @commentaire.save
+      flash[:notice] = "Commentaire envoyé avec succès !"
       redirect_to commentaires_path
     else
+      flash[:notice] = "Erreur dans votre commentaire !"
+
       render :index, status: :unprocessable_entity
     end
   end
