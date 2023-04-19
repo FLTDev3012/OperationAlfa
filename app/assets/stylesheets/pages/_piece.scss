@@ -11,6 +11,7 @@
 }
 
 
+
 .piece-card {
   background-color: $grisc;
   width: 280px;
@@ -31,8 +32,20 @@
 .piece-card p {
   text-align: center;
   color: #fff;
+  text-shadow: 2px 3px 3px $grisf;
+  font-size: 22px;
+
+
 }
 
+.piece-card .piece-descrip {
+  font-size: 18px;
+  min-height: 5rem;
+}
+
+.piece-card .piece-prix {
+  font-size: 16px;
+}
 
 .piece-index {
   padding: 1em;
