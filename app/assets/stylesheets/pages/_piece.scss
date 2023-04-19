@@ -1,0 +1,26 @@
+.piece-container {
+  background-color: $grisf;
+  min-height: 80vh;
+}
+
+.piece-titre {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  padding: 60px 0;
+}
+
+
+.piece-card {
+  background-color: $blanc;
+  width: 282px;
+  border-radius: 8px;
+  border: 1px solid $grisc;
+  margin: 20px 10px;
+  transition: transform 0.3s ease;
+  align-items: center;
+}
+
+.piece-card:hover {
+  transform: scale(1.05);
+}

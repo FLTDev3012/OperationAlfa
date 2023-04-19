@@ -1,15 +1,22 @@
-<h1>pieces index</h1>
+<div class="piece-container">
+
+  <div class="piece-titre">
+    <h1>Nos pieces</h1>
+  </div>
 
 
-<% @pieces.each do |piece| %>
-  <%= link_to piece_path(piece) do%>
-    <br><br><br>
-    <p>------------------</p>
-    <p> <%= piece.nom %> </p>
-    <%= cl_image_tag piece.photo.key, height: 200, width: 280, crop: :fill, class: "index-img" %>
-    <p> <%= piece.description %> </p>
-    <p> <%= piece.prix %> </p>
-    <p style="background-color: #666; padding: 16px 8px;">plus d'info</p>
-    <p>------------------</p>
-  <% end %>
-<% end %>
+  <div class="grid-index">
+    <% @pieces.each do |piece| %>
+      <div class="piece-card">
+        <%= link_to piece_path(piece) do%>
+          <p> <%= piece.nom %> </p>
+          <%= cl_image_tag piece.photo.key, height: 200, width: 280, crop: :fill, class: "index-img" %>
+          <p> <%= piece.description %> </p>
+          <p> <%= piece.prix %> </p>
+          <p style="background-color: #666; padding: 16px 8px;">plus d'info</p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+</div>
