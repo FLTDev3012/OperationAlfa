@@ -11,6 +11,11 @@
   color: #fff;
 }
 
+.com-titre h1 {
+  background-image: linear-gradient(180deg, #ffffff57 0%, #ffffff 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* pour Safari */
+}
 .com-droite-gauche-content {
   display: flex;
   justify-content: space-around;
@@ -122,4 +127,20 @@
   border: 1px solid #fff;
   padding: 8px 16px;
   border-radius: 3px;
+  transition: 0.1s ease-in-out;
+}
+
+.com-submit input:hover {
+  background-color: $grisc;
+}
+
+.com-submit input:active {
+  transform: scale(0.95);
+  transition: 0.1s ease-in-out;
+
+}
+
+
+.blanc {
+  color: #fff;
 }

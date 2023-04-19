@@ -8,22 +8,47 @@
   <div class="com-droite-gauche-content">
 
     <div class="com-part-gauche">
-      <% @commentaires.each_with_index do |commentaire, index| %>
-        <div class="com-all-one-w-rep">
-          <div class="com-part-gauche-com-seul <%= index.even? ? 'com-bg-red' : 'com-bg-grey' %>">
-            <p> <strong><span class="com-nom"><%= commentaire.prenom.capitalize %>:</span></strong></p>
-            <p class="com-text"> <%= commentaire.text.capitalize %> </p>
-            <div class="com-date"></div>
-          </div>
-          <% if commentaire.reponse.present? %>
-            <div class="com-part-gauche-com-rep-seul">
-              <div class="com-rep-nom">
-                <p class="com-admin"><strong>Planète Alfa</strong></p>
-              </div>
-              <p> <%= commentaire.reponse.capitalize %></p>
+      <% if @commentaires.present? %>
+        <% @commentaires.each_with_index do |commentaire, index| %>
+          <div class="com-all-one-w-rep">
+            <div class="com-part-gauche-com-seul <%= index.even? ? 'com-bg-red' : 'com-bg-grey' %>">
+              <p> <strong><span class="com-nom"><%= commentaire.prenom.capitalize %>:</span></strong></p>
+              <p class="com-text"> <%= commentaire.text.capitalize %> </p>
+              <div class="com-date"></div>
             </div>
-          <% end %>
+            <% if commentaire.reponse.present? %>
+              <div class="com-part-gauche-com-rep-seul">
+                <div class="com-rep-nom">
+                  <p class="com-admin"><strong>Planète Alfa</strong></p>
+                </div>
+                <p> <%= commentaire.reponse.capitalize %></p>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+
+      <% else %>
+
+        <% if @commentaire.errors.any? %>
+        <div class="com-error blanc">
+          <p><strong>Le formulaire contient des erreurs :</strong></p>
+          <ul>
+            <% @commentaire.errors.full_messages_for(:nom).each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            <% @commentaire.errors.full_messages_for(:prenom).each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            <% @commentaire.errors.full_messages_for(:email).each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            <% @commentaire.errors.full_messages_for(:text).each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
         </div>
+      <% end %>
+
       <% end %>
     </div>
 
@@ -42,6 +67,30 @@
           <%= f.submit "Publier"%>
         </div>
       <% end %>
+
+      <% if @commentaire.errors.any? %>
+        <div class="com-error">
+          <p><strong>Le formulaire contient des erreurs :</strong></p>
+          <ul>
+            <% @commentaire.errors.full_messages_for(:nom).each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            <% @commentaire.errors.full_messages_for(:prenom).each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            <% @commentaire.errors.full_messages_for(:email).each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            <% @commentaire.errors.full_messages_for(:text).each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+
+
+
     </div>
 
   </div>
