@@ -12,9 +12,9 @@
 
 .index-card {
   background-color: $blanc;
-  width: 282px;
+  width: 280px;
   border-radius: 8px;
-  border: 1px solid $grisc;
+  // border: 1px solid $grisc;
   margin: 20px 10px;
   transition: transform 0.3s ease;
 
@@ -22,14 +22,19 @@
 
 .index-card-stacy {
   background-color: $blanc;
-  width: 282px;
+  width: 280px;
   border-radius: 8px;
-  border: 1px solid $grisc;
+  // border: 1px solid $grisc;
   margin: 20px 10px;
 }
 
 .index-card:hover {
   transform: scale(1.05);
+}
+
+.index-card-titre {
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .index-card p {

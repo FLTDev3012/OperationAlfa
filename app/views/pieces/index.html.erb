@@ -17,7 +17,7 @@
               ...
             <% end %>
           </p>
-          <p class="piece-prix"> <%= piece.prix %> €</p>
+          <p class="piece-prix"> <%= sprintf("%.2f", piece.prix) %> €</p>
           <div class="index-card-btn little-font">
             <p>Détail</p>
           </div>
