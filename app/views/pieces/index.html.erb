@@ -11,7 +11,12 @@
         <div class="piece-card">
           <%= cl_image_tag piece.photo.key, height: 200, width: 280, crop: :fill, class: "index-img piece-margin-b" %>
           <p> <%= piece.nom %> </p>
-          <p class="piece-descrip"> <%= piece.description %> </p>
+          <p class="piece-descrip">
+            <%= piece.description.slice(0, 97) %>
+            <% if piece.description.length > 97 %>
+              ...
+            <% end %>
+          </p>
           <p class="piece-prix"> <%= piece.prix %> €</p>
           <div class="index-card-btn little-font">
             <p>Détail</p>

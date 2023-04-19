@@ -72,7 +72,7 @@
             <% end %>
             <%= cl_image_tag piece.photo.key, height: 40, width: 60, crop: :fill, class: "dash-img" %>
             <%= link_to "#{piece.nom}", piece_path(piece), class: "deco-none dash-nom" %>
-            <%= piece.description %>
+            <%= piece.description.slice(0, 50) %>
             <%= piece.prix %>
           </div>
 
