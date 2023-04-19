@@ -138,7 +138,7 @@ piece1.save
 
 
 file = URI.open("https://dam-media.mister-auto.com/gates/kit-de-distribution-pompe-a-eau/kp15503xs-2/624x390/033KP15503XS-2-14-5.JPG")
-piece2 = Piece.create(nom: "Piece2", description: "Magnifique piece...", prix: 45)
+piece2 = Piece.create(nom: "Piece2", description: "Magnifique piece blabla blablabla blabla blablabla blabla blablabla blabla blablabla blabla blablabla blabla blablabla blabla blablabla blabla blablabla", prix: 45)
 piece2.photo.attach(io: file, filename: "p2.png", content_type: "image/png")
 piece2.save
 
