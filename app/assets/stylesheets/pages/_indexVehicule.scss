@@ -1,7 +1,13 @@
 .index-container {
   background-color: $grisf;
   min-height: 80vh;
-  padding-top: 10vh;
+}
+
+.index-titre {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+  color: #fff;
 }
 
 .index-card {

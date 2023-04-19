@@ -257,10 +257,10 @@
 	font-size: 16px;
 
 	display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    background-color: $grisc;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  background-color: $grisf;
 }
 
 // Carousel configuration parameters
@@ -342,7 +342,7 @@ $apothem: 723.842712474619px;
 
 			cursor: pointer;
 
-			color: #333;
+			color: #ffffff;
 			background: none;
 			border: 1px solid;
 			letter-spacing: 1px;
