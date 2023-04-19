@@ -31,7 +31,7 @@
             <p><%= vehicule.enregistrement %></p>
             <p><%= vehicule.boite %></p>
             <p><%= vehicule.taille %> ltr</p>
-            <p><%= vehicule.kilometrage %> kms</p>
+            <p><%= sprintf("%.2f", vehicule.kilometrage) %> kms</p>
 
 
           </div>

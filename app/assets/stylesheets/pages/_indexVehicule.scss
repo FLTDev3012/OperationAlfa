@@ -59,17 +59,20 @@ a.link-card {
 .index-card-tag {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .index-card-tag p{
   font-size: 12px;
-  margin: 0 4px;
+  margin: 0 3px;
   align-items: center;
   padding-left: 0;
   border-radius: 50px;
   border: 2px solid $grisc;
   padding: 0 3px;
+  background-color: $grisf;
+  color: #fff;
+
 }
 
 .index-card-btn {
