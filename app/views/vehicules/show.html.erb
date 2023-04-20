@@ -1,7 +1,35 @@
-<h1>Show de la voiture </h1>
+<div class="vshow-container">
 
-<p><%= @vehicule.marque %></p>
-<p><%= @vehicule.modele %></p>
-<%= cl_image_tag @vehicule.photo.key, height: 200, width: 280, crop: :fill %>
+  <div class="vshow-titre">
+    <h1>Show de la voiture </h1>
+  </div>
 
-<p><%= link_to "revoir tout les vehicules", vehicules_path %></p>
+  <div class="vshow-droite-gauche">
+
+    <div class="vshow-gauche">
+      <%= cl_image_tag @vehicule.photo.key, height: 200, width: 280, crop: :fill %>
+      <p>prix: <%= @vehicule.prix %></p>
+      <p><%= link_to "revoir tout les vehicules", vehicules_path %></p>
+    </div>
+
+    <div class="vshow-droite">
+      <p>Marque: <%= @vehicule.marque %></p>
+      <p>Modele: <%= @vehicule.modele %></p>
+      <p>Boite: <%= @vehicule.boite %></p>
+      <p>Carburant: <%= @vehicule.carburant %></p>
+      <p>Kilometrage: <%= sprintf("%.2f", @vehicule.kilometrage) %> km</p>
+      <p>Enregistrement: <%= @vehicule.enregistrement %></p>
+      <p>Puissance ch: <%= @vehicule.puissancech %> ch</p>
+      <p>Puissance cv: <%= @vehicule.puissancecv %> cv</p>
+      <p>Taille: <%= @vehicule.taille %> L</p>
+      <p>Couleur: <%= @vehicule.couleur %></p>
+      <p>Carrosserie: <%= @vehicule.carrosserie %></p>
+      <p>Ancien proprietaires: <%= @vehicule.proprietaires %></p>
+      <p><%= @vehicule.dioxy %> g de CO2 / km</p>
+      <p>Portes: <%= @vehicule.portes %></p>
+      <p>Places: <%= @vehicule.places %></p>
+    </div>
+
+  </div>
+
+</div>
