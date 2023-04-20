@@ -1,7 +1,21 @@
-<h1>Show de la voiture </h1>
+<div class="vshow-container">
 
-<p><%= @vehicule.marque %></p>
-<p><%= @vehicule.modele %></p>
-<%= cl_image_tag @vehicule.photo.key, height: 200, width: 280, crop: :fill %>
+  <div class="vshow-titre">
+    <h1>Show de la voiture </h1>
+  </div>
 
-<p><%= link_to "revoir tout les vehicules", vehicules_path %></p>
+  <div class="vshow-droite-gauche">
+
+    <div class="vshow-gauche">
+      <%= cl_image_tag @vehicule.photo.key, height: 200, width: 280, crop: :fill %>
+      <p><%= link_to "revoir tout les vehicules", vehicules_path %></p>
+    </div>
+
+    <div class="vshow-droite">
+      <p><%= @vehicule.marque %></p>
+      <p><%= @vehicule.modele %></p>
+    </div>
+
+  </div>
+
+</div>

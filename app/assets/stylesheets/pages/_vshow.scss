@@ -1,0 +1,23 @@
+.vshow-container {
+  background-color: $grisf;
+  min-height: 80vh;
+}
+
+.vshow-titre {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.vshow-droite-gauche {
+  display: flex;
+}
+
+.vshow-gauche {
+width: 50%;
+}
+
+.vshow-droite {
+width: 50%;
+}
