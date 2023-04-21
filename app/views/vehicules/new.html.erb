@@ -2,7 +2,20 @@
 <%= simple_form_for @vehicule do |f| %>
   <%= f.input :marque, placeholder: 'Marque' %>
   <%= f.input :modele, placeholder: 'Modele' %>
-  <%= f.input :photo, as: :file %>
+  <%= f.collection_select :boite, ['Manuelle', 'Automatique'], :to_s, :titleize, { prompt: 'Sélectionner un carburant' } %>
+  <%= f.collection_select :carburant, ['Essence', 'Diesel'], :to_s, :titleize, { prompt: 'Sélectionner un carburant' } %>
   <%= f.input :kilometrage, placeholder: 'Kilometrage' %>
+  <%= f.input :enregistrement, placeholder: 'enregistrement' %>
+  <%= f.input :puissancech, placeholder: 'puissancech' %>
+  <%= f.input :puissancecv, placeholder: 'puissancecv' %>
+  <%= f.input :taille, placeholder: 'taille' %>
+  <%= f.input :couleur, placeholder: 'couleur' %>
+  <%= f.input :prix, placeholder: 'Prix' %>
+  <%= f.collection_select :carrosserie, ['Break', 'Familialle'], :to_s, :titleize, { prompt: 'Sélectionner la carrosserie' } %>
+  <%= f.input :proprietaires, placeholder: 'proprietaires' %>
+  <%= f.input :dioxy, placeholder: 'dioxy' %>
+  <%= f.input :portes, placeholder: 'portes' %>
+  <%= f.input :places, placeholder: 'places' %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>

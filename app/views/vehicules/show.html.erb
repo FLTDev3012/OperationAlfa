@@ -11,7 +11,7 @@
 
       <div class="vshow560">
         <div class="vshow-prix">
-          <p><%= @vehicule.prix %> €</p>
+          <p><%= sprintf("%.2f", @vehicule.prix) %> €</p>
         </div>
         <div class="vshow-back">
           <%= link_to vehicules_path, class: "deco-none" do %>
