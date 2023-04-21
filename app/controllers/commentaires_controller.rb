@@ -14,7 +14,7 @@ class CommentairesController < ApplicationController
       flash[:notice] = "Commentaire envoyé avec succès !"
       redirect_to commentaires_path
     else
-      flash[:notice] = "Erreur dans votre commentaire !"
+      flash[:alert] = "Erreur dans votre commentaire !"
 
       render :index, status: :unprocessable_entity
     end

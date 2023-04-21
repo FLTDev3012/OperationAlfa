@@ -7,27 +7,47 @@
   <div class="vshow-droite-gauche">
 
     <div class="vshow-gauche">
-      <%= cl_image_tag @vehicule.photo.key, height: 200, width: 280, crop: :fill %>
+      <%= cl_image_tag @vehicule.photo.key, height: 400, width: 560, crop: :fill %>
       <p>prix: <%= @vehicule.prix %></p>
       <p><%= link_to "revoir tout les vehicules", vehicules_path %></p>
     </div>
 
     <div class="vshow-droite">
-      <p>Marque: <%= @vehicule.marque %></p>
-      <p>Modele: <%= @vehicule.modele %></p>
-      <p>Boite: <%= @vehicule.boite %></p>
-      <p>Carburant: <%= @vehicule.carburant %></p>
-      <p>Kilometrage: <%= sprintf("%.2f", @vehicule.kilometrage) %> km</p>
-      <p>Enregistrement: <%= @vehicule.enregistrement %></p>
-      <p>Puissance ch: <%= @vehicule.puissancech %> ch</p>
-      <p>Puissance cv: <%= @vehicule.puissancecv %> cv</p>
-      <p>Taille: <%= @vehicule.taille %> L</p>
-      <p>Couleur: <%= @vehicule.couleur %></p>
-      <p>Carrosserie: <%= @vehicule.carrosserie %></p>
-      <p>Ancien proprietaires: <%= @vehicule.proprietaires %></p>
-      <p><%= @vehicule.dioxy %> g de CO2 / km</p>
-      <p>Portes: <%= @vehicule.portes %></p>
-      <p>Places: <%= @vehicule.places %></p>
+      <div class="vshow-box-droite">
+        <p><span class="vshow-span-tableau">Marque: </span></p>
+        <p><span class="vshow-span-tableau">Modele: </span></p>
+        <p><span class="vshow-span-tableau">Boite: </span></p>
+        <p><span class="vshow-span-tableau">Carburant: </span></p>
+        <p><span class="vshow-span-tableau">Kilometrage: </span></p>
+        <p><span class="vshow-span-tableau">Enregistrement: </span></p>
+        <p><span class="vshow-span-tableau">Puissance ch: </span></p>
+        <p><span class="vshow-span-tableau">Puissance cv: </span></p>
+        <p><span class="vshow-span-tableau">Taille: </span></p>
+        <p><span class="vshow-span-tableau">Couleur: </span></p>
+        <p><span class="vshow-span-tableau">Carrosserie: </span></p>
+        <p><span class="vshow-span-tableau">Ancien proprietaires: </span></p>
+        <p><span class="vshow-span-tableau"><%= @vehicule.dioxy %> </span></p>
+        <p><span class="vshow-span-tableau">Nombre de portes: </span></p>
+        <p><span class="vshow-span-tableau">Nombre de places: </span></p>
+      </div>
+
+      <div class="vshow-box-droite">
+        <p><%= @vehicule.marque %></p>
+        <p><%= @vehicule.modele %></p>
+        <p><%= @vehicule.boite %></p>
+        <p><%= @vehicule.carburant %></p>
+        <p><%= sprintf("%.2f", @vehicule.kilometrage) %> km</p>
+        <p><%= @vehicule.enregistrement %></p>
+        <p><%= @vehicule.puissancech %> ch</p>
+        <p><%= @vehicule.puissancecv %> cv</p>
+        <p><%= @vehicule.taille %> L</p>
+        <p><%= @vehicule.couleur %></p>
+        <p><%= @vehicule.carrosserie %></p>
+        <p><%= @vehicule.proprietaires %></p>
+        <p>g de CO2 / km</p>
+        <p><%= @vehicule.portes %></p>
+        <p><%= @vehicule.places %></p>
+      </div>
     </div>
 
   </div>
