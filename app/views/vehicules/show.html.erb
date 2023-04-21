@@ -14,7 +14,9 @@
           <p><%= @vehicule.prix %> €</p>
         </div>
         <div class="vshow-back">
-          <%= link_to "revoir tout les vehicules", vehicules_path %>
+          <%= link_to vehicules_path, class: "deco-none" do %>
+            <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i>
+          <% end %>
         </div>
       </div>
 
