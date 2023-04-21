@@ -1,6 +1,6 @@
 .vshow-container {
   background-color: $grisf;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 .vshow-titre {
@@ -8,6 +8,12 @@
   display: flex;
   justify-content: center;
   padding: 60px 0;
+}
+
+.vshow-titre h1 {
+  background-image: linear-gradient(180deg, #ffffffbd 0%, #ffffff 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* pour Safari */
 }
 
 .vshow-droite-gauche {
@@ -21,7 +27,71 @@
   align-items: center;
 }
 
+.vshow-gauche img{
+  border-radius: 5px;
+}
+
+.vshow-gauche p{
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.vshow560 {
+  width: 560px;
+}
+
+.vshow-gauche .vshow-prix {
+  color: #fff;
+  font-size: 2rem;
+  width: 100%;
+  display: flex;
+  text-align: end;
+  background-color: aqua;
+
+}
+
+.vshow-gauche .vshow-back {
+  background-color: #6d2321;
+  width: 100%;
+}
+
 .vshow-droite {
   color: #fff;
   width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.vshow-droite  .vshow-box-droite{
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  width: 40%;
+  font-weight: bold;
+
+}
+
+.vshow-droite  .vshow-box-droite span{
+  margin-left: 15px;
+}
+
+.vshow-droite p{
+  margin-bottom: 0;
+  background-color: #6d2321;
+  margin-bottom: 10px;
+}
+
+.vshow-droite p:nth-child(2n){
+  background-color: #9e1716;
+}
+
+// .vshow-droite p:hover{
+//   text-shadow: 2px 3px 3px $rouge;
+// }
+
+.vshow-span-tableau {
+  display: inline-block;
+  width: 200px;
 }
