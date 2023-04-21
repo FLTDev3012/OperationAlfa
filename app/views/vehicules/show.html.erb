@@ -8,8 +8,16 @@
 
     <div class="vshow-gauche">
       <%= cl_image_tag @vehicule.photo.key, height: 400, width: 560, crop: :fill %>
-      <p>prix: <%= @vehicule.prix %></p>
-      <p><%= link_to "revoir tout les vehicules", vehicules_path %></p>
+
+      <div class="vshow560">
+        <div class="vshow-prix">
+          <p><%= @vehicule.prix %> €</p>
+        </div>
+        <div class="vshow-back">
+          <%= link_to "revoir tout les vehicules", vehicules_path %>
+        </div>
+      </div>
+
     </div>
 
     <div class="vshow-droite">
