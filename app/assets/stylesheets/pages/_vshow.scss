@@ -46,11 +46,23 @@
   width: 100%;
   display: flex;
   text-align: end;
+  padding-top: 1rem;
 
 }
 
 .vshow-gauche .vshow-back {
   width: 100%;
+}
+
+.vshow-gauche .vshow-back i{
+  font-size: 2rem;
+  background-color:#6d2321;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.vshow-gauche .vshow-back i:hover{
+  background-color: #9e1716;
 }
 
 .vshow-droite {
