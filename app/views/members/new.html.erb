@@ -1,9 +1,19 @@
-<h1>ajoutez votre nouvel recrue</h1>
+<div class="form-container">
 
-<%= simple_form_for @member do |f| %>
-  <%= f.input :nom, placeholder: 'Nom' %>
-  <%= f.input :prenom, placeholder: 'Prenom' %>
-  <%= f.input :job, placeholder: 'Place dans l entreprise' %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+  <div class="form-titre">
+    <h1>ajoutez votre nouvel recrue</h1>
+  </div>
+
+  <div class="form-formulaire">
+    <%= simple_form_for @member do |f| %>
+      <%= f.input :nom, placeholder: 'Nom' %>
+      <%= f.input :prenom, placeholder: 'Prenom' %>
+      <%= f.input :job, placeholder: 'Place dans l entreprise' %>
+      <%= f.input :photo, as: :file %>
+      <div class="form-input">
+        <%= f.button :submit, value: 'Validation' %>
+      </div>
+    <% end %>
+  </div>
+
+</div>
