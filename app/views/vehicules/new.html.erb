@@ -1,21 +1,36 @@
-<h1>ajoutez votre vehicules</h1>
-<%= simple_form_for @vehicule do |f| %>
-  <%= f.input :marque, placeholder: 'Marque' %>
-  <%= f.input :modele, placeholder: 'Modele' %>
-  <%= f.collection_select :boite, ['Manuelle', 'Automatique'], :to_s, :titleize, { prompt: 'Sélectionner la boite' } %>
-  <%= f.collection_select :carburant, ['Essence', 'Diesel'], :to_s, :titleize, { prompt: 'Sélectionner un carburant' } %>
-  <%= f.input :kilometrage, placeholder: 'Kilometrage' %>
-  <%= f.input :enregistrement, placeholder: 'enregistrement' %>
-  <%= f.input :puissancech, placeholder: 'puissancech' %>
-  <%= f.input :puissancecv, placeholder: 'puissancecv' %>
-  <%= f.input :taille, placeholder: 'taille' %>
-  <%= f.input :couleur, placeholder: 'couleur' %>
-  <%= f.input :prix, placeholder: 'Prix' %>
-  <%= f.collection_select :carrosserie, ['Break', 'Familialle'], :to_s, :titleize, { prompt: 'Sélectionner la carrosserie' } %>
-  <%= f.input :proprietaires, placeholder: 'proprietaires' %>
-  <%= f.input :dioxy, placeholder: 'dioxy' %>
-  <%= f.input :portes, placeholder: 'portes' %>
-  <%= f.input :places, placeholder: 'places' %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+<div class="form-container">
+
+  <div class="form-titre">
+    <h1>Ajoutez votre vehicules</h1>
+  </div>
+
+  <div class="form-formulaire">
+    <%= simple_form_for @vehicule do |f| %>
+      <p>Marque *</p>
+      <%= f.collection_select :marque, ['Abarth', 'Alfa Romeo', "Fiat", "Ford", "Jeep", "Suzuki"], :to_s, :titleize, { prompt: 'Sélectionner la marque' } %>
+      <%= f.input :modele, placeholder: 'Modele' %>
+      <p>Boite *</p>
+      <%= f.collection_select :boite, ['Manuelle', 'Automatique'], :to_s, :titleize, { prompt: 'Sélectionner la boite' } %>
+      <p>Carburant *</p>
+      <%= f.collection_select :carburant, ['Essence', 'Diesel'], :to_s, :titleize, { prompt: 'Sélectionner un carburant' } %>
+      <%= f.input :kilometrage, placeholder: 'Kilometrage' %>
+      <%= f.input :enregistrement, placeholder: 'enregistrement' %>
+      <%= f.input :puissancech, placeholder: 'puissancech' %>
+      <%= f.input :puissancecv, placeholder: 'puissancecv' %>
+      <%= f.input :taille, placeholder: 'taille' %>
+      <%= f.input :couleur, placeholder: 'couleur' %>
+      <%= f.input :prix, placeholder: 'Prix' %>
+      <p>Carrosserie *</p>
+      <%= f.collection_select :carrosserie, ['Break', 'Familialle'], :to_s, :titleize, { prompt: 'Sélectionner la carrosserie' } %>
+      <%= f.input :proprietaires, placeholder: 'proprietaires' %>
+      <%= f.input :dioxy, placeholder: 'dioxy' %>
+      <%= f.input :portes, placeholder: 'portes' %>
+      <%= f.input :places, placeholder: 'places' %>
+      <%= f.input :photo, as: :file %>
+      <div class="form-input">
+        <%= f.button :submit, value: 'Validation' %>
+      </div>
+    <% end %>
+  </div>
+
+</div>

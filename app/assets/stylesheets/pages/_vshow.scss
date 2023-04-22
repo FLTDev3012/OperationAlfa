@@ -29,11 +29,12 @@
 
 .vshow-gauche img{
   border-radius: 5px;
+  box-shadow: 2px 2px 5px #0C0C0C;
+
 }
 
 .vshow-gauche p{
   margin-bottom: 0;
-  width: 100%;
 }
 
 .vshow560 {
@@ -43,11 +44,14 @@
 .vshow-gauche .vshow-prix {
   color: #fff;
   font-size: 2rem;
-  width: 100%;
-  display: flex;
   text-align: end;
   padding-top: 1rem;
 
+}
+
+.vshow-gauche .vshow-prix p{
+
+  color: $grisc;
 }
 
 .vshow-gauche .vshow-back {
@@ -85,6 +89,7 @@
 
 .vshow-droite  .vshow-box-droite span{
   margin-left: 15px;
+
 }
 
 .vshow-droite p{
@@ -104,4 +109,5 @@
 .vshow-span-tableau {
   display: inline-block;
   width: 200px;
+
 }
