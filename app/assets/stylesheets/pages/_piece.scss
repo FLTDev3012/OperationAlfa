@@ -36,12 +36,13 @@
 
 .piece-card p {
   text-align: center;
-  color: #fff;
-  text-shadow: 2px 3px 3px $grisf;
   font-size: 22px;
-
+  color: #0C0C0C;
 
 }
+
+
+
 
 .piece-card .piece-descrip {
   font-size: 18px;
@@ -64,4 +65,14 @@ a.link-card {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.index-card-btn p {
+  color: #fff;
+}
+
+.piece-prix {
+  display: flex;
+  justify-content: end;
+  margin-right: 10%;
 }
