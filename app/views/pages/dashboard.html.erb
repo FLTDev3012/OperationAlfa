@@ -104,11 +104,11 @@
       <div class="dash-commentaire-content">
 
         <% @commentaires.each do |commentaire| %>
-          <br><br><br>
           <div class="one-com">
-            <p>Nom: <%= commentaire.nom %> <%= commentaire.prenom %></p>
-
-            <p>Email: <%= commentaire.email %> </p>
+            <div class="dash-com-client-address">
+              <p><%= commentaire.nom %> <%= commentaire.prenom %></p>
+              <p><%= commentaire.email %> </p>
+            </div>
 
             <p>Text: <%= commentaire.text.slice(0, 90) %><% if commentaire.text.length > 90 %>...<% end %></p>
 
@@ -118,15 +118,24 @@
               <p class="dash-no-rep">Aucune reponse</p>
             <% end %>
 
+            <div class="dash-com-date">
+              <p>Date: <%= commentaire.created_at %> </p>
+            </div>
 
-            <p>Date: <%= commentaire.created_at %> </p>
+            <div class="dash-com-fav">
+              <div>
+                <%= link_to edit_commentaire_path(commentaire), class: "deco-none dash-modif" do %>
+                  <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+                <% end %>
+              </div>
+              <div>
+                <%= link_to commentaire_path(commentaire), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" }, class: "deco-none dash-corbeille" do %>
+                  <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
+                <% end %>
+              </div>
+            </div>
 
-            <%= link_to commentaire_path(commentaire), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" }, class: "deco-none dash-corbeille" do %>
-              <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
-            <% end %>
-            <%= link_to edit_commentaire_path(commentaire), class: "deco-none dash-modif" do %>
-              <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
-            <% end %>
+
           </div>
 
 

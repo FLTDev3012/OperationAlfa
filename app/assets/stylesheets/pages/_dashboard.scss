@@ -197,17 +197,31 @@
 // commentaires
 
 .dash-commentaire-content {
-  background-color: pink;
   color: #fff;
 }
 
 .one-com {
   background-color: $grisf;
-  padding: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .one-com p{
   margin-bottom: 0;
+}
+
+.dash-com-client-address {
+ display: flex;
+ justify-content: space-between;
+ margin-bottom: 10px;
+}
+
+.dash-com-date {
+  display: flex;
+  justify-content: end;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .dash-all-vehicule-content {
@@ -228,8 +242,20 @@
 
 .dash-yes-rep {
   color: forestgreen;
+  margin-top: 10px;
+  margin-bottom: 5px;
+
 }
 
 .dash-no-rep {
   color: $rouge;
+  margin-top: 10px;
+  margin-bottom: 5px;
+
+
+}
+
+.dash-com-fav {
+  display: flex;
+  justify-content: space-between;
 }
