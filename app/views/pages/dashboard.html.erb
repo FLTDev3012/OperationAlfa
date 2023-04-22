@@ -13,7 +13,9 @@
 
   <div class="dash-title">
 
-
+    <div class="dash-titre-categ">
+      <h3>Véhicules</h3>
+    </div>
     <div class="dash-titre-bas">
       <%= link_to "Ajouter +", new_vehicule_path, class: "dash-add-btn" %>
       <h6> <%= Vehicule.count %> articles en vente</h6>
@@ -54,7 +56,9 @@
   <!-- pieces -->
 
   <div class="dash-title">
-
+    <div class="dash-titre-categ">
+      <h3>Pièces</h3>
+    </div>
     <div class="dash-titre-bas">
       <%= link_to "Ajouter +", new_piece_path, class: "dash-add-btn" %>
       <h6> <%= Piece.count %> pieces en vente</h6>
@@ -91,8 +95,11 @@
   <!-- commentaires -->
 
   <div class="dash-title">
-
+    <div class="dash-titre-categ">
+      <h3>commentaires</h3>
+    </div>
     <div class="dash-titre-bas">
+      <p> </p>
       <h6> <%= Commentaire.count %> commentaires sur le site</h6>
     </div>
 
@@ -149,6 +156,9 @@
 
   <div class="dash-title">
 
+    <div class="dash-titre-categ">
+      <h3>Team</h3>
+    </div>
     <div class="dash-titre-bas">
       <%= link_to "Ajouter +", new_member_path, class: "dash-add-btn" %>
       <h6> <%= Member.count %> personnes dans l'équipe</h6>
