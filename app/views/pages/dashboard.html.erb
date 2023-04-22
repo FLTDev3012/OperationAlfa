@@ -107,9 +107,18 @@
           <br><br><br>
           <div class="one-com">
             <p>Nom: <%= commentaire.nom %> <%= commentaire.prenom %></p>
-            <p>Text: <%= commentaire.text %> </p>
+
             <p>Email: <%= commentaire.email %> </p>
-            <p>Reponse: <%= commentaire.reponse %> </p>
+
+            <p>Text: <%= commentaire.text.slice(0, 90) %><% if commentaire.text.length > 90 %>...<% end %></p>
+
+            <% if commentaire.reponse.present? %>
+              <p class="dash-yes-rep">Reponse: <%= commentaire.reponse.slice(0, 85) %><% if commentaire.reponse.length > 85 %>...<% end %></p>
+            <% else %>
+              <p class="dash-no-rep">Aucune reponse</p>
+            <% end %>
+
+
             <p>Date: <%= commentaire.created_at %> </p>
 
             <%= link_to commentaire_path(commentaire), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" }, class: "deco-none dash-corbeille" do %>

@@ -203,6 +203,11 @@
 
 .one-com {
   background-color: $grisf;
+  padding: 10px;
+}
+
+.one-com p{
+  margin-bottom: 0;
 }
 
 .dash-all-vehicule-content {
@@ -218,4 +223,13 @@
   flex-direction: column;
   border: 5px solid #2c3230;
   border-radius: 5px;
+}
+
+
+.dash-yes-rep {
+  color: forestgreen;
+}
+
+.dash-no-rep {
+  color: $rouge;
 }
