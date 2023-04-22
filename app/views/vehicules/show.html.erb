@@ -7,7 +7,12 @@
   <div class="vshow-droite-gauche">
 
     <div class="vshow-gauche">
-      <%= cl_image_tag @vehicule.photo.key, height: 400, width: 560, crop: :fill %>
+
+      <% if @vehicule.photo.present? %>
+        <%= cl_image_tag @vehicule.photo.key, height: 400, width: 560, crop: :fill %>
+      <% else %>
+        <p>Image non disponible</p>
+      <% end %>
 
       <div class="vshow560">
         <div class="vshow-prix">

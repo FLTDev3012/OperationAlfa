@@ -35,7 +35,11 @@
             <%= link_to edit_vehicule_path(vehicule), class: "deco-none dash-modif" do %>
               <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
             <% end %>
-            <%= cl_image_tag vehicule.photo.key, height: 40, width: 60, crop: :fill, class: "dash-img" %>
+            <% if vehicule.photo.present? %>
+              <%= cl_image_tag vehicule.photo.key, height: 40, width: 60, crop: :fill, class: "dash-img" %>
+            <% else %>
+              <p>Sans Image </p>
+            <% end %>
             <%= link_to "#{vehicule.marque} #{vehicule.modele}", vehicule_path(vehicule), class: "deco-none dash-nom" %>
           </div>
 
