@@ -18,7 +18,7 @@
 
 
 .piece-card {
-  background-color: $grisc;
+  background-color: #fff;
   width: 280px;
   border-radius: 8px;
   margin: 20px 10px;
@@ -75,4 +75,26 @@ a.link-card {
   display: flex;
   justify-content: end;
   margin-right: 10%;
+}
+
+.piece-banner-info-content {
+  display: flex;
+  justify-content: start;
+  margin-left: 110px;
+  translate: 0 -20px;
+}
+
+.piece-info-banner {
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+  background-color: #5cb85c;
+  border: 2px solid #ffffff;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.piece-info-banner h6{
+  margin-bottom: 0;
+  color: #fff;
 }

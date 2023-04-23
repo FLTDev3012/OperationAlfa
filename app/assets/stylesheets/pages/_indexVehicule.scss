@@ -29,6 +29,12 @@
 
 }
 
+.index-card:hover {
+  transform: scale(1.05);
+
+
+}
+
 .index-card-stacy {
   background-color: $blanc;
   width: 280px;
@@ -37,9 +43,7 @@
   margin: 20px 10px;
 }
 
-.index-card:hover {
-  transform: scale(1.05);
-}
+
 
 .index-card-prix {
   display: flex;
