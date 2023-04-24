@@ -8,7 +8,6 @@
 
 require "open-uri"
 
-
 User.destroy_all
 p "------  user destroy ----------"
 
