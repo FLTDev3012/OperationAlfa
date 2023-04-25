@@ -1,5 +1,5 @@
 .dash-content {
-  background-color: $grisc;
+  background-color: $grisf;
   padding: 30px 0 200px 0;
 }
 
@@ -27,18 +27,18 @@
 .dash-titre-haut h1{
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
-  color: $grisf;
-  text-shadow: #FFF 0px 0px 5px;
+  color: #fff;
+  text-shadow: $grisc 0px 0px 5px;
 
 }
 
 .dash-titre-categ {
-  color: $grisf;
+  color: #fff;
   margin-top: 50px;
 }
 
 .dash-titre-categ h3{
-  text-shadow: #FFF 0px 0px 5px;
+  // text-shadow: $grisc 0px 0px 5px;
 }
 
 
@@ -54,7 +54,7 @@
 
 .dash-titre-bas h6{
   color: #e6e6e6;
-  text-shadow: #1c1c1c 0px 0px 5px;
+  text-shadow: $grisc 0px 0px 5px;
 }
 
 .dash-title a{
@@ -75,7 +75,7 @@
   width: 60%;
   display: flex;
   flex-direction: column;
-  border: 5px solid #2c3230;
+  border: 5px solid $grisc !important;
   border-radius: 5px;
 }
 
@@ -159,7 +159,7 @@
 
 
 .dash-croix:hover {
-  background-color: $grisf;
+  background-color: $grisc;
   color: #fff;
 
 }
@@ -172,7 +172,7 @@
 }
 
 .dash-modif:hover {
-  //background-color: $grisf;
+  //background-color: $grisc;
   //color: #fff;
 }
 
@@ -203,6 +203,26 @@
   background-color: #5cb85c;
 }
 
+// piece
+
+.dash-piece-nom {
+  margin-right: 10px;
+}
+
+.dash-piece-desc {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.dash-piece-prix {
+  color: #fff;
+}
+
+.dash-member-name {
+  color: #fff;
+  margin-left: 50px;
+}
+
 
 // commentaires
 
@@ -211,7 +231,7 @@
 }
 
 .one-com {
-  background-color: $grisf;
+  background-color: $grisc;
   padding: 20px;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -231,7 +251,8 @@
   display: flex;
   justify-content: end;
   font-size: 0.75rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .dash-all-vehicule-content {

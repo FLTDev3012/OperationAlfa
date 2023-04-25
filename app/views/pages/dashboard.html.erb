@@ -79,9 +79,15 @@
               <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
             <% end %>
             <%= cl_image_tag piece.photo.key, height: 40, width: 60, crop: :fill, class: "dash-img" %>
-            <%= link_to "#{piece.nom}", piece_path(piece), class: "deco-none dash-nom" %>
-            <%= piece.description.slice(0, 50) %>
-            <%= piece.prix %>
+            <div class="dash-piece-nom">
+              <%= link_to "#{piece.nom}", piece_path(piece), class: "deco-none dash-nom" %>
+            </div>
+            <div class="dash-piece-desc">
+              <%= piece.description.slice(0, 50) %>
+            </div>
+            <div class="dash-piece-prix">
+              <%= piece.prix %>
+            </div>
           </div>
 
 
@@ -113,7 +119,7 @@
         <% @commentaires.each do |commentaire| %>
           <div class="one-com">
             <div class="dash-com-client-address">
-              <p><%= commentaire.nom %> <%= commentaire.prenom %></p>
+              <p><strong><%= commentaire.nom %> <%= commentaire.prenom %></strong></p>
               <p><%= commentaire.email %> </p>
             </div>
 
@@ -126,7 +132,7 @@
             <% end %>
 
             <div class="dash-com-date">
-              <p>Date: <%= commentaire.created_at %> </p>
+              <p>Date: <%= commentaire.created_at.strftime("%d/%m/%Y") %> </p>
             </div>
 
             <div class="dash-com-fav">
@@ -181,7 +187,9 @@
               <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
             <% end %>
             <%= cl_image_tag member.photo.key, height: 40, width: 60, crop: :fill, class: "dash-img" %>
-            <p> <%= member.nom %> <%= member.prenom %> </p>
+            <div class="dash-member-name">
+              <%= member.nom %> <%= member.prenom %>
+            </div>
           </div>
 
 
