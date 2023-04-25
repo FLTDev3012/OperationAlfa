@@ -4,6 +4,8 @@
   <%= f.input :nom, placeholder: 'Nom' %>
   <%= f.input :prenom, placeholder: 'Prenom' %>
   <%= f.input :job, placeholder: 'Place dans l entreprise' %>
+  <p>Description (150 caractéres max)</p>
+  <%= f.text_area :description, placeholder: 'Description', class: "com-textarea" %>
   <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>
