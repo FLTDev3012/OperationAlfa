@@ -151,27 +151,27 @@ piece3.save
 p "------ #{Piece.count} piece created ----------"
 
 file = URI.open("https://t3.ftcdn.net/jpg/02/00/90/24/360_F_200902415_G4eZ9Ok3Ypd4SZZKjc8nqJyFVp1eOD6V.jpg")
-member1 = Member.create(nom: "Dujardin", prenom: "Jean", job: "Directeur")
+member1 = Member.create(nom: "Dujardin", prenom: "Jean", job: "Directeur", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.")
 member1.photo.attach(io: file, filename: "m1.png", content_type: "image/png")
 member1.save
 
 file = URI.open("https://media.npr.org/assets/img/2022/11/08/ap22312071681283-0d9c328f69a7c7f15320e8750d6ea447532dff66.jpg")
-member2 = Member.create(nom: "yun", prenom: "zing", job: "Mécanicien")
+member2 = Member.create(nom: "yun", prenom: "zing", job: "Mécanicien", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.")
 member2.photo.attach(io: file, filename: "m2.png", content_type: "image/png")
 member2.save
 
 file = URI.open("https://i.insider.com/5cb8b133b8342c1b45130629?width=700")
-member3 = Member.create(nom: "Barthez", prenom: "Fabien", job: "Mécanicienne")
+member3 = Member.create(nom: "Barthez", prenom: "Fabien", job: "Mécanicienne", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.")
 member3.photo.attach(io: file, filename: "m3.png", content_type: "image/png")
 member3.save
 
 file = URI.open("https://img.freepik.com/free-photo/young-man-with-beard-round-glasses_273609-5867.jpg")
-member4 = Member.create(nom: "Rocher", prenom: "Yves", job: "exemple")
+member4 = Member.create(nom: "Rocher", prenom: "Yves", job: "exemple", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.")
 member4.photo.attach(io: file, filename: "m4.png", content_type: "image/png")
 member4.save
 
 file = URI.open("https://cdn.pixabay.com/photo/2018/08/28/13/29/avatar-3637561_1280.png")
-member5 = Member.create(nom: "Iop", prenom: "Feu", job: "exemple")
+member5 = Member.create(nom: "Iop", prenom: "Feu", job: "exemple", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. blafkds gg xdxkk  drdyhs ytgiugf yyftdf")
 member5.photo.attach(io: file, filename: "m5.png", content_type: "image/png")
 member5.save
 p "------ #{Member.count} member created ----------"
