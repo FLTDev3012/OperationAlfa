@@ -13,6 +13,9 @@
 
 }
 
+.blacknav-container h4{
+  font-size: 1.2rem;
+}
 
 .blacknav-container p{
   margin-bottom: 0;
@@ -43,11 +46,12 @@
 }
 
 .nvrainav-container a:hover {
-  color: $rouge;
   translate: 0px -5px;
   transition: 0.3s;
+  text-shadow: #A7A7A7 0px 0px 5px;
 }
 
 .nvrainav-container a.active {
   color: $rouge;
+  text-shadow: none;
 }
