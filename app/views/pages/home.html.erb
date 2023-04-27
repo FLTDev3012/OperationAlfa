@@ -62,3 +62,16 @@
   </div>
 
 </div>
+
+
+<script>
+  const firstDiv = document.querySelector('.hero-video');
+  const secondDiv = document.querySelector('.carrou-body');
+
+  firstDiv.addEventListener('wheel', (event) => {
+    if (event.deltaY > 0) {
+      event.preventDefault();
+      secondDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+</script>
