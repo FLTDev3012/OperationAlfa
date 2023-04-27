@@ -43,17 +43,19 @@
   <div class="carrou-container">
 
     <% @vehicules.each do |vehicule| %>
-      <div class="carrou-card">
-      <h3 class="carrou-title"><%= vehicule.marque %></h3>
-      <h5 class="carrou-subtitle"><%= vehicule.modele %></h5>
-      <div class="carrou-bar">
-        <div class="carrou-emptybar"></div>
-        <div class="carrou-filledbar"></div>
-      </div>
-      <div class="carrou-circle">
-        <%= cl_image_tag vehicule.photo.key, height: 100, width: 140, crop: :fill, class: "carrou-img" %>
-      </div>
-    </div>
+      <%= link_to vehicule_path(vehicule), class:"carrou-card" do%>
+
+          <h3 class="carrou-title"><%= vehicule.marque %></h3>
+          <h5 class="carrou-subtitle"><%= vehicule.modele %></h5>
+          <div class="carrou-bar">
+            <div class="carrou-emptybar"></div>
+            <div class="carrou-filledbar"></div>
+          </div>
+          <div class="carrou-circle">
+            <%= cl_image_tag vehicule.photo.key, height: 100, width: 140, crop: :fill, class: "carrou-img" %>
+          </div>
+
+      <% end %>
     <% end %>
 
 
