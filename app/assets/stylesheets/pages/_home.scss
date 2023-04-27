@@ -78,10 +78,23 @@
 .text-sur-video h1 {
   font-size: 5rem;
   font-weight: 600;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation:  apparition 0.6s 0.8s ease-out forwards;
+}
+
+@keyframes apparition {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .text-sur-video h2 {
   font-size: 4rem;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation:  apparition 0.4s 1.2s ease-out forwards;
 }
 
 // cheveron
