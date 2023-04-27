@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
 
   def home
-    @vehicules = Vehicule.order(:marque).first(8)
+    @vehicules = Vehicule.order(:marque).first(5)
   end
 
   def dashboard
