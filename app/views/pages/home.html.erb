@@ -3,6 +3,8 @@
 
   <div class="hero-video">
     <%= video_tag "mainvideo.mp4", type: "video/mp4", autoplay: true, controls: true, loop: true, muted: true, id: "home-videoo", preload: "auto", playsinline: true %>
+    <div class="home-gray-bar">
+    </div>
   </div>
 
 <% else %>
@@ -12,150 +14,15 @@
 <% end %>
 
 
-<!--
-<div class="home-carrou">
-
-
-  <div class="home-carrou-title">
-    <h2>Nos dernières arrivées! 🔑</h2>
-  </div>
-
-  <section>
-    <div class="container">
-        <div class="carousel">
-
-          <% @vehicules.each do |vehicule| %>
-            <input type="radio" name="slides" id="slide-<%= vehicule.id %>" <%= 'checked="checked"' if vehicule == @vehicules.first %>>
-          <% end %>
-
-            <ul class="carousel__slides">
-
-                <% @vehicules.each do |vehicule| %>
-
-                  <li class="carousel__slide">
-                      <figure>
-                          <div>
-                              <%= cl_image_tag vehicule.photo.key, crop: :fill %>
-                          </div>
-                          <figcaption>
-                              <p> <%= vehicule.marque %> </p>
-                              <span class="credit"><%= vehicule.modele %></span>
-                              <%= link_to "Voir +", vehicule_path(vehicule) %>
-                          </figcaption>
-                      </figure>
-                  </li>
-
-                <% end %>
-
-            </ul>
-
-
-            <ul class="carousel__thumbnails">
-              <% @vehicules.each do |vehicule| %>
-                <li>
-                  <label for="slide-<%= vehicule.id %>"><%= cl_image_tag vehicule.photo.key, crop: :fill, width: 150, height: 150 %></label>
-                </li>
-              <% end %>
-            </ul>
-
-        </div>
-    </div>
-  </section>
-
-
-</div>
-
- -->
 
 
 
-<script>
-
-  function autoClick() {
-  var thumbnails = document.querySelectorAll('.carousel__thumbnails li label');
-  var index = 0;
-
-
-  setInterval(function() {
-    thumbnails[index].click();
-    index++;
-
-    if (index >= thumbnails.length) {
-      index = 0;
-    }
-  }, 3000);
-}
-
-window.onload = autoClick;
-
-
-
-</script>
 
 
 
 
 <!-- test carrou -->
 <div class="carrou-body">
-  <div class="carousel">
-    <figure>
-      <% @vehicules.each_with_index do |vehicule, index| %>
-        <%= cl_image_tag vehicule.photo.key, crop: :fill %>
-      <% end %>
-    </figure>
-    <nav>
-      <button class="nav prev">Prev</button>
-      <button class="nav next">Next</button>
-    </nav>
-  </div>
 
-  <div>
-    <% @vehicules.each_with_index do |vehicule, index| %>
-      <%= vehicule.id %>
-    <% end %>
-  </div>
 
 </div>
-
-
-
-
-
-
-
-<script>
-  var
-    carousel = document.querySelector('.carousel'),
-    figure = carousel.querySelector('figure'),
-    nav = carousel.querySelector('nav'),
-    numImages = figure.childElementCount,
-    theta =  2 * Math.PI / numImages,
-    currImage = 0
-  ;
-
-  nav.addEventListener('click', onClick, true);
-
-  function onClick(e) {
-    e.stopPropagation();
-
-    var t = e.target;
-    if (t.tagName.toUpperCase() != 'BUTTON')
-      return;
-
-    if (t.classList.contains('next')) {
-      currImage++;
-    }
-    else {
-      currImage--;
-    }
-
-    figure.style.transform = `rotateY(${currImage * -theta}rad)`;
-  }
-
-    // Ajouter une fonction qui déclenche le clic sur le bouton "Next" toutes les 3 secondes
-  setInterval(function() {
-    var nextButton = nav.querySelector('.next');
-    nextButton.click();
-  }, 3000);
-
-</script>

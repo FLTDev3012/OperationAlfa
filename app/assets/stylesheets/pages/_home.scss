@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-  height: 82vh;
+  height: 90vh;
 }
 
 .hero-image {
@@ -37,15 +37,7 @@
   position: relative;
 }
 
-// .home-carrou::before {
-//   content: '';
-//   position: absolute;
-//   top: 0;
-//   width: 100%;
-//   height: 50px;
-//   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.7231093120842087) 34%, rgba(0,0,0,1) 72%);
-//   z-index: 10000;
-// }
+
 
 // video
 
@@ -67,189 +59,16 @@
   z-index: -1;
 }
 
-
-// carrousel
-
-// .home-carrou-title {
-//   display: flex;
-//   justify-content: center;
-//   padding-top: 50px;
-// }
-
-// .home-carrou-title h2{
-//   color: $grisc;
-// }
-
-// @mixin aspect-ratio($width, $height) {
-//   position: relative;
-
-//   &:before {
-//     display: block;
-//     content: "";
-//     width: 100%;
-//     padding-top: ($height / $width) * 100%;
-//   }
-
-//   > img {
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         right: 0;
-//         bottom: 0;
-//         width: 100%;
-//         height: 100%;
-//   }
-// }
-
-// // Styling
-
-// section {
-//     padding: 50px 0;
-// }
-
-// .container {
-//     max-width: 1044px;
-//     margin: 0 auto;
-//     padding: 0 20px;
-// }
-
-// .carousel {
-//     display: block;
-//     text-align: left;
-//     position: relative;
-//     margin-bottom: 22px;
-
-//     > input {
-//         clip: rect(1px, 1px, 1px, 1px);
-//         clip-path: inset(50%);
-//         height: 1px;
-//         width: 1px;
-//         margin: -1px;
-//         overflow: hidden;
-//         padding: 0;
-//         position: absolute;
-
-//         &:nth-of-type(6):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -500%; }
-//         &:nth-of-type(5):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -400%; }
-//         &:nth-of-type(4):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -300%; }
-//         &:nth-of-type(3):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -200%; }
-//         &:nth-of-type(2):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -100%; }
-//         &:nth-of-type(1):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: 0%; }
-
-//         &:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 3px $rouge; }
-//         &:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 3px $rouge; }
-//         &:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 3px $rouge; }
-//         &:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 3px $rouge; }
-//         &:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 3px $rouge; }
-//         &:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 3px $rouge; }
-//     }
-// }
-
-// .carousel__slides {
-//     position: relative;
-//     z-index: 1;
-//     padding: 0;
-//     margin: 0;
-//     overflow: hidden;
-//     white-space: nowrap;
-//     box-sizing: border-box;
-//     display: flex;
-// }
-
-// .carousel__slide {
-//     position: relative;
-//     display: block;
-//     flex: 1 0 100%;
-//     width: 100%;
-//     height: 100%;
-//     overflow: hidden;
-//     transition: all 300ms ease-out;
-//     vertical-align: top;
-//     box-sizing: border-box;
-//     white-space: normal;
-
-//     figure {
-//         display: flex;
-//         margin: 0;
-//     }
-
-//     div {
-//         @include aspect-ratio(3, 2);
-//         width: 100%;
-//     }
-
-//     img {
-//         display: block;
-//         flex: 1 1 auto;
-//         object-fit: cover;
-//         border-radius: 5px;
-//     }
-
-//     figcaption {
-//         align-self: flex-start;
-//         padding: 20px 20px 0 20px;
-//         flex: 0 0 auto;
-//         width: 25%;
-//         min-width: 150px;
-//         color: #fff;
-//     }
-
-//     .credit {
-//         margin-top: 1rem;
-//         color: rgba(255, 255, 255, 0.5);
-//         display: block;
-//     }
-
-//     &.scrollable {
-//         overflow-y: scroll;
-//     }
-// }
-
-// .carousel__thumbnails {
-//     list-style: none;
-//     padding: 0;
-//     margin: 0;
-//     display: flex;
-
-//     margin: 0 -10px;
-
-//     .carousel__slides + & {
-//         margin-top: 20px;
-//     }
-
-//     li {
-//         flex: 1 1 auto;
-//         max-width: calc((100% / 6) - 20px);
-//         margin: 0 10px;
-//         transition: all 300ms ease-in-out;
-//     }
-
-//     label {
-//         display: block;
-//         @include aspect-ratio(1,1);
+.home-gray-bar {
+  position: absolute;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(44,50,48,0.5046219171262255) 50%, rgba(44,50,48,1) 100%);
+  bottom: 0;
+  min-height: 3vh;
+  width: 100%;
+  z-index: 10;
+}
 
 
-//         &:hover,
-//         &:focus {
-//             cursor: pointer;
-
-//             img {
-//                 box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
-//                 transition: all 300ms ease-in-out;
-//             }
-//         }
-//     }
-
-//     img {
-//         display: block;
-//         width: 100%;
-//         height: 100%;
-//         object-fit: cover;
-//     }
-// }
-
-
-// test autre carrou
 
 .carrou-body {
 	margin: 0;
@@ -261,93 +80,4 @@
   height: 100vh;
   justify-content: center;
   background-color: $grisf;
-}
-
-// Carousel configuration parameters
-$n: 8;
-$item-width: 600px;
-$item-separation: 120px;
-$viewer-distance: 750px;
-
-// Derived variables
-$theta: 2 * 3.141592653589793 / $n;
-$apothem: 723.842712474619px;
-
-.carousel {
-	padding: 20px;
-
-	perspective: $viewer-distance;
-	overflow: hidden;
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	> * {
-		flex: 0 0 auto;
-	}
-
-	figure {
-		margin: 0;
-
-		width: $item-width;
-		transform-style: preserve-3d;
-		transition: transform 0.5s;
-		transform-origin: 50% 50% (-$apothem);
-
-    p {
-      display: none;
-      /* Masque initialement le modèle de véhicule */
-    }
-    &:first-child {
-      /* Affiche le modèle de véhicule uniquement si c'est le premier enfant */
-      p {
-        display: block;
-      }
-    }
-
-		img {
-			width: 100%;
-      height: 370px;
-			box-sizing: border-box;
-      background-color: #ffffff21;
-			padding: 0 $item-separation / 2;
-      border: 1px solid $grisc;
-			opacity: 1;
-
-
-
-			&:not(:first-of-type) {
-				position: absolute;
-				left: 0;
-				top: 0;
-				transform-origin: 50% 50% (-$apothem);
-			}
-
-			@for $i from 2 through $n {
-				&:nth-child(#{$i}) {
-					transform: rotateY(#{($i - 1) * $theta}rad);
-				}
-			}
-		}
-	}
-
-	nav {
-		display: flex;
-		justify-content: center;
-		margin: 20px 0 0;
-
-		button {
-			flex: 0 0 auto;
-			margin: 0 5px;
-
-			cursor: pointer;
-
-			color: #ffffff;
-			background: none;
-			border: 1px solid;
-			letter-spacing: 1px;
-			padding: 5px 10px;
-		}
-	}
-
 }
