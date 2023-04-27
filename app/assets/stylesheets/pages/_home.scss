@@ -88,6 +88,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  animation: bounce 3s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+  animation-iteration-count: infinite;
 }
 
 .cheveron-down {
@@ -100,6 +105,52 @@
   color: #dbdbdb;
 }
 
+@keyframes bounce {
+
+  0% {
+    transform: translateY(-50px);
+  }
+  20% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+
+
+/* Prefix Support */
+
+ball {
+  -webkit-animation-name: bounce;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: cubic-bezier(
+  .5, 0.05, 1, .5);
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce {
+  from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+  }
+  to {
+      -webkit-transform: translate3d(0, 200px, 0);
+      transform: translate3d(0, 200px, 0);
+  }
+}
 
 // carrou
 
