@@ -105,7 +105,7 @@
   font-size: 4rem;
   opacity: 0;
   transform: translateX(-30px);
-  animation:  apparition 0.4s 1.2s ease-out forwards;
+  animation:  apparition 0.8s 1.2s ease-out forwards;
   display: none;
 }
 
@@ -114,6 +114,7 @@
 .ball-big-contener {
   display: flex;
   justify-content: center;
+
 }
 
 .ball-contener {
@@ -122,12 +123,15 @@
   position: absolute;
   bottom: 3vh;
   align-items: center;
+  opacity: 0;
+  transform: translateY(-200px);
+  animation:  apparition 1.1s 2s ease-out forwards;
 }
 .ball {
   width: 35px; //35
   height: 35px;
   border-radius: 50%;
-  border: 2px solid $grisc;
+  border: 2px solid #d6d6d6;
   display: flex;
   align-items: center;
   justify-content: center;
