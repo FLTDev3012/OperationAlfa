@@ -158,13 +158,19 @@ ball {
 	margin: 0;
 	font-family: 'Roboto';
 	font-size: 16px;
-
+  flex-direction: column;
 	display: flex;
   height: 100vh;
-  justify-content: center;
   align-items: center;
   background-color: $grisf;
   position: relative;
+}
+
+.carrou-body h2 {
+  margin-top: 12vh;
+  margin-bottom: 20vh;
+  color: #fff;
+  text-shadow: $grisc 0px 0px 3px;
 }
 
 .carrou-container {

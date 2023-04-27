@@ -12,9 +12,8 @@
 }
 
 .com-titre h1 {
-  background-image: linear-gradient(180deg, #ffffffbd 0%, #ffffff 100%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent; /* pour Safari */
+  animation: flasht 3s;
+  animation-iteration-count: infinite;
 }
 .com-droite-gauche-content {
   display: flex;

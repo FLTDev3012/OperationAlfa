@@ -28,7 +28,31 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   color: #fff;
-  text-shadow: $grisc 0px 0px 5px;
+  animation: flasht 3s;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes flasht {
+
+  0% {
+    text-shadow: $grisc 0px 0px 0px;
+  }
+  20% {
+    text-shadow: $grisc 0px 0px 5px;
+  }
+  40% {
+    text-shadow: $grisc 0px 0px 0px;
+  }
+  60% {
+    text-shadow: $grisc 0px 0px 5px;
+  }
+  80% {
+    text-shadow: $grisc 0px 0px 0px;
+  }
+  100% {
+    text-shadow: $grisc 0px 0px 0px;
+  }
 
 }
 
