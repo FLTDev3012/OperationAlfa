@@ -68,7 +68,39 @@
   z-index: 10;
 }
 
+.ball-big-contener {
+  display: flex;
+  justify-content: center;
+}
 
+.ball-contener {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 3vh;
+  align-items: center;
+}
+.ball {
+  width: 35px; //35
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #2C3230;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cheveron-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+// carrou
 
 .carrou-body {
 	margin: 0;
