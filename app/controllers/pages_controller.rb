@@ -3,6 +3,12 @@ class PagesController < ApplicationController
 
   def home
     @vehicules = Vehicule.order(:created_at).last(5)
+    @vehicule1 = Vehicule.order(:created_at).last
+    @vehicule2 = Vehicule.order(:created_at).second_to_last
+    @vehicule3 = Vehicule.order(:created_at).third_to_last
+
+
+
   end
 
   def dashboard

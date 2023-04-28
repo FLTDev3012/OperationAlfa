@@ -199,11 +199,60 @@ ball {
   }
 }
 
+//SCROLL hhorizontal
+
+.scrl-container {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-x: hidden;
+
+  // pour ie et mozilla
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.scrl-blockHorizontal {
+  display: flex;
+  flex-direction: row;
+  width: 400vw;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+
+.scrl-slide {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+
+.scrl-one {
+  background-color: #ff0000;
+}
+.scrl-two {
+  background-color: #ff6a00;
+}
+.scrl-three {
+  background-color: #fff700;
+}
+.scrl-four {
+  background-color: #62ff00;
+}
+
+
 // carrou
 
 .carrou-body {
 	margin: 0;
-	font-family: 'Roboto';
 	font-size: 16px;
   flex-direction: column;
 	display: flex;
@@ -358,8 +407,6 @@ svg {
 
  // new carrou
 
- @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
-
 
 
 
@@ -369,8 +416,8 @@ input[type=radio] {
 
 .card {
   position: absolute;
-  width: 60%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   left: 0;
   right: 0;
   margin: auto;
@@ -437,6 +484,9 @@ label img {
   border-radius: 8px;
   min-width: 320px;
   padding: 16px 10px;
+  position: absolute;
+  bottom: 0;
+
 }
 
 .upper-part {
@@ -459,12 +509,15 @@ label img {
   color: #403d40;
   font-size: 14px;
   line-height: 24px;
+
 }
 
 .sub-line {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  font-size: 14px;
+
 }
 
 .subtitle, .time {
@@ -479,24 +532,10 @@ label img {
   color: #a5a5a5;
   font-weight: 500;
   margin-left: auto;
+  z-index: 10;
 }
 
-.progress-bar {
-  height: 3px;
-  width: 100%;
-  background-color: #e9efff;
-  border-radius: 2px;
-  overflow: hidden;
-}
 
-.progress {
-  display: block;
-  position: relative;
-  width: 60%;
-  height: 100%;
-  background-color: #2992dc;
-  border-radius: 6px;
-}
 
 .info-area {
   width: 100%;
