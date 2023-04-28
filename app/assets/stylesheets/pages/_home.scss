@@ -438,11 +438,11 @@ label img {
 }
 
 #item-2:checked ~ .player #test  {
-  transform: translateY(-55px);
+  transform: translateY(-65px);
 }
 
 #item-3:checked ~ .player #test  {
-  transform: translateY(-110px);
+  transform: translateY(-130px);
 }
 
 .flex {
@@ -453,4 +453,21 @@ label img {
   display: flex;
   justify-content: space-between;
   margin-right: 25px;
+}
+
+.carrou-link {
+  transform: translateY(-20px);
+}
+
+
+
+.carrou-link a {
+  color: #fff;
+  background-color: $rouge;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.carrou-link:hover a {
+  background-color: #ff0100;
 }

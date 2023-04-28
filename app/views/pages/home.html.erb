@@ -86,7 +86,9 @@
               </div>
               <div class="flex-bas">
                 <div class="time"><%= @vehicule1.kilometrage %> Km</div>
-                <div class="time"><%= @vehicule1.prix %> €</div>
+                <div class="carrou-link">
+                  <%= link_to "voir+", vehicule_path(@vehicule1) %>
+                </div>
               </div>
             </label>
 
@@ -97,7 +99,9 @@
               </div>
               <div class="flex-bas">
                 <div class="time"><%= @vehicule2.kilometrage %> Km</div>
-                <div class="time"><%= @vehicule2.prix %> €</div>
+                <div class="carrou-link">
+                  <%= link_to "voir+", vehicule_path(@vehicule2) %>
+                </div>
               </div>
             </label>
 
@@ -108,7 +112,9 @@
               </div>
               <div class="flex-bas">
                 <div class="time"><%= @vehicule3.kilometrage %> Km</div>
-                <div class="time"><%= @vehicule3.prix %> €</div>
+                <div class="carrou-link">
+                  <%= link_to "voir+", vehicule_path(@vehicule3) %>
+                </div>
               </div>
             </label>
 
