@@ -148,6 +148,16 @@ piece3 = Piece.create(nom: "Piece3", description: "Magnifique piece", prix: 550)
 piece3.photo.attach(io: file, filename: "p3.png", content_type: "image/png")
 piece3.save
 
+file = URI.open("https://www.mikadoracing.com/annonces/images/2018_05/7dab62a9cbfc7006d4ee87308fff20e3.jpg")
+piece4 = Piece.create(nom: "Piece3", description: "Magnifique piece", prix: 550)
+piece4.photo.attach(io: file, filename: "p3.png", content_type: "image/png")
+piece4.save
+
+file = URI.open("https://www.mikadoracing.com/annonces/images/2018_05/7dab62a9cbfc7006d4ee87308fff20e3.jpg")
+piece5 = Piece.create(nom: "Piece3", description: "Magnifique piece", prix: 550)
+piece5.photo.attach(io: file, filename: "p3.png", content_type: "image/png")
+piece5.save
+
 p "------ #{Piece.count} piece created ----------"
 
 file = URI.open("https://t3.ftcdn.net/jpg/02/00/90/24/360_F_200902415_G4eZ9Ok3Ypd4SZZKjc8nqJyFVp1eOD6V.jpg")

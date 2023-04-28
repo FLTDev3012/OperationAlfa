@@ -25,8 +25,9 @@
 }
 
 .dash-titre-haut h1{
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 500;
+  font-family: 'Great Vibes', cursive;
+  // font-family: 'Lobster', cursive;
+  font-size: 4rem;
   color: #fff;
   animation: flasht 3s;
   animation-iteration-count: infinite;
@@ -63,6 +64,7 @@
 
 .dash-titre-categ h3{
   // text-shadow: $grisc 0px 0px 5px;
+  font-family: 'Lobster', cursive;
 }
 
 
@@ -72,6 +74,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+
 }
 
 
@@ -83,6 +86,8 @@
 
 .dash-title a{
   color: #fff;
+  font-family: 'Lobster', cursive;
+
 }
 
 

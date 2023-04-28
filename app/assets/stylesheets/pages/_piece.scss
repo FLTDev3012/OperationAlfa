@@ -3,16 +3,30 @@
   min-height: 80vh;
 }
 
+@keyframes apparitionn {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .piece-titre {
   display: flex;
   justify-content: center;
   color: #fff;
   padding: 60px 0;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation:  apparitionn 0.6s 0.1s ease-out forwards;
 }
 
 .piece-titre h1 {
-  animation: flasht 3s;
+  animation: flasht 4s;
   animation-iteration-count: infinite;
+  color: #fff;
+  // font-family: 'Great Vibes', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 55px;
 }
 
 

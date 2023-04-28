@@ -53,76 +53,76 @@
 
 
 
-  <div class="carrou-body">
+<div class="carrou-body">
 
-    <div>
-      <h2>Dernier arrivage</h2>
+  <div>
+    <h2>Dernier arrivage</h2>
+  </div>
+
+  <div class="container">
+      <input type="radio" name="slider" id="item-1" checked>
+      <input type="radio" name="slider" id="item-2">
+      <input type="radio" name="slider" id="item-3">
+    <div class="cards">
+      <label class="card" for="item-1" id="song-1">
+        <%= cl_image_tag @vehicule1.photo.key %>
+      </label>
+      <label class="card" for="item-2" id="song-2">
+        <%= cl_image_tag @vehicule2.photo.key %>
+      </label>
+      <label class="card" for="item-3" id="song-3">
+        <%= cl_image_tag @vehicule3.photo.key %>
+      </label>
     </div>
+    <div class="player">
+      <div class="upper-part">
 
-    <div class="container">
-        <input type="radio" name="slider" id="item-1" checked>
-        <input type="radio" name="slider" id="item-2">
-        <input type="radio" name="slider" id="item-3">
-      <div class="cards">
-        <label class="card" for="item-1" id="song-1">
-          <%= cl_image_tag @vehicule1.photo.key %>
-        </label>
-        <label class="card" for="item-2" id="song-2">
-          <%= cl_image_tag @vehicule2.photo.key %>
-        </label>
-        <label class="card" for="item-3" id="song-3">
-          <%= cl_image_tag @vehicule3.photo.key %>
-        </label>
-      </div>
-      <div class="player">
-        <div class="upper-part">
+        <div class="info-area" id="test">
 
-          <div class="info-area" id="test">
+          <label class="song-info" id="song-info-1">
+            <div class="flex">
+              <div class="title"><%= @vehicule1.marque %></div>
+              <div class="title"><%= @vehicule1.modele %></div>
+            </div>
+            <div class="flex-bas">
+              <div class="time"><%= @vehicule1.kilometrage %> Km</div>
+              <div class="carrou-link">
+                <%= link_to "voir+", vehicule_path(@vehicule1) %>
+              </div>
+            </div>
+          </label>
 
-            <label class="song-info" id="song-info-1">
-              <div class="flex">
-                <div class="title"><%= @vehicule1.marque %></div>
-                <div class="title"><%= @vehicule1.modele %></div>
+          <label class="song-info" id="song-info-2">
+            <div class="flex">
+              <div class="title"><%= @vehicule2.marque %></div>
+              <div class="title"><%= @vehicule2.modele %></div>
+            </div>
+            <div class="flex-bas">
+              <div class="time"><%= @vehicule2.kilometrage %> Km</div>
+              <div class="carrou-link">
+                <%= link_to "voir+", vehicule_path(@vehicule2) %>
               </div>
-              <div class="flex-bas">
-                <div class="time"><%= @vehicule1.kilometrage %> Km</div>
-                <div class="carrou-link">
-                  <%= link_to "voir+", vehicule_path(@vehicule1) %>
-                </div>
-              </div>
-            </label>
+            </div>
+          </label>
 
-            <label class="song-info" id="song-info-2">
-              <div class="flex">
-                <div class="title"><%= @vehicule2.marque %></div>
-                <div class="title"><%= @vehicule2.modele %></div>
+          <label class="song-info" id="song-info-3">
+            <div class="flex">
+              <div class="title"><%= @vehicule3.marque %></div>
+              <div class="title"><%= @vehicule3.modele %></div>
+            </div>
+            <div class="flex-bas">
+              <div class="time"><%= @vehicule3.kilometrage %> Km</div>
+              <div class="carrou-link">
+                <%= link_to "voir+", vehicule_path(@vehicule3) %>
               </div>
-              <div class="flex-bas">
-                <div class="time"><%= @vehicule2.kilometrage %> Km</div>
-                <div class="carrou-link">
-                  <%= link_to "voir+", vehicule_path(@vehicule2) %>
-                </div>
-              </div>
-            </label>
+            </div>
+          </label>
 
-            <label class="song-info" id="song-info-3">
-              <div class="flex">
-                <div class="title"><%= @vehicule3.marque %></div>
-                <div class="title"><%= @vehicule3.modele %></div>
-              </div>
-              <div class="flex-bas">
-                <div class="time"><%= @vehicule3.kilometrage %> Km</div>
-                <div class="carrou-link">
-                  <%= link_to "voir+", vehicule_path(@vehicule3) %>
-                </div>
-              </div>
-            </label>
-
-          </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 
 
