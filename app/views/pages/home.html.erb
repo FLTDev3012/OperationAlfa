@@ -30,14 +30,16 @@
 <% end %>
 
 
-<div class="scrl-container">
+<%# <div class="scrl-container">
   <div class="scrl-blockHorizontal">
-    <div class="scrl-slide scrl-one">Slide1</div>
-    <div class="scrl-slide scrl-two">Slide2</div>
+    <div class="scrl-slide scrl-one">A propos</div>
+    <div class="scrl-slide scrl-two">
+
+    </div>
     <div class="scrl-slide scrl-three">Slide3</div>
     <div class="scrl-slide scrl-four">Slide4</div>
   </div>
-</div>
+</div> %>
 
 
 
@@ -47,40 +49,70 @@
 
 
 <!-- test carrou -->
-<div class="carrou-body">
 
-  <div>
-    <h2>Dernier arrivage</h2>
+
+
+
+  <div class="carrou-body">
+
+    <div>
+      <h2>Dernier arrivage</h2>
+    </div>
+
+    <div class="container">
+        <input type="radio" name="slider" id="item-1" checked>
+        <input type="radio" name="slider" id="item-2">
+        <input type="radio" name="slider" id="item-3">
+      <div class="cards">
+        <label class="card" for="item-1" id="song-1">
+          <%= cl_image_tag @vehicule1.photo.key %>
+        </label>
+        <label class="card" for="item-2" id="song-2">
+          <%= cl_image_tag @vehicule2.photo.key %>
+        </label>
+        <label class="card" for="item-3" id="song-3">
+          <%= cl_image_tag @vehicule3.photo.key %>
+        </label>
+      </div>
+      <div class="player">
+        <div class="upper-part">
+
+          <div class="info-area" id="test">
+            <label class="song-info" id="song-info-1">
+              <div class="title"><%= @vehicule1.marque %></div>
+              <div class="sub-line">
+                <div class="subtitle"><%= @vehicule1.modele %></div>
+                <div class="time"><%= @vehicule1.prix %> €</div>
+              </div>
+            </label>
+            <label class="song-info" id="song-info-2">
+              <div class="title"><%= @vehicule2.marque %></div>
+              <div class="sub-line">
+                <div class="subtitle"><%= @vehicule2.modele %></div>
+                <div class="time"><%= @vehicule2.prix %></div>
+              </div>
+            </label>
+            <label class="song-info" id="song-info-3">
+              <div class="title"><%= @vehicule3.marque %></div>
+              <div class="sub-line">
+                <div class="subtitle"><%= @vehicule3.modele %></div>
+                <div class="time"><%= @vehicule3.prix %></div>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="progress-bar">
+        </div>
+      </div>
+    </div>
   </div>
 
 
-  <div class="carrou-container">
-
-    <% @vehicules.each do |vehicule| %>
-      <%= link_to vehicule_path(vehicule), class:"carrou-card" do%>
-
-          <h3 class="carrou-title"><%= vehicule.marque %></h3>
-          <h5 class="carrou-subtitle"><%= vehicule.modele %></h5>
-          <div class="carrou-bar">
-            <div class="carrou-emptybar"></div>
-            <div class="carrou-filledbar"></div>
-          </div>
-          <div class="carrou-circle">
-            <%= cl_image_tag vehicule.photo.key, height: 100, width: 140, crop: :fill, class: "carrou-img" %>
-          </div>
-
-      <% end %>
-    <% end %>
-
-
-  </div>
-
-</div>
 
 
 <script>
   const firstDiv = document.querySelector('.hero-video');
-  const secondDiv = document.querySelector('.scrl-one');
+  const secondDiv = document.querySelector('.carrou-body');
 
   firstDiv.addEventListener('wheel', (event) => {
     if (event.deltaY > 0) {
@@ -89,57 +121,3 @@
     }
   });
 </script>
-
-
-
-
-
-
-<div class="carrou-body">
-  <div class="container">
-      <input type="radio" name="slider" id="item-1" checked>
-      <input type="radio" name="slider" id="item-2">
-      <input type="radio" name="slider" id="item-3">
-    <div class="cards">
-      <label class="card" for="item-1" id="song-1">
-        <%= cl_image_tag @vehicule1.photo.key %>
-      </label>
-      <label class="card" for="item-2" id="song-2">
-        <%= cl_image_tag @vehicule2.photo.key %>
-      </label>
-      <label class="card" for="item-3" id="song-3">
-        <%= cl_image_tag @vehicule3.photo.key %>
-      </label>
-    </div>
-    <div class="player">
-      <div class="upper-part">
-
-        <div class="info-area" id="test">
-          <label class="song-info" id="song-info-1">
-            <div class="title"><%= @vehicule1.marque %></div>
-            <div class="sub-line">
-              <div class="subtitle"><%= @vehicule1.modele %></div>
-              <div class="time"><%= @vehicule1.prix %> €</div>
-            </div>
-          </label>
-          <label class="song-info" id="song-info-2">
-            <div class="title"><%= @vehicule2.marque %></div>
-            <div class="sub-line">
-              <div class="subtitle"><%= @vehicule2.modele %></div>
-              <div class="time"><%= @vehicule2.prix %></div>
-            </div>
-          </label>
-          <label class="song-info" id="song-info-3">
-            <div class="title"><%= @vehicule3.marque %></div>
-            <div class="sub-line">
-              <div class="subtitle"><%= @vehicule3.modele %></div>
-              <div class="time"><%= @vehicule3.prix %></div>
-            </div>
-          </label>
-        </div>
-      </div>
-      <div class="progress-bar">
-      </div>
-    </div>
-  </div>
-</div>
