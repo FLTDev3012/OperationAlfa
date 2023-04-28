@@ -85,7 +85,7 @@
               <div class="title"><%= @vehicule1.modele %></div>
             </div>
             <div class="flex-bas">
-              <div class="time"><%= @vehicule1.kilometrage %> Km</div>
+              <div class="time"><%= number_with_precision(@vehicule1.kilometrage, precision: 2, delimiter: ' ', separator: '.') %> Km</div>
               <div class="carrou-link">
                 <%= link_to "voir+", vehicule_path(@vehicule1) %>
               </div>
@@ -98,7 +98,7 @@
               <div class="title"><%= @vehicule2.modele %></div>
             </div>
             <div class="flex-bas">
-              <div class="time"><%= @vehicule2.kilometrage %> Km</div>
+              <div class="time"><%= number_with_precision(@vehicule2.kilometrage, precision: 2, delimiter: ' ', separator: '.') %> Km</div>
               <div class="carrou-link">
                 <%= link_to "voir+", vehicule_path(@vehicule2) %>
               </div>
@@ -111,7 +111,9 @@
               <div class="title"><%= @vehicule3.modele %></div>
             </div>
             <div class="flex-bas">
-              <div class="time"><%= @vehicule3.kilometrage %> Km</div>
+              <div class="time"><%= number_with_precision(@vehicule3.kilometrage, precision: 2, delimiter: ' ', separator: '.') %> Km</div>
+
+
               <div class="carrou-link">
                 <%= link_to "voir+", vehicule_path(@vehicule3) %>
               </div>
