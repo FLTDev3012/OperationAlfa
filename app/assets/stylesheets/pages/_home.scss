@@ -199,6 +199,15 @@ ball {
   }
 }
 
+
+
+
+
+
+
+
+
+
 //SCROLL hhorizontal
 
 .scrl-container {
@@ -249,7 +258,17 @@ ball {
 }
 
 
-// carrou
+
+
+
+
+
+
+
+
+
+
+// carrou!!!!!!!!!!!
 
 .carrou-body {
 	margin: 0;
@@ -263,151 +282,13 @@ ball {
 }
 
 .carrou-body h2 {
-  margin-top: 20vh;
-  margin-bottom: 20vh;
+  margin-top: 12vh;
+  margin-bottom: 3vh;
   color: #fff;
   text-shadow: $grisc 0px 0px 2px;
   font-family: 'Lobster', cursive;
   font-size: 55px;
 }
-
-.carrou-container {
-  // position: absolute;
-  // height: 300px;
-  //width: 600px;
-  top: 60px;
-  left: calc(50% - 300px);
-  display: flex;
-}
-
-
-
-.carrou-card {
-  display: flex;
-  height: 280px;
-  width: 200px;
-  background-color: #17141d;
-  border-radius: 10px;
-  box-shadow: -1rem 0 3rem #000;
-/*   margin-left: -50px; */
-  transition: 0.4s ease-out;
-  position: relative;
-  left: 0px;
-}
-
-.carrou-card:not(:first-child) {
-    margin-left: -50px;
-}
-
-.carrou-card:hover {
-  transform: translateY(-20px);
-  transition: 0.4s ease-out;
-}
-
-.carrou-card:hover ~ .carrou-card {
-  position: relative;
-  left: 50px;
-  transition: 0.4s ease-out;
-}
-
-.carrou-title {
-  color: white;
-  font-weight: 300;
-  position: absolute;
-  left: 20px;
-  top: 15px;
-}
-
-.carrou-subtitle {
-  color: white;
-  font-weight: 300;
-  position: absolute;
-  left: 20px;
-  top: 50px;
-}
-
-.carrou-bar {
-  position: absolute;
-  top: 100px;
-  left: 20px;
-  height: 5px;
-  width: 150px;
-}
-
-.carrou-emptybar {
-  background-color: #2e3033;
-  width: 100%;
-  height: 100%;
-}
-
-.carrou-filledbar {
-  position: absolute;
-  top: 0px;
-  z-index: 3;
-  width: 0px;
-  height: 100%;
-  background: rgb(0,154,217);
-  background: linear-gradient(90deg, rgb(14, 217, 0) 0%, rgb(217, 0, 0) 65%, rgb(255, 0, 0) 100%);
-  transition: 0.6s ease-out;
-}
-
-.carrou-card:hover .carrou-filledbar {
-  width: 120px;
-  transition: 0.4s ease-out;
-}
-
-.carrou-circle {
-  position: absolute;
-  top: 130px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.carrou-circle img {
-  border-radius: 5px;
-  height: 124px;
-  width: 174px;
-  // filter: grayscale(70%);
-  opacity: 0.3;
-}
-
-.carrou-card:hover img {
-  stroke-dashoffset: 100;
-  transition: 0.6s ease-out;
-  // filter: grayscale(0%);
-  opacity: 1;
-}
-
-.carrou-stroke {
-  stroke: white;
-  stroke-dasharray: 360;
-  stroke-dashoffset: 360;
-  transition: 0.6s ease-out;
-}
-
-svg {
-  fill: #17141d;
-  stroke-width: 2px;
-}
-
-.carrou-card:hover .carrou-stroke {
-  stroke-dashoffset: 100;
-  transition: 0.6s ease-out;
-}
-
-
-
-
-
-
-
-
-
-
- // new carrou
-
-
 
 
 input[type=radio] {
@@ -440,7 +321,7 @@ input[type=radio] {
 .cards {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 90%;
   margin-bottom: 20px;
 }
 
@@ -480,12 +361,14 @@ label img {
 }
 
 .player {
-  background-color: #fff;
+  background-color: $noir;
+  border: 2px solid #fff;
   border-radius: 8px;
-  min-width: 320px;
+  min-width: 450px;
+  min-height: 100px;
   padding: 16px 10px;
   position: absolute;
-  bottom: 0;
+  bottom: 13px;
 
 }
 
@@ -494,7 +377,7 @@ label img {
   display: flex;
   align-items: center;
   margin-bottom: 12px;
-  height: 36px;
+  height: 55px;
   overflow: hidden;
 }
 
@@ -506,9 +389,15 @@ label img {
 }
 
 .song-info .title {
-  color: #403d40;
-  font-size: 14px;
+  color: #fff;
+  font-size: 25px;
   line-height: 24px;
+
+}
+
+.song-info .title:first-child {
+  margin-right: 15px;
+  margin-bottom: 15px;
 
 }
 
@@ -527,11 +416,10 @@ label img {
 }
 
 .time {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 16px;
   color: #a5a5a5;
   font-weight: 500;
-  margin-left: auto;
   z-index: 10;
 }
 
@@ -550,9 +438,19 @@ label img {
 }
 
 #item-2:checked ~ .player #test  {
-  transform: translateY(-40px);
+  transform: translateY(-55px);
 }
 
 #item-3:checked ~ .player #test  {
-  transform: translateY(-80px);
+  transform: translateY(-110px);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-bas {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 25px;
 }

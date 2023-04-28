@@ -78,30 +78,41 @@
         <div class="upper-part">
 
           <div class="info-area" id="test">
+
             <label class="song-info" id="song-info-1">
-              <div class="title"><%= @vehicule1.marque %></div>
-              <div class="sub-line">
-                <div class="subtitle"><%= @vehicule1.modele %></div>
+              <div class="flex">
+                <div class="title"><%= @vehicule1.marque %></div>
+                <div class="title"><%= @vehicule1.modele %></div>
+              </div>
+              <div class="flex-bas">
+                <div class="time"><%= @vehicule1.kilometrage %> Km</div>
                 <div class="time"><%= @vehicule1.prix %> €</div>
               </div>
             </label>
+
             <label class="song-info" id="song-info-2">
-              <div class="title"><%= @vehicule2.marque %></div>
-              <div class="sub-line">
-                <div class="subtitle"><%= @vehicule2.modele %></div>
-                <div class="time"><%= @vehicule2.prix %></div>
+              <div class="flex">
+                <div class="title"><%= @vehicule2.marque %></div>
+                <div class="title"><%= @vehicule2.modele %></div>
+              </div>
+              <div class="flex-bas">
+                <div class="time"><%= @vehicule2.kilometrage %> Km</div>
+                <div class="time"><%= @vehicule2.prix %> €</div>
               </div>
             </label>
+
             <label class="song-info" id="song-info-3">
-              <div class="title"><%= @vehicule3.marque %></div>
-              <div class="sub-line">
-                <div class="subtitle"><%= @vehicule3.modele %></div>
-                <div class="time"><%= @vehicule3.prix %></div>
+              <div class="flex">
+                <div class="title"><%= @vehicule3.marque %></div>
+                <div class="title"><%= @vehicule3.modele %></div>
+              </div>
+              <div class="flex-bas">
+                <div class="time"><%= @vehicule3.kilometrage %> Km</div>
+                <div class="time"><%= @vehicule3.prix %> €</div>
               </div>
             </label>
+
           </div>
-        </div>
-        <div class="progress-bar">
         </div>
       </div>
     </div>
