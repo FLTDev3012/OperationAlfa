@@ -146,7 +146,7 @@
         <div class="dash-commentaire-content">
 
           <% @commentaires.each do |commentaire| %>
-            <div class="one-com">
+            <div class="one-com <%= commentaire.id.even? ? 'com-bg-strggrey' : 'com-bg-grey' %>">
               <div class="dash-com-client-address">
                 <p><strong><%= commentaire.nom %> <%= commentaire.prenom %></strong></p>
                 <p><%= commentaire.email %> </p>
