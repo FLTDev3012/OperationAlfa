@@ -30,6 +30,10 @@ class VehiculesController < ApplicationController
       @vehicules = @vehicules.where('kilometrage <= ?', params[:kilometrage])
     end
 
+    if @vehicules.blank?
+      flash.now[:notice] = "Aucun véhicule ne correspond aux filtres sélectionnés."
+    end
+
     # Autres filtres ici...
 
     # Pour afficher la liste de véhicules filtrée dans la vue

@@ -38,7 +38,7 @@
 }
 
 .index-filter-content {
-  background-color: $grisf;
+  background-color: #ffffff12;
   border: 2px solid #fff;
   width: 50%;
   border-radius: 5px;
@@ -61,6 +61,10 @@
   margin-bottom: 10px;
   width: 130px;
   height: 30px;
+  border: none;
+  color: #fff;
+  background-color: $noir;
+  border-radius: 5px;
 }
 
 .filter-part-2 {
@@ -87,7 +91,11 @@
 }
 
 .filter-two-btn input {
-
+  background-color: #c10100;
+  padding: 3px 6px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
 }
 
 .filter-two-btn a {
@@ -97,7 +105,19 @@
 }
 
 
+// FIN FILTER
 
+
+
+// vehicule
+
+
+.index-aucun-vehicule {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  margin-top: 6rem;
+}
 
 .index-card {
   background-color: #ededed;
