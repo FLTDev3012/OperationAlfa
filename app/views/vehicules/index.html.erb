@@ -19,19 +19,45 @@
     <br>
 
     <label for="carburant">Carburant :</label>
-      <select name="carburant">
-        <option value="">-- Choisissez un carburant --</option>
-        <option value="Essence" <%= 'selected' if params[:carburant] == 'Essence' %>>Essence</option>
-        <option value="Diesel" <%= 'selected' if params[:carburant] == 'Diesel' %>>Diesel</option>
-        <option value="Hybride" <%= 'selected' if params[:carburant] == 'Hybride' %>>Hybride</option>
-      </select>
+    <select name="carburant">
+      <option value="">-- Choisissez un carburant --</option>
+      <option value="Essence" <%= 'selected' if params[:carburant] == 'Essence' %>>Essence</option>
+      <option value="Diesel" <%= 'selected' if params[:carburant] == 'Diesel' %>>Diesel</option>
+      <option value="Hybride" <%= 'selected' if params[:carburant] == 'Hybride' %>>Hybride</option>
+    </select>
 
+
+    <br>
+
+    <label for="boite">Boite :</label>
+    <select name="boite">
+      <option value="">-- Choisissez un boite --</option>
+      <option value="Manuelle" <%= 'selected' if params[:boite] == 'Manuelle' %>>Manuelle</option>
+      <option value="Automatique" <%= 'selected' if params[:boite] == 'Automatique' %>>Automatique</option>
+    </select>
+
+
+    <br>
+
+    <label for="prix_min">Prix minimum :</label>
+    <input type="number" step="1000" name="prix_min" value="<%= params[:prix_min] %> " >
+
+    <br>
+
+    <label for="prix_max">Prix maximum :</label>
+    <input type="number" step="1000" name="prix_max" value="<%= params[:prix_max] %>">
+
+    <br>
+
+    <label for="kilometrage">Kilometrage Max:</label>
+    <input type="number" step="1000" name="kilometrage" value="<%= params[:kilometrage] %>">
 
     <br>
 
     <!-- Autres filtres ici... -->
 
     <input type="submit" value="Filtrer">
+    <button type="button" onclick="window.location.href='/vehicules'">Réinitialiser les filtres</button>
   </form>
 
 
