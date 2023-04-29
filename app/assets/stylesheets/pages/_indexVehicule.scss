@@ -33,7 +33,7 @@
 
 
 .index-card {
-  background-color: $blanc;
+  background-color: #ededed;
   width: 280px;
   border-radius: 8px;
   // border: 1px solid $grisc;
@@ -107,7 +107,7 @@ a.link-card {
   align-items: center;
   padding-left: 0;
   border-radius: 50px;
-  border: 2px solid $grisc;
+  border: 2px solid $grisf;
   padding: 0 3px;
   background-color: $grisf;
   color: #fff;
@@ -117,11 +117,12 @@ a.link-card {
 .index-card-btn {
   display: flex;
   justify-content: center;
+  margin-top: 4px;
 }
 
 .index-card-btn p{
 
-  background-color: $rouge;
+  background-color: #c10100;
   padding-left: 0;
   margin: 5px 0;
   color: $blanc;
@@ -132,7 +133,14 @@ a.link-card {
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
-  border-radius: 2px;
+  border-radius: 5px;
+
+}
+
+.index-card-btn p:hover {
+
+  background-color: #e20100;
+
 
 }
 

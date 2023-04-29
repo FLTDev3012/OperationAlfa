@@ -29,9 +29,15 @@
 }
 
 .member-card {
-  box-shadow: 1px 5px 5px #0C0C0C;
-  background-color: $grisc;
+  box-shadow: 1px 5px 20px #0C0C0C;
+  background-color: $grisf;
   border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.member-card:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
 }
 
 .member-card p{

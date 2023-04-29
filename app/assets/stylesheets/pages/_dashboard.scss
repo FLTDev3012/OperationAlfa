@@ -72,11 +72,16 @@
   border-radius: 50px;
   margin: 0px 30px;
   box-shadow: inset 3px 0 13px #bc0100ad;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+
 
 }
 
 .dash-icon-circle:hover {
   box-shadow: inset 3px 0 27px $rouge;
+  transform: translateY(-5px);
+  transition: 0.2s ease-in-out;
 
 }
 
@@ -230,16 +235,6 @@
 }
 
 
-.dash-modif {
-  //background-color: #fff;
-  //padding: 8px 16px;
-  //border-radius: 5px;
-}
-
-.dash-modif:hover {
-  //background-color: $grisc;
-  //color: #fff;
-}
 
 
 .dash-img {
@@ -262,10 +257,12 @@
   border-radius: 5px;
   margin-bottom: 10px;
   border: 2px solid #fff;
+  transition: 0.2s;
 }
 
 .dash-add-btn:hover {
   background-color: #5cb85c;
+  transition: 0.2s;
 }
 
 // piece
@@ -300,6 +297,10 @@
   padding: 20px;
   border-radius: 5px;
   margin-bottom: 10px;
+}
+
+.com-bg-strggrey {
+  background-color: #414141;
 }
 
 .one-com p{

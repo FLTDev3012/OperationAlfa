@@ -1,7 +1,8 @@
 <div class="vshow-container">
 
   <div class="vshow-titre">
-    <h1><%= @vehicule.marque %> <%= @vehicule.modele %></h1>
+    <h1><%= @vehicule.marque %> &nbsp; <%= @vehicule.modele %></h1>
+
   </div>
 
   <div class="vshow-droite-gauche">
@@ -16,7 +17,8 @@
 
       <div class="vshow560">
         <div class="vshow-prix">
-          <p><%= sprintf("%.2f", @vehicule.prix) %> €</p>
+          <p><%= number_with_delimiter(@vehicule.prix.to_i, delimiter: ' ') %> €</p>
+
         </div>
         <div class="vshow-back">
           <%= link_to vehicules_path, class: "deco-none" do %>
@@ -41,7 +43,7 @@
         <p><span class="vshow-span-tableau">Couleur: </span></p>
         <p><span class="vshow-span-tableau">Carrosserie: </span></p>
         <p><span class="vshow-span-tableau">Ancien proprietaires: </span></p>
-        <p><span class="vshow-span-tableau"><%= @vehicule.dioxy %> </span></p>
+        <p><span class="vshow-span-tableau">CO2: </span></p>
         <p><span class="vshow-span-tableau">Nombre de portes: </span></p>
         <p><span class="vshow-span-tableau">Nombre de places: </span></p>
       </div>
@@ -59,7 +61,7 @@
         <p><%= @vehicule.couleur %></p>
         <p><%= @vehicule.carrosserie %></p>
         <p><%= @vehicule.proprietaires %></p>
-        <p>g de CO2 / km</p>
+        <p><%= @vehicule.dioxy %> g de CO2 /km</p>
         <p><%= @vehicule.portes %></p>
         <p><%= @vehicule.places %></p>
       </div>

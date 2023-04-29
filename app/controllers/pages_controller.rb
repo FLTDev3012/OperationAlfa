@@ -13,7 +13,7 @@ class PagesController < ApplicationController
 
   def dashboard
     @vehicules = Vehicule.order(:marque)
-    @commentaires = Commentaire.all
+    @commentaires = Commentaire.all.order(created_at: :desc)
     @pieces = Piece.all
     @members = Member.all
   end
