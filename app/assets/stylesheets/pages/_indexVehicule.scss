@@ -47,6 +47,29 @@
   height: 190px;
 }
 
+.filter-croix {
+  position: absolute;
+  color: #fff;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: $grisf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-15px, -15px);
+  border-radius: 50px;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.filter-croix:hover {
+  background-color: #fff;
+  color: $noir;
+  border: 2px solid $noir;
+}
+
 .content-filter {
   display: flex;
   justify-content: space-between;

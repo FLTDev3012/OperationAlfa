@@ -12,6 +12,10 @@
 
   <form class="index-filter-container">
     <div class="index-filter-content">
+      <div class="filter-croix">
+        <i class="fa-sharp fa-solid fa-xmark"></i>
+      </div>
+
       <div class="content-filter">
         <div class="filter-part-1">
 
@@ -49,7 +53,9 @@
 
           <div>
             <label for="prix_min">Prix minimum :</label>
-            <input type="number" step="500" name="prix_min" value="<%= params[:prix_min] %> " >
+            <input type="number" step="500" name="prix_min" style="text-align: center;" value="<%= number_with_delimiter(params[:prix_min], delimiter: ' ') %>">
+
+
           </div>
 
 
