@@ -53,7 +53,7 @@
         <p><%= @vehicule.modele %></p>
         <p><%= @vehicule.boite %></p>
         <p><%= @vehicule.carburant %></p>
-        <p><%= sprintf("%.2f", @vehicule.kilometrage) %> km</p>
+        <p><%= number_with_delimiter(@vehicule.kilometrage.to_i, delimiter: ' ') %> km</p>
         <p><%= @vehicule.enregistrement %></p>
         <p><%= @vehicule.puissancech %> ch</p>
         <p><%= @vehicule.puissancecv %> cv</p>
@@ -61,7 +61,7 @@
         <p><%= @vehicule.couleur %></p>
         <p><%= @vehicule.carrosserie %></p>
         <p><%= @vehicule.proprietaires %></p>
-        <p><%= @vehicule.dioxy %> g de CO2 /km</p>
+        <p><%= @vehicule.dioxy %> g /km</p>
         <p><%= @vehicule.portes %></p>
         <p><%= @vehicule.places %></p>
       </div>
