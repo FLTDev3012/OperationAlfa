@@ -6,6 +6,35 @@ class VehiculesController < ApplicationController
   def index
     @vehicules = Vehicule.all
 
+    if params[:marque].present?
+      @vehicules = @vehicules.where(marque: params[:marque])
+    end
+
+    if params[:carburant].present?
+      @vehicules = @vehicules.where(carburant: params[:carburant])
+    end
+
+    if params[:boite].present?
+      @vehicules = @vehicules.where(boite: params[:boite])
+    end
+
+    if params[:prix_min].present?
+      @vehicules = @vehicules.where('prix >= ?', params[:prix_min])
+    end
+
+    if params[:prix_max].present?
+      @vehicules = @vehicules.where('prix <= ?', params[:prix_max])
+    end
+
+    if params[:kilometrage].present?
+      @vehicules = @vehicules.where('kilometrage <= ?', params[:kilometrage])
+    end
+
+    # Autres filtres ici...
+
+    # Pour afficher la liste de véhicules filtrée dans la vue
+    render 'index'
+
   end
 
   def show
