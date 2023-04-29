@@ -467,8 +467,10 @@ label img {
   background-color: $rouge;
   padding: 8px 16px;
   border-radius: 5px;
+  transition: 0.2s;
 }
 
 .carrou-link:hover a {
   background-color: #ff0100;
+  transition: 0.2s;
 }
