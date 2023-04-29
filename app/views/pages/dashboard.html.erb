@@ -1,4 +1,4 @@
-<div class="dash-content">
+<div class="dash-content" data-controller="dashboard">
   <div class="dash-title">
 
     <div class="dash-titre-haut">
@@ -11,17 +11,17 @@
 
   <div class="dash-icon-container">
 
-    <div class="dash-icon-circle">
+    <div class="dash-icon-circle" data-action="click->dashboard#openvehicule">
       <i class="fa-solid fa-car"></i>
     </div>
 
-    <div class="dash-icon-circle">
+    <div class="dash-icon-circle" data-action="click->dashboard#openpiece">
       <i class="fa-solid fa-gear"></i>
     </div>
-    <div class="dash-icon-circle">
+    <div class="dash-icon-circle" data-action="click->dashboard#opencom">
       <i class="fa-solid fa-comment"></i>
     </div>
-    <div class="dash-icon-circle">
+    <div class="dash-icon-circle" data-action="click->dashboard#openmember">
       <i class="fa-solid fa-clipboard-user"></i>
     </div>
 
@@ -29,193 +29,208 @@
 
 
     <!-- vehicules -->
+  <div data-dashboard-target="sectionvehicule">
 
 
-  <div class="dash-title">
+    <div class="dash-title">
 
-    <div class="dash-titre-categ">
-      <h3>Véhicules</h3>
-    </div>
-    <div class="dash-titre-bas">
-      <%= link_to "Ajouter +", new_vehicule_path, class: "dash-add-btn" %>
-      <h6> <%= Vehicule.count %> articles en vente</h6>
-    </div>
+      <div class="dash-titre-categ">
+        <h3>Véhicules</h3>
+      </div>
+      <div class="dash-titre-bas">
+        <%= link_to "Ajouter +", new_vehicule_path, class: "dash-add-btn" %>
+        <h6> <%= Vehicule.count %> articles en vente</h6>
+      </div>
 
-
-  </div>
-
-
-
-  <div class="dash-all-vehicule-content">
-    <div class="dash-all-vehicules">
-
-      <% @vehicules.each do |vehicule| %>
-          <div class="testdash dashborder deco-none">
-            <%= link_to vehicule_path(vehicule), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" }, class: "deco-none dash-corbeille" do %>
-              <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
-            <% end %>
-            <%= link_to edit_vehicule_path(vehicule), class: "deco-none dash-modif" do %>
-              <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
-            <% end %>
-            <% if vehicule.photo.present? %>
-              <%= cl_image_tag vehicule.photo.key, height: 40, width: 60, crop: :fill, class: "dash-img" %>
-            <% else %>
-              <p>Sans Image </p>
-            <% end %>
-            <%= link_to "#{vehicule.marque} #{vehicule.modele}", vehicule_path(vehicule), class: "deco-none dash-nom" %>
-          </div>
-
-
-      <% end %>
 
     </div>
-  </div>
 
 
 
-  <!-- pieces -->
+    <div class="dash-all-vehicule-content">
+      <div class="dash-all-vehicules">
 
-  <div class="dash-title">
-    <div class="dash-titre-categ">
-      <h3>Pièces</h3>
-    </div>
-    <div class="dash-titre-bas">
-      <%= link_to "Ajouter +", new_piece_path, class: "dash-add-btn" %>
-      <h6> <%= Piece.count %> pieces en vente</h6>
-    </div>
-
-  </div>
-
-
-  <div class="dash-all-vehicule-content">
-    <div class="dash-all-vehicules">
-
-      <% @pieces.each do |piece| %>
-          <div class="testdash dashborder deco-none">
-            <%= link_to piece_path(piece), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" }, class: "deco-none dash-corbeille" do %>
-              <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
-            <% end %>
-            <%= link_to edit_piece_path(piece), class: "deco-none dash-modif" do %>
-              <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
-            <% end %>
-            <%= cl_image_tag piece.photo.key, height: 40, width: 60, crop: :fill, class: "dash-img" %>
-            <div class="dash-piece-nom">
-              <%= link_to "#{piece.nom}", piece_path(piece), class: "deco-none dash-nom" %>
+        <% @vehicules.each do |vehicule| %>
+            <div class="testdash dashborder deco-none">
+              <%= link_to vehicule_path(vehicule), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" }, class: "deco-none dash-corbeille" do %>
+                <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
+              <% end %>
+              <%= link_to edit_vehicule_path(vehicule), class: "deco-none dash-modif" do %>
+                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+              <% end %>
+              <% if vehicule.photo.present? %>
+                <%= cl_image_tag vehicule.photo.key, height: 40, width: 60, crop: :fill, class: "dash-img" %>
+              <% else %>
+                <p>Sans Image </p>
+              <% end %>
+              <%= link_to "#{vehicule.marque} #{vehicule.modele}", vehicule_path(vehicule), class: "deco-none dash-nom" %>
             </div>
-            <div class="dash-piece-desc">
-              <%= piece.description.slice(0, 50) %>
-            </div>
-            <div class="dash-piece-prix">
-              <%= piece.prix %>
-            </div>
-          </div>
-
-
-      <% end %>
-
-    </div>
-  </div>
-
-
-
-  <!-- commentaires -->
-
-  <div class="dash-title">
-    <div class="dash-titre-categ">
-      <h3>commentaires</h3>
-    </div>
-    <div class="dash-titre-bas">
-      <p> </p>
-      <h6> <%= Commentaire.count %> commentaires sur le site</h6>
-    </div>
-
-  </div>
-
-  <div class="dash-all-vehicule-content">
-    <div class="dash-all-com">
-
-      <div class="dash-commentaire-content">
-
-        <% @commentaires.each do |commentaire| %>
-          <div class="one-com">
-            <div class="dash-com-client-address">
-              <p><strong><%= commentaire.nom %> <%= commentaire.prenom %></strong></p>
-              <p><%= commentaire.email %> </p>
-            </div>
-
-            <p>Text: <%= commentaire.text.slice(0, 90) %><% if commentaire.text.length > 90 %>...<% end %></p>
-
-            <% if commentaire.reponse.present? %>
-              <p class="dash-yes-rep">Reponse: <%= commentaire.reponse.slice(0, 85) %><% if commentaire.reponse.length > 85 %>...<% end %></p>
-            <% else %>
-              <p class="dash-no-rep">Aucune reponse</p>
-            <% end %>
-
-            <div class="dash-com-date">
-              <p>Date: <%= commentaire.created_at.strftime("%d/%m/%Y") %> </p>
-            </div>
-
-            <div class="dash-com-fav">
-              <div>
-                <%= link_to edit_commentaire_path(commentaire), class: "deco-none dash-modif" do %>
-                  <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
-                <% end %>
-              </div>
-              <div>
-                <%= link_to commentaire_path(commentaire), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" }, class: "deco-none dash-corbeille" do %>
-                  <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
-                <% end %>
-              </div>
-            </div>
-
-          </div>
 
 
         <% end %>
 
       </div>
     </div>
+
+  </div>
+
+
+
+  <!-- pieces -->
+  <div data-dashboard-target="sectionpiece">
+
+    <div class="dash-title">
+      <div class="dash-titre-categ">
+        <h3>Pièces</h3>
+      </div>
+      <div class="dash-titre-bas">
+        <%= link_to "Ajouter +", new_piece_path, class: "dash-add-btn" %>
+        <h6> <%= Piece.count %> pieces en vente</h6>
+      </div>
+
+    </div>
+
+
+    <div class="dash-all-vehicule-content">
+      <div class="dash-all-vehicules">
+
+        <% @pieces.each do |piece| %>
+            <div class="testdash dashborder deco-none">
+              <%= link_to piece_path(piece), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" }, class: "deco-none dash-corbeille" do %>
+                <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
+              <% end %>
+              <%= link_to edit_piece_path(piece), class: "deco-none dash-modif" do %>
+                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+              <% end %>
+              <%= cl_image_tag piece.photo.key, height: 40, width: 60, crop: :fill, class: "dash-img" %>
+              <div class="dash-piece-nom">
+                <%= link_to "#{piece.nom}", piece_path(piece), class: "deco-none dash-nom" %>
+              </div>
+              <div class="dash-piece-desc">
+                <%= piece.description.slice(0, 50) %>
+              </div>
+              <div class="dash-piece-prix">
+                <%= piece.prix %>
+              </div>
+            </div>
+
+
+        <% end %>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- commentaires -->
+
+  <div data-dashboard-target="sectioncom">
+
+
+    <div class="dash-title">
+      <div class="dash-titre-categ">
+        <h3>commentaires</h3>
+      </div>
+      <div class="dash-titre-bas">
+        <p> </p>
+        <h6> <%= Commentaire.count %> commentaires sur le site</h6>
+      </div>
+
+    </div>
+
+    <div class="dash-all-vehicule-content">
+      <div class="dash-all-com">
+
+        <div class="dash-commentaire-content">
+
+          <% @commentaires.each do |commentaire| %>
+            <div class="one-com">
+              <div class="dash-com-client-address">
+                <p><strong><%= commentaire.nom %> <%= commentaire.prenom %></strong></p>
+                <p><%= commentaire.email %> </p>
+              </div>
+
+              <p>Text: <%= commentaire.text.slice(0, 90) %><% if commentaire.text.length > 90 %>...<% end %></p>
+
+              <% if commentaire.reponse.present? %>
+                <p class="dash-yes-rep">Reponse: <%= commentaire.reponse.slice(0, 85) %><% if commentaire.reponse.length > 85 %>...<% end %></p>
+              <% else %>
+                <p class="dash-no-rep">Aucune reponse</p>
+              <% end %>
+
+              <div class="dash-com-date">
+                <p>Date: <%= commentaire.created_at.strftime("%d/%m/%Y") %> </p>
+              </div>
+
+              <div class="dash-com-fav">
+                <div>
+                  <%= link_to edit_commentaire_path(commentaire), class: "deco-none dash-modif" do %>
+                    <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+                  <% end %>
+                </div>
+                <div>
+                  <%= link_to commentaire_path(commentaire), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" }, class: "deco-none dash-corbeille" do %>
+                    <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
+                  <% end %>
+                </div>
+              </div>
+
+            </div>
+
+
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+
   </div>
 
 
     <!-- members -->
 
-  <div class="dash-title">
+  <div data-dashboard-target="sectionmember">
 
-    <div class="dash-titre-categ">
-      <h3>Team</h3>
+    <div class="dash-title">
+
+      <div class="dash-titre-categ">
+        <h3>Team</h3>
+      </div>
+      <div class="dash-titre-bas">
+        <%= link_to "Ajouter +", new_member_path, class: "dash-add-btn" %>
+        <h6> <%= Member.count %> personnes dans l'équipe</h6>
+      </div>
+
     </div>
-    <div class="dash-titre-bas">
-      <%= link_to "Ajouter +", new_member_path, class: "dash-add-btn" %>
-      <h6> <%= Member.count %> personnes dans l'équipe</h6>
-    </div>
-
-  </div>
 
 
 
 
-  <div class="dash-all-vehicule-content">
-    <div class="dash-all-vehicules">
+    <div class="dash-all-vehicule-content">
+      <div class="dash-all-vehicules">
 
-      <% @members.each do |member| %>
-          <div class="testdash dashborder deco-none">
-            <%= link_to member_path(member), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" }, class: "deco-none dash-corbeille" do %>
-              <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
-            <% end %>
-            <%= link_to edit_member_path(member), class: "deco-none dash-modif" do %>
-              <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
-            <% end %>
-            <%= cl_image_tag member.photo.key, height: 40, width: 60, crop: :fill, class: "dash-img" %>
-            <div class="dash-member-name">
-              <%= member.nom %> <%= member.prenom %>
+        <% @members.each do |member| %>
+            <div class="testdash dashborder deco-none">
+              <%= link_to member_path(member), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" }, class: "deco-none dash-corbeille" do %>
+                <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
+              <% end %>
+              <%= link_to edit_member_path(member), class: "deco-none dash-modif" do %>
+                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+              <% end %>
+              <%= cl_image_tag member.photo.key, height: 40, width: 60, crop: :fill, class: "dash-img" %>
+              <div class="dash-member-name">
+                <%= member.nom %> <%= member.prenom %>
+              </div>
             </div>
-          </div>
 
 
-      <% end %>
+        <% end %>
 
+      </div>
     </div>
+
   </div>
 
 </div>
