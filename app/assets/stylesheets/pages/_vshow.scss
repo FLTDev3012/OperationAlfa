@@ -17,9 +17,8 @@
   animation: flasht 4s;
   animation-iteration-count: infinite;
   color: #fff;
-  // font-family: 'Great Vibes', cursive;
-  font-family: 'Lobster', cursive;
-  font-size: 55px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 43px;
 }
 
 .vshow-droite-gauche {
@@ -93,19 +92,20 @@
 }
 
 .vshow-droite  .vshow-box-droite span{
-  margin-left: 15px;
+  margin-left: 30px;
 
 }
 
 .vshow-droite p{
   margin-bottom: 0;
-  background-color: #6d2321;
+  background-color: #6d232173;
   margin-bottom: 10px;
 }
 
 .vshow-droite p:nth-child(2n){
-  background-color: #9e1716;
+  background-color: #9e171675;
 }
+
 
 // .vshow-droite p:hover{
 //   text-shadow: 2px 3px 3px $rouge;

@@ -21,11 +21,11 @@
           <% end %>
 
           <div class="big-font">
-          <div class="index-card-titre">
-            <p><%= vehicule.marque %> <%= vehicule.modele %></p>
-          </div>
-            <p><strong>2.0 TB VELOCE 4d 277 BHP</strong></p>
-            <p>3000€ D’EXTRAS</p>
+            <div class="index-card-titre">
+              <p><%= vehicule.marque %> <%= vehicule.modele %></p>
+            </div>
+            <%# <p><strong>2.0 TB VELOCE 4d 277 BHP</strong></p>
+            <p>3000€ D’EXTRAS</p> %>
           </div>
 
 
@@ -33,13 +33,14 @@
             <p><%= vehicule.enregistrement %></p>
             <p><%= vehicule.boite %></p>
             <p><%= vehicule.taille %> ltr</p>
-            <p><%= sprintf("%.2f", vehicule.kilometrage) %> km</p>
+            <p><%= number_with_delimiter(vehicule.kilometrage.to_i, delimiter: ' ') %> km</p>
+
 
 
           </div>
 
           <div class="index-card-prix">
-            <p class="big-font"><p><%= sprintf("%.2f", vehicule.prix) %>€</p>
+            <p class="big-font"><p><%= number_with_delimiter(vehicule.prix.to_i, delimiter: ' ') %> €</p>
           </div>
 
           <div class="index-card-btn little-font">
