@@ -6,61 +6,82 @@
     <h1>Les occasions</h1>
   </div>
 
-  <form>
-    <label for="marque">Marque :</label>
-    <select name="marque">
-      <option value="">-- Sélectionner une marque --</option>
-      <option value="Alfa Romeo" <%= 'selected' if params[:marque] == 'Alfa Romeo' %>>Alfa Romeo</option>
-      <option value="Fiat" <%= 'selected' if params[:marque] == 'Fiat' %>>Fiat</option>
-      <option value="Jeep" <%= 'selected' if params[:marque] == 'Jeep' %>>Jeep</option>
-      <!-- Autres options ici... -->
-    </select>
-
-    <br>
-
-    <label for="carburant">Carburant :</label>
-    <select name="carburant">
-      <option value="">-- Choisissez un carburant --</option>
-      <option value="Essence" <%= 'selected' if params[:carburant] == 'Essence' %>>Essence</option>
-      <option value="Diesel" <%= 'selected' if params[:carburant] == 'Diesel' %>>Diesel</option>
-      <option value="Hybride" <%= 'selected' if params[:carburant] == 'Hybride' %>>Hybride</option>
-    </select>
 
 
-    <br>
+  <!-- FILTER -->
 
-    <label for="boite">Boite :</label>
-    <select name="boite">
-      <option value="">-- Choisissez un boite --</option>
-      <option value="Manuelle" <%= 'selected' if params[:boite] == 'Manuelle' %>>Manuelle</option>
-      <option value="Automatique" <%= 'selected' if params[:boite] == 'Automatique' %>>Automatique</option>
-    </select>
+  <form class="index-filter-container">
+    <div class="index-filter-content">
+      <div class="content-filter">
+        <div class="filter-part-1">
+
+          <select name="marque">
+            <option value="">Marque</option>
+            <option value="Alfa Romeo" <%= 'selected' if params[:marque] == 'Alfa Romeo' %>>Alfa Romeo</option>
+            <option value="Fiat" <%= 'selected' if params[:marque] == 'Fiat' %>>Fiat</option>
+            <option value="Jeep" <%= 'selected' if params[:marque] == 'Jeep' %>>Jeep</option>
+            <!-- Autres options ici... -->
+          </select>
 
 
-    <br>
 
-    <label for="prix_min">Prix minimum :</label>
-    <input type="number" step="1000" name="prix_min" value="<%= params[:prix_min] %> " >
+          <select name="carburant">
+            <option value="">Carburant</option>
+            <option value="Essence" <%= 'selected' if params[:carburant] == 'Essence' %>>Essence</option>
+            <option value="Diesel" <%= 'selected' if params[:carburant] == 'Diesel' %>>Diesel</option>
+            <option value="Hybride" <%= 'selected' if params[:carburant] == 'Hybride' %>>Hybride</option>
+          </select>
 
-    <br>
 
-    <label for="prix_max">Prix maximum :</label>
-    <input type="number" step="1000" name="prix_max" value="<%= params[:prix_max] %>">
 
-    <br>
 
-    <label for="kilometrage">Kilometrage Max:</label>
-    <input type="number" step="1000" name="kilometrage" value="<%= params[:kilometrage] %>">
+          <select name="boite">
+            <option value="">Boite</option>
+            <option value="Manuelle" <%= 'selected' if params[:boite] == 'Manuelle' %>>Manuelle</option>
+            <option value="Automatique" <%= 'selected' if params[:boite] == 'Automatique' %>>Automatique</option>
+          </select>
 
-    <br>
+        </div>
 
-    <!-- Autres filtres ici... -->
 
-    <input type="submit" value="Filtrer">
-    <button type="button" onclick="window.location.href='/vehicules'">Réinitialiser les filtres</button>
+
+        <div class="filter-part-2">
+
+          <div>
+            <label for="prix_min">Prix minimum :</label>
+            <input type="number" step="1000" name="prix_min" value="<%= params[:prix_min] %> " >
+          </div>
+
+
+          <div>
+            <label for="prix_max">Prix maximum :</label>
+            <input type="number" step="1000" name="prix_max" value="<%= params[:prix_max] %>">
+          </div>
+
+
+          <div>
+            <label for="kilometrage">Kilometrage Max:</label>
+            <input type="number" step="1000" name="kilometrage" value="<%= params[:kilometrage] %>">
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <!-- Autres filtres ici... -->
+
+      <div class="filter-two-btn">
+        <div></div>
+        <input type="submit" value="Filtrer">
+        <button type="button" onclick="window.location.href='/vehicules'">Réinitialiser les filtres</button>
+      </div>
+    </div>
+
   </form>
 
 
+  <!-- FIN FILTER -->
 
   <div class="grid-index">
     <% @vehicules.each do |vehicule| %>
