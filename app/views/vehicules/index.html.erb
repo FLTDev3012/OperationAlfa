@@ -6,6 +6,36 @@
     <h1>Les occasions</h1>
   </div>
 
+  <form>
+    <label for="marque">Marque :</label>
+    <select name="marque">
+      <option value="">-- Sélectionner une marque --</option>
+      <option value="Alfa Romeo" <%= 'selected' if params[:marque] == 'Alfa Romeo' %>>Alfa Romeo</option>
+      <option value="Fiat" <%= 'selected' if params[:marque] == 'Fiat' %>>Fiat</option>
+      <option value="Jeep" <%= 'selected' if params[:marque] == 'Jeep' %>>Jeep</option>
+      <!-- Autres options ici... -->
+    </select>
+
+    <br>
+
+    <label for="carburant">Carburant :</label>
+      <select name="carburant">
+        <option value="">-- Choisissez un carburant --</option>
+        <option value="Essence" <%= 'selected' if params[:carburant] == 'Essence' %>>Essence</option>
+        <option value="Diesel" <%= 'selected' if params[:carburant] == 'Diesel' %>>Diesel</option>
+        <option value="Hybride" <%= 'selected' if params[:carburant] == 'Hybride' %>>Hybride</option>
+      </select>
+
+
+    <br>
+
+    <!-- Autres filtres ici... -->
+
+    <input type="submit" value="Filtrer">
+  </form>
+
+
+
   <div class="grid-index">
     <% @vehicules.each do |vehicule| %>
 
