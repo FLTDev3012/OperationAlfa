@@ -30,21 +30,40 @@
 <% end %>
 
 
-<%# <div class="scrl-container">
-  <div class="scrl-blockHorizontal">
-    <div class="scrl-slide scrl-one">A propos</div>
-    <div class="scrl-slide scrl-two">
 
-    </div>
-    <div class="scrl-slide scrl-three">Slide3</div>
-    <div class="scrl-slide scrl-four">Slide4</div>
+<!-- Qui sommes nous ? (who) -->
+
+<div class="who-container">
+
+  <div class="who-titre">
+    <h2 id="scroll-text" class="hid-scroll-text">Texte à afficher</h2>
   </div>
-</div> %>
+
+  <div class="who-gauche-droite">
+
+    <div class="who-gauche">
+      <%= image_tag "alfaMainImg.jpg", height: 400, width: 560, crop: :fill %>
+    </div>
+
+    <div class="who-droite">
+    </div>
+
+  </div>
+
+</div>
 
 
+<script>
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var scrollText = document.getElementById('scroll-text');
 
-
-
+    if (scrollPosition > 450) {
+      scrollText.classList.remove('hid-scroll-text');
+      scrollText.classList.add('show-scroll-text');
+    }
+  });
+</script>
 
 
 
@@ -130,8 +149,8 @@
 
 
 <script>
-  const firstDiv = document.querySelector('.hero-video');
-  const secondDiv = document.querySelector('.carrou-body');
+  // const firstDiv = document.querySelector('.hero-video');
+  // const secondDiv = document.querySelector('.carrou-body');
 
   firstDiv.addEventListener('wheel', (event) => {
     if (event.deltaY > 0) {
