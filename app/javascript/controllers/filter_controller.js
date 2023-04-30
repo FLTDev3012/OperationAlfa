@@ -14,4 +14,11 @@ export default class extends Controller {
   }
 
 
+  closeBigFilter() {
+    // au clic on passe en display
+    this.sectionBigFilterTarget.classList.add("d-none")
+    this.sectionBtnFilterTarget.classList.remove("d-none")
+  }
+
+
 }

@@ -9,82 +9,88 @@
 
 
   <!-- FILTER -->
-
-  <form class="index-filter-container">
-    <div class="index-filter-content">
-      <div class="filter-croix">
-        <i class="fa-sharp fa-solid fa-xmark"></i>
-      </div>
-
-      <div class="content-filter">
-        <div class="filter-part-1">
-
-          <select name="marque">
-            <option value="">Marque</option>
-            <option value="Alfa Romeo" <%= 'selected' if params[:marque] == 'Alfa Romeo' %>>Alfa Romeo</option>
-            <option value="Fiat" <%= 'selected' if params[:marque] == 'Fiat' %>>Fiat</option>
-            <option value="Jeep" <%= 'selected' if params[:marque] == 'Jeep' %>>Jeep</option>
-            <!-- Autres options ici... -->
-          </select>
-
-
-
-          <select name="carburant">
-            <option value="">Carburant</option>
-            <option value="Essence" <%= 'selected' if params[:carburant] == 'Essence' %>>Essence</option>
-            <option value="Diesel" <%= 'selected' if params[:carburant] == 'Diesel' %>>Diesel</option>
-            <option value="Hybride" <%= 'selected' if params[:carburant] == 'Hybride' %>>Hybride</option>
-          </select>
-
-
-
-
-          <select name="boite">
-            <option value="">Boite</option>
-            <option value="Manuelle" <%= 'selected' if params[:boite] == 'Manuelle' %>>Manuelle</option>
-            <option value="Automatique" <%= 'selected' if params[:boite] == 'Automatique' %>>Automatique</option>
-          </select>
-
-        </div>
-
-
-
-        <div class="filter-part-2">
-
-          <div>
-            <label for="prix_min">Prix minimum :</label>
-            <input type="number" step="500" name="prix_min" style="text-align: center;" value="<%= number_with_delimiter(params[:prix_min], delimiter: ' ') %>">
-
-
-          </div>
-
-
-          <div>
-            <label for="prix_max">Prix maximum :</label>
-            <input type="number" step="500" name="prix_max" value="<%= params[:prix_max] %>">
-          </div>
-
-
-          <div>
-            <label for="kilometrage">Kilometrage Max:</label>
-            <input type="number" name="kilometrage" value="<%= params[:kilometrage] %>">
-          </div>
-
-        </div>
-      </div>
-
-
-
-      <!-- Autres filtres ici... -->
-
-      <div class="filter-two-btn">
-        <div></div>
-        <input type="submit" value="Filtrer">
-        <a onclick="window.location.href='/vehicules'"><i class="fa-solid fa-arrow-rotate-left" style="color: #ffffff;"></i></a>
-      </div>
+  <div class="petit-btn-filter-et-form">
+    <div class="petit-btn-filter">
+      <span>Filtrer</span>
     </div>
 
-  </form>
+    <form class="index-filter-container">
+      <div class="index-filter-content">
+        <div class="filter-croix">
+          <i class="fa-sharp fa-solid fa-xmark"></i>
+        </div>
+
+        <div class="content-filter">
+          <div class="filter-part-1">
+
+            <select name="marque">
+              <option value="">Marque</option>
+              <option value="Alfa Romeo" <%= 'selected' if params[:marque] == 'Alfa Romeo' %>>Alfa Romeo</option>
+              <option value="Fiat" <%= 'selected' if params[:marque] == 'Fiat' %>>Fiat</option>
+              <option value="Jeep" <%= 'selected' if params[:marque] == 'Jeep' %>>Jeep</option>
+              <!-- Autres options ici... -->
+            </select>
+
+
+
+            <select name="carburant">
+              <option value="">Carburant</option>
+              <option value="Essence" <%= 'selected' if params[:carburant] == 'Essence' %>>Essence</option>
+              <option value="Diesel" <%= 'selected' if params[:carburant] == 'Diesel' %>>Diesel</option>
+              <option value="Hybride" <%= 'selected' if params[:carburant] == 'Hybride' %>>Hybride</option>
+            </select>
+
+
+
+
+            <select name="boite">
+              <option value="">Boite</option>
+              <option value="Manuelle" <%= 'selected' if params[:boite] == 'Manuelle' %>>Manuelle</option>
+              <option value="Automatique" <%= 'selected' if params[:boite] == 'Automatique' %>>Automatique</option>
+            </select>
+
+          </div>
+
+
+
+          <div class="filter-part-2">
+
+            <div>
+              <label for="prix_min">Prix minimum :</label>
+              <input type="number" step="500" name="prix_min" style="text-align: center;" value="<%= number_with_delimiter(params[:prix_min], delimiter: ' ') %>">
+
+
+            </div>
+
+
+            <div>
+              <label for="prix_max">Prix maximum :</label>
+              <input type="number" step="500" name="prix_max" value="<%= params[:prix_max] %>">
+            </div>
+
+
+            <div>
+              <label for="kilometrage">Kilometrage Max:</label>
+              <input type="number" name="kilometrage" value="<%= params[:kilometrage] %>">
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <!-- Autres filtres ici... -->
+
+        <div class="filter-two-btn">
+          <div></div>
+          <input type="submit" value="Filtrer">
+          <a onclick="window.location.href='/vehicules'"><i class="fa-solid fa-arrow-rotate-left" style="color: #ffffff;"></i></a>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
 
 
   <!-- FIN FILTER -->
