@@ -5,6 +5,8 @@ class VehiculesController < ApplicationController
 
   def index
     @vehicules = Vehicule.all
+    @filtered = false
+
 
     if params[:marque].present?
       @vehicules = @vehicules.where(marque: params[:marque])
@@ -34,6 +36,9 @@ class VehiculesController < ApplicationController
       flash.now[:notice] = "Aucun véhicule ne correspond aux filtres sélectionnés."
     end
 
+    if params[:marque].present? || params[:carburant].present? || params[:prix_min].present? || params[:prix_max].present? || params[:kilometrage].present? || flash.now[:notice].present?
+      @filtered = true
+    end
     # Autres filtres ici...
 
     # Pour afficher la liste de véhicules filtrée dans la vue

@@ -11,11 +11,11 @@
   <!-- FILTER -->
   <div class="petit-btn-filter-et-form" data-controller="filter">
 
-    <div class="petit-btn-filter" data-action="click->filter#openBigFilter" data-filter-target="sectionBtnFilter">
+    <div class="petit-btn-filter <%= @filtered ? 'd-none' : '' %>" data-action="click->filter#openBigFilter" data-filter-target="sectionBtnFilter">
       <span>Filtrer</span>
     </div>
 
-    <form class="index-filter-container d-none" data-filter-target="sectionBigFilter">
+    <form class="index-filter-container <%= @filtered ? '' : 'd-none' %>"  data-filter-target="sectionBigFilter">
       <div class="index-filter-content">
         <div class="filter-croix" data-action="click->filter#closeBigFilter">
           <i class="fa-sharp fa-solid fa-xmark"></i>
