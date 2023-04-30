@@ -9,14 +9,15 @@
 
 
   <!-- FILTER -->
-  <div class="petit-btn-filter-et-form">
-    <div class="petit-btn-filter">
+  <div class="petit-btn-filter-et-form" data-controller="filter">
+
+    <div class="petit-btn-filter" data-action="click->filter#openBigFilter" data-filter-target="sectionBtnFilter">
       <span>Filtrer</span>
     </div>
 
-    <form class="index-filter-container">
+    <form class="index-filter-container" data-filter-target="sectionBigFilter">
       <div class="index-filter-content">
-        <div class="filter-croix">
+        <div class="filter-croix" data-action="click->filter#closeBigFilter">
           <i class="fa-sharp fa-solid fa-xmark"></i>
         </div>
 
@@ -89,6 +90,7 @@
       </div>
 
     </form>
+
   </div>
 
 
