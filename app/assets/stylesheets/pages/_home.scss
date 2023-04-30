@@ -240,6 +240,27 @@ ball {
 
 }
 
+.who-gauche-droite {
+  display: flex;
+}
+
+.who-gauche {
+  background-color: #fc0606;
+  width: 50%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+}
+
+.who-gauche img{
+  border-radius: 5px;
+}
+
+.who-droite {
+  background-color: #50b300;
+  width: 50%;
+  height: 70vh;
+}
 
 // carrou!!!!!!!!!!!
 
