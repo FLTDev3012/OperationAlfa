@@ -35,8 +35,21 @@
 
 .petit-btn-filter {
   color: #fff;
+  margin-left: 50px;
 }
 
+.petit-btn-filter span {
+  background-color: $rouge;
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px $noir;
+}
+
+
+
+.petit-btn-filter span:hover {
+  background-color: #f10201;
+}
 
 //
 
