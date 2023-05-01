@@ -50,10 +50,12 @@
 
 .com-bg-red {
   background-color: #9e1716; /* ou une autre couleur */
+  border-radius: 50px 10px;
 }
 
 .com-bg-grey {
   background-color: $grisc;
+  border-radius: 50px 10px;
 }
 
 .com-nom {
@@ -80,6 +82,7 @@
   margin-top: 8px;
   box-shadow: 1px 2px 2px #0C0C0C;
   text-shadow: none;
+  border-radius: 10px 50px;
 
 }
 
