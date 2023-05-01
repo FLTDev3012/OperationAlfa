@@ -14,16 +14,19 @@
 }
 
 .blacknav-container h4{
-  font-size: 1.2rem;
+  font-size: 18px;
+  font-family: "Lobster" !important;
 }
 
 .blacknav-container p{
   margin-bottom: 0;
+  font-size: 18px;
 }
 
 .blacknav-droite {
   border-left: solid 1px $rouge;
   padding-left: 10px;
+  font-family: "Lobster" !important;
 }
 
 // test
@@ -41,8 +44,10 @@
   line-height: 52px;
   padding: 0 30px;
   color: $blanc;
-  font-size: 17px;
+  font-size: 22px;
   transition: 0.5s;
+  font-family: "Lobster";
+
 }
 
 .nvrainav-container a:hover {

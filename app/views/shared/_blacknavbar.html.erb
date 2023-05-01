@@ -10,11 +10,13 @@
     <%= link_to "Nos piéces", pieces_path, class: ("active" if current_page?(pieces_path)) %>
     <%= link_to "Commentaires", commentaires_path, class: ("active" if current_page?(commentaires_path)) %>
     <%= link_to "Notre équipe", members_path, class: ("active" if current_page?(members_path)) %>
-    <%= link_to "Dashboard", dashboard_path, class: ("active" if current_page?(dashboard_path)) %>
+    <% if user_signed_in? %>
+      <%= link_to "Dashboard", dashboard_path, class: ("active" if current_page?(dashboard_path)) %>
+    <% end %>
   </div>
 
   <div class="blacknav-droite">
-    <p>contact:</p>
+    <p>Contact:</p>
     <h4>03 21 89 56 00</h4>
   </div>
 
