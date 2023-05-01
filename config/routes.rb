@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "dashboard", to: "pages#dashboard"
 
 
+
   resources :vehicules
 
   resources :commentaires, only: [:index, :new, :create, :edit, :update, :destroy]
