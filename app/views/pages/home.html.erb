@@ -49,7 +49,7 @@
   <div class="who-gauche-droite">
 
     <div class="who-gauche">
-      <%= image_tag "alfaMainImg.jpg", height: 400, width: 560, crop: :fill %>
+      <%= image_tag "alfaMainImg.jpg", height: 400, width: 560, crop: :fill, class:"who-gauche-img" %>
     </div>
 
     <div class="who-droite">
@@ -65,10 +65,22 @@
     var scrollPosition = window.scrollY;
     var scrollText = document.querySelector('.scroll-text');
 
-    if (scrollPosition > 300) {
+    if (scrollPosition > 216) {
       scrollText.classList.add('show');
     } else {
       scrollText.classList.remove('show');
+    }
+  });
+
+
+    window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var scrollImg = document.querySelector('.who-gauche img');
+
+    if (scrollPosition > 450) {
+      scrollImg.classList.add('show');
+    } else {
+      scrollImg.classList.remove('show');
     }
   });
 </script>
