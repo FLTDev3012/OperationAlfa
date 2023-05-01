@@ -209,7 +209,7 @@ ball {
 .who-container {
   height: 90vh;
   width: 100vw;
-  background-color: $grisc;
+  background-color: $grisf;
 }
 
 
@@ -245,22 +245,31 @@ ball {
 }
 
 .who-gauche {
-  background-color: #fc0606;
+  // background-color: #fc0606;
   width: 50%;
   height: 70vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .who-gauche img{
-  border-radius: 5px;
+  // border-radius: 5px;
+  border-radius: 35% 5%;
+  box-shadow: 2px 4px 10px $noir;
 }
 
 .who-droite {
-  background-color: #50b300;
+  // background-color: #50b300;
   width: 50%;
   height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+
 
 .scroll-text {
 
@@ -288,6 +297,23 @@ ball {
   opacity: 1;
 }
 
+.who-droite p{
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  padding: 40px 40px;
+}
+
+.who-droite-text {
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  transform: translateX(-30px);
+}
+
+.who-droite-text.show {
+  transform: translateX(0px);
+  opacity: 1;
+}
 
 
 
@@ -300,7 +326,7 @@ ball {
 	display: flex;
   height: 100vh;
   align-items: center;
-  background-color: $grisf;
+  background-color: $grisc;
   position: relative;
 }
 

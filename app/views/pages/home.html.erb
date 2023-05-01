@@ -39,7 +39,7 @@
 
     <div class="scroll-container">
       <div class="scroll-text">
-        <h2>Texte à afficher</h2>
+        <h2>Où sommes nous ?</h2>
       </div>
     </div>
 
@@ -53,6 +53,10 @@
     </div>
 
     <div class="who-droite">
+      <div class="who-droite-text">
+        <p>Située entre Cucq et Trépied, au 801 Avenue Maxence Van Der Meersch, 62780 Cucq, notre concession Planète Alfa vous accueille avec plaisir.</p>
+        <p>Notre équipe expérimentée est à votre disposition pour répondre à toutes vos questions et vous aider à trouver la voiture de vos rêves. N'hésitez pas à nous rendre visite ou à nous contacter pour plus d'informations.</p>
+      </div>
     </div>
 
   </div>
@@ -63,24 +67,35 @@
 <script>
   window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
-    var scrollText = document.querySelector('.scroll-text');
+    var scrollTitre = document.querySelector('.scroll-text');
 
-    if (scrollPosition > 216) {
-      scrollText.classList.add('show');
+    if (scrollPosition > 120) {
+      scrollTitre.classList.add('show');
     } else {
-      scrollText.classList.remove('show');
+      scrollTitre.classList.remove('show');
     }
   });
 
 
-    window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
     var scrollImg = document.querySelector('.who-gauche img');
 
-    if (scrollPosition > 450) {
+    if (scrollPosition > 390) {
       scrollImg.classList.add('show');
     } else {
       scrollImg.classList.remove('show');
+    }
+  });
+
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var scrollText = document.querySelector('.who-droite-text');
+
+    if (scrollPosition > 450) {
+      scrollText.classList.add('show');
+    } else {
+      scrollText.classList.remove('show');
     }
   });
 </script>
