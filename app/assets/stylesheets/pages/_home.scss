@@ -1,6 +1,7 @@
 // Specific CSS for your home-page
 
 
+
 .home-main-img {
   background-image: url(asset_path('alfaMainImg.jpg'));
   background-repeat: no-repeat;
@@ -201,7 +202,11 @@ ball {
 
 
 
+// who +  carrou
 
+.home-bgc-grisf {
+  background-color: $grisf;
+}
 
 // ou sommes nous ?
 
@@ -328,6 +333,15 @@ ball {
   align-items: center;
   background-color: $grisf;
   position: relative;
+
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  transform: translateY(300px);
+}
+
+.carrou-body.show {
+  transform: translateX(0px);
+  opacity: 1;
 }
 
 .carrou-body h2 {

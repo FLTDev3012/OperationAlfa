@@ -1,4 +1,3 @@
-
 <% if video_path("mainvideo.mp4").present? %>
 
   <div class="hero-video">
@@ -30,168 +29,171 @@
 <% end %>
 
 
+<!-- Qui sommes nous ? (who) + carrou pour bgc -->
+<div class="home-bgc-grisf">
+  <!-- Qui sommes nous ? (who) -->
 
-<!-- Qui sommes nous ? (who) -->
+  <div class="who-container">
 
-<div class="who-container">
+    <div class="who-titre">
 
-  <div class="who-titre">
-
-    <div class="scroll-container">
-      <div class="scroll-text">
-        <h2>Où sommes nous ?</h2>
+      <div class="scroll-container">
+        <div class="scroll-text">
+          <h2>Où sommes nous ?</h2>
+        </div>
       </div>
+
     </div>
 
-  </div>
 
+    <div class="who-gauche-droite">
 
-  <div class="who-gauche-droite">
-
-    <div class="who-gauche">
-      <%= image_tag "who2.jpg", height: 400, width: 560, crop: :fill, class:"who-gauche-img" %>
-    </div>
-
-    <div class="who-droite">
-      <div class="who-droite-text">
-        <p>Située entre <strong>Cucq</strong> et <strong>Trépied</strong><br>Au 801 Avenue Maxence Van Der Meersch, 62780 Cucq<br>Notre concession <strong>Planète Alfa</strong> vous accueille avec plaisir!</p>
-        <p>Notre équipe <strong>expérimentée</strong> est à votre disposition pour répondre à toutes vos questions et vous aider à trouver <strong>la voiture de vos rêves</strong>.</p>
-        <p><strong>N'hésitez pas</strong> à nous rendre visite ou à nous contacter pour plus d'informations.</p>
+      <div class="who-gauche">
+        <%= image_tag "who2.jpg", height: 400, width: 560, crop: :fill, class:"who-gauche-img" %>
       </div>
+
+      <div class="who-droite">
+        <div class="who-droite-text">
+          <p>Située entre <strong>Cucq</strong> et <strong>Trépied</strong><br>Au 801 Avenue Maxence Van Der Meersch, 62780 Cucq<br>Notre concession <strong>Planète Alfa</strong> vous accueille avec plaisir!</p>
+          <p>Notre équipe <strong>expérimentée</strong> est à votre disposition pour répondre à toutes vos questions et vous aider à trouver <strong>la voiture de vos rêves</strong>.</p>
+          <p><strong>N'hésitez pas</strong> à nous rendre visite ou à nous contacter pour plus d'informations.</p>
+        </div>
+      </div>
+
     </div>
 
   </div>
 
-</div>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var scrollPosition = window.scrollY;
+      var scrollTitre = document.querySelector('.scroll-text');
+
+      if (scrollPosition > 120) {
+        scrollTitre.classList.add('show');
+      } else {
+        scrollTitre.classList.remove('show');
+      }
+    });
 
 
-<script>
-  window.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY;
-    var scrollTitre = document.querySelector('.scroll-text');
+    window.addEventListener('scroll', function() {
+      var scrollPosition = window.scrollY;
+      var scrollImg = document.querySelector('.who-gauche img');
 
-    if (scrollPosition > 120) {
-      scrollTitre.classList.add('show');
-    } else {
-      scrollTitre.classList.remove('show');
-    }
-  });
+      if (scrollPosition > 390) {
+        scrollImg.classList.add('show');
+      } else {
+        scrollImg.classList.remove('show');
+      }
+    });
 
+    window.addEventListener('scroll', function() {
+      var scrollPosition = window.scrollY;
+      var scrollText = document.querySelector('.who-droite-text');
 
-  window.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY;
-    var scrollImg = document.querySelector('.who-gauche img');
-
-    if (scrollPosition > 390) {
-      scrollImg.classList.add('show');
-    } else {
-      scrollImg.classList.remove('show');
-    }
-  });
-
-  window.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY;
-    var scrollText = document.querySelector('.who-droite-text');
-
-    if (scrollPosition > 450) {
-      scrollText.classList.add('show');
-    } else {
-      scrollText.classList.remove('show');
-    }
-  });
-</script>
+      if (scrollPosition > 450) {
+        scrollText.classList.add('show');
+      } else {
+        scrollText.classList.remove('show');
+      }
+    });
+  </script>
 
 
 
-<!-- test carrou -->
+  <!-- test carrou -->
 
 
 
 
-<div class="carrou-body">
+  <div class="carrou-body">
 
-  <div>
-    <h2>Dernier arrivage</h2>
-  </div>
 
-  <div class="container">
-      <input type="radio" name="slider" id="item-1" checked>
-      <input type="radio" name="slider" id="item-2">
-      <input type="radio" name="slider" id="item-3">
-    <div class="cards">
-      <label class="card" for="item-1" id="song-1">
-        <%= cl_image_tag @vehicule1.photo.key %>
-      </label>
-      <label class="card" for="item-2" id="song-2">
-        <%= cl_image_tag @vehicule2.photo.key %>
-      </label>
-      <label class="card" for="item-3" id="song-3">
-        <%= cl_image_tag @vehicule3.photo.key %>
-      </label>
+    <div>
+      <h2>Dernier arrivage</h2>
     </div>
-    <div class="player">
-      <div class="upper-part">
 
-        <div class="info-area" id="test">
+    <div class="container">
+        <input type="radio" name="slider" id="item-1" checked>
+        <input type="radio" name="slider" id="item-2">
+        <input type="radio" name="slider" id="item-3">
+      <div class="cards">
+        <label class="card" for="item-1" id="song-1">
+          <%= cl_image_tag @vehicule1.photo.key %>
+        </label>
+        <label class="card" for="item-2" id="song-2">
+          <%= cl_image_tag @vehicule2.photo.key %>
+        </label>
+        <label class="card" for="item-3" id="song-3">
+          <%= cl_image_tag @vehicule3.photo.key %>
+        </label>
+      </div>
+      <div class="player">
+        <div class="upper-part">
 
-          <label class="song-info" id="song-info-1">
-            <div class="flex">
-              <div class="title"><%= @vehicule1.marque %></div>
-              <div class="title"><%= @vehicule1.modele %></div>
-            </div>
-            <div class="flex-bas">
-              <div class="time"><%= number_with_precision(@vehicule1.kilometrage.to_i, precision: 0, delimiter: ' ', separator: '.') %> Km</div>
-              <div class="carrou-link">
-                <%= link_to "voir+", vehicule_path(@vehicule1) %>
+          <div class="info-area" id="test">
+
+            <label class="song-info" id="song-info-1">
+              <div class="flex">
+                <div class="title"><%= @vehicule1.marque %></div>
+                <div class="title"><%= @vehicule1.modele %></div>
               </div>
-            </div>
-          </label>
-
-          <label class="song-info" id="song-info-2">
-            <div class="flex">
-              <div class="title"><%= @vehicule2.marque %></div>
-              <div class="title"><%= @vehicule2.modele %></div>
-            </div>
-            <div class="flex-bas">
-              <div class="time"><%= number_with_precision(@vehicule2.kilometrage, precision: 0, delimiter: ' ', separator: '.') %> Km</div>
-              <div class="carrou-link">
-                <%= link_to "voir+", vehicule_path(@vehicule2) %>
+              <div class="flex-bas">
+                <div class="time"><%= number_with_precision(@vehicule1.kilometrage.to_i, precision: 0, delimiter: ' ', separator: '.') %> Km</div>
+                <div class="carrou-link">
+                  <%= link_to "voir+", vehicule_path(@vehicule1) %>
+                </div>
               </div>
-            </div>
-          </label>
+            </label>
 
-          <label class="song-info" id="song-info-3">
-            <div class="flex">
-              <div class="title"><%= @vehicule3.marque %></div>
-              <div class="title"><%= @vehicule3.modele %></div>
-            </div>
-            <div class="flex-bas">
-              <div class="time"><%= number_with_delimiter(@vehicule3.kilometrage.to_i, delimiter: ' ', separator: '.', precision: 0) %> Km</div>
-
-
-              <div class="carrou-link">
-                <%= link_to "voir+", vehicule_path(@vehicule3) %>
+            <label class="song-info" id="song-info-2">
+              <div class="flex">
+                <div class="title"><%= @vehicule2.marque %></div>
+                <div class="title"><%= @vehicule2.modele %></div>
               </div>
-            </div>
-          </label>
+              <div class="flex-bas">
+                <div class="time"><%= number_with_precision(@vehicule2.kilometrage, precision: 0, delimiter: ' ', separator: '.') %> Km</div>
+                <div class="carrou-link">
+                  <%= link_to "voir+", vehicule_path(@vehicule2) %>
+                </div>
+              </div>
+            </label>
 
+            <label class="song-info" id="song-info-3">
+              <div class="flex">
+                <div class="title"><%= @vehicule3.marque %></div>
+                <div class="title"><%= @vehicule3.modele %></div>
+              </div>
+              <div class="flex-bas">
+                <div class="time"><%= number_with_delimiter(@vehicule3.kilometrage.to_i, delimiter: ' ', separator: '.', precision: 0) %> Km</div>
+
+
+                <div class="carrou-link">
+                  <%= link_to "voir+", vehicule_path(@vehicule3) %>
+                </div>
+              </div>
+            </label>
+
+          </div>
         </div>
       </div>
     </div>
+
   </div>
+
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var scrollPosition = window.scrollY;
+      var scrollCarrou = document.querySelector('.carrou-body');
+
+      if (scrollPosition > 1026) {
+        scrollCarrou.classList.add('show');
+      } else {
+        scrollCarrou.classList.remove('show');
+      }
+    });
+  </script>
 </div>
-
-
-
-
-<script>
-  // const firstDiv = document.querySelector('.hero-video');
-  // const secondDiv = document.querySelector('.carrou-body');
-
-  firstDiv.addEventListener('wheel', (event) => {
-    if (event.deltaY > 0) {
-      event.preventDefault();
-      secondDiv.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-</script>
