@@ -33,14 +33,21 @@
 .piece-card {
   background-color: #ededed;
   width: 280px;
-  border-radius: 8px;
+  border-radius: 10% 5%;
   margin: 20px 10px;
   transition: transform 0.3s ease;
   box-shadow: 1px 5px 5px #0C0C0C;
+  font-family: "lobster", cursive;
+
 }
 
 .piece-nom {
-  font-family: "lobster", cursive;
+  font-family: "lobster", cursive !important;
+
+}
+
+.piece-nom {
+  font-size: 26px;
 }
 
 .piece-card:hover {
@@ -53,8 +60,10 @@
 
 .piece-card p {
   text-align: center;
-  font-size: 22px;
   color: #0C0C0C;
+  font-family: "Lobster Two" cursive;
+  font-style: italic;
+  // text-shadow: 1px 3px 3px #0C0C0C;
 
 }
 

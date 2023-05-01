@@ -128,7 +128,7 @@ commentaire5 = Commentaire.create(nom: "andre", prenom: "philippe", email: "andr
 p "------ #{Commentaire.count} commentaire created ----------"
 
 
-file = URI.open("https://images.unsplash.com/photo-1563760836797-bf5d5f9d2243?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80")
+file = URI.open("https://careconord-pieces-occasion.fr/13159362-large_default/boite-a-vitesse-mecanique.jpg")
 piece1 = Piece.create(nom: "Piece1", description: "Magnifique piece", prix: 35)
 piece1.photo.attach(io: file, filename: "p1.png", content_type: "image/png")
 piece1.save
