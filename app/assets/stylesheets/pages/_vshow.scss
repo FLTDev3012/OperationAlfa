@@ -17,7 +17,7 @@
   animation: flasht 4s;
   animation-iteration-count: infinite;
   color: #fff;
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Lobster';
   font-size: 43px;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .vshow-gauche img{
-  border-radius: 5px;
+  border-radius: 20% 5%;
   box-shadow: 2px 2px 5px #0C0C0C;
 
 }
@@ -55,7 +55,8 @@
 }
 
 .vshow-gauche .vshow-prix p{
-  color: #e2e2e2;
+  color: #fff;
+  font-family: "Lobster";
 }
 
 .vshow-gauche .vshow-back {
@@ -74,7 +75,7 @@
 }
 
 .vshow-droite {
-  color: #fff;
+  color: #ededed;
   width: 50%;
   display: flex;
   justify-content: center;
@@ -88,6 +89,7 @@
   border-radius: 5px;
   width: 40%;
   font-weight: bold;
+  font-style: italic;
 
 }
 
