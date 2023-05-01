@@ -58,7 +58,7 @@
 
             <div>
               <label for="prix_min">Prix minimum :</label>
-              <input type="number" step="500" name="prix_min" style="text-align: center;" value="<%= number_with_delimiter(params[:prix_min], delimiter: ' ') %>">
+              <input type="number" step="500" name="prix_min" style="text-align: center;" value="<%= params[:prix_min] %>">
 
 
             </div>
@@ -66,13 +66,13 @@
 
             <div>
               <label for="prix_max">Prix maximum :</label>
-              <input type="number" step="500" name="prix_max" value="<%= params[:prix_max] %>">
+              <input type="number" step="500" name="prix_max" style="text-align: center;" value="<%= params[:prix_max] %>">
             </div>
 
 
             <div>
               <label for="kilometrage">Kilometrage Max:</label>
-              <input type="number" name="kilometrage" value="<%= params[:kilometrage] %>">
+              <input type="number" name="kilometrage" style="text-align: center;" value="<%= params[:kilometrage] %>">
             </div>
 
           </div>
