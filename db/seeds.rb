@@ -40,7 +40,7 @@ vehicule1.save
 p "------ #{Vehicule.count} vehicule created ----------"
 
 file = URI.open("https://www.challenges.fr/assets/img/2017/11/02/cover-r4x3w1200-59fb0424953e9-jeep-wrangler-unlimited-rubicon-24-jpeg.jpg")
-vehicule2 = Vehicule.create(marque: "Jeep", modele: "350z", user_id: user1.id, enregistrement: 2010, kilometrage: 110000, taille: 1.9, puissancech: 180, puissancecv: 7, carburant: "Diesel", boite: "Manuelle", prix: 27000.54, carrosserie: "Cross", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
+vehicule2 = Vehicule.create(marque: "Jeep", modele: "Monster", user_id: user1.id, enregistrement: 2010, kilometrage: 110000, taille: 1.9, puissancech: 180, puissancecv: 7, carburant: "Diesel", boite: "Manuelle", prix: 27000.54, carrosserie: "Cross", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
 vehicule2.photo.attach(io: file, filename: "v2.png", content_type: "image/png")
 vehicule2.save
 
@@ -61,7 +61,7 @@ vehicule4.save
 p "------ #{Vehicule.count} vehicule created ----------"
 
 file = Rails.root.join('app', 'assets', 'images', 'car3.jpg')
-vehicule5 = Vehicule.create(marque: "Alfa Romeo", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
+vehicule5 = Vehicule.create(marque: "Alfa Romeo", modele: "Mito", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
 vehicule5.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
 vehicule5.save
 
@@ -83,7 +83,7 @@ p "------ #{Vehicule.count} vehicule created ----------"
 
 
 file = Rails.root.join('app', 'assets', 'images', 'car6.jpg')
-vehicule8 = Vehicule.create(marque: "Fiat", modele: "Punto", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
+vehicule8 = Vehicule.create(marque: "Fiat", modele: "500", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
 vehicule8.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
 vehicule8.save
 
@@ -91,7 +91,7 @@ p "------ #{Vehicule.count} vehicule created ----------"
 
 
 file = Rails.root.join('app', 'assets', 'images', 'car7.jpg')
-vehicule9 = Vehicule.create(marque: "PORSCHE", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
+vehicule9 = Vehicule.create(marque: "Porsche", modele: "511", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
 vehicule9.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
 vehicule9.save
 
@@ -99,7 +99,7 @@ p "------ #{Vehicule.count} vehicule created ----------"
 
 
 file = Rails.root.join('app', 'assets', 'images', 'car8.jpg')
-vehicule10 = Vehicule.create(marque: "Fiat", modele: "Giulia", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
+vehicule10 = Vehicule.create(marque: "Fiat", modele: "500", user_id: user1.id, enregistrement: 2017, kilometrage: 53200, taille: 2.0, puissancech: 280, puissancecv: 5, carburant: "Essence", boite: "Manuelle", prix: 36990, carrosserie: "Sport", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5)
 vehicule10.photo.attach(io: File.open(file), filename: "v3.jpg", content_type: "image/jpeg")
 vehicule10.save
 

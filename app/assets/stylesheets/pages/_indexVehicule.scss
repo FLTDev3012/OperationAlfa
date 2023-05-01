@@ -168,7 +168,7 @@
 .index-card {
   background-color: #ededed;
   width: 280px;
-  border-radius: 8px;
+  border-radius: 10% 5%;
   // border: 1px solid $grisc;
   margin: 20px 10px;
   transition: transform 0.3s ease;
@@ -204,6 +204,10 @@
   margin-top: 1rem;
 }
 
+.index-card-titre:first-child {
+  font-size: 26px;
+}
+
 .index-card p {
   color: #111;
   padding-left: 10px;
@@ -226,7 +230,7 @@ a.link-card {
 }
 
 .index-img {
-  border-radius: 8px 8px 0 0;
+  border-radius: 10% 5% 0 0;
 }
 
 .index-card-tag {
@@ -236,7 +240,7 @@ a.link-card {
 }
 
 .index-card-tag p{
-  font-size: 12px;
+  font-size: 15px;
   margin: 0 3px;
   align-items: center;
   padding-left: 0;
