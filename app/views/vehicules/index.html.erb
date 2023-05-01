@@ -26,9 +26,13 @@
 
             <select name="marque">
               <option value="">Marque</option>
+              <option value="Abarth" <%= 'selected' if params[:marque] == 'Abarth' %>>Abarth</option>
               <option value="Alfa Romeo" <%= 'selected' if params[:marque] == 'Alfa Romeo' %>>Alfa Romeo</option>
               <option value="Fiat" <%= 'selected' if params[:marque] == 'Fiat' %>>Fiat</option>
+              <option value="Ford" <%= 'selected' if params[:marque] == 'Ford' %>>Ford</option>
               <option value="Jeep" <%= 'selected' if params[:marque] == 'Jeep' %>>Jeep</option>
+              <option value="Suzuki" <%= 'selected' if params[:marque] == 'Suzuki' %>>Suzuki</option>
+
               <!-- Autres options ici... -->
             </select>
 

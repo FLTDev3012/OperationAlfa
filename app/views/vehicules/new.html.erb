@@ -12,7 +12,7 @@
       <p>Boite *</p>
       <%= f.collection_select :boite, ['Manuelle', 'Automatique'], :to_s, :titleize, { prompt: 'Sélectionner la boite' } %>
       <p>Carburant *</p>
-      <%= f.collection_select :carburant, ['Essence', 'Diesel'], :to_s, :titleize, { prompt: 'Sélectionner un carburant' } %>
+      <%= f.collection_select :carburant, ['Essence', 'Diesel', 'Hybride'], :to_s, :titleize, { prompt: 'Sélectionner un carburant' } %>
       <%= f.input :kilometrage, placeholder: 'Kilometrage' %>
       <%= f.input :enregistrement, placeholder: 'enregistrement' %>
       <%= f.input :puissancech, placeholder: 'puissancech' %>
@@ -21,7 +21,7 @@
       <%= f.input :couleur, placeholder: 'couleur' %>
       <%= f.input :prix, placeholder: 'Prix' %>
       <p>Carrosserie *</p>
-      <%= f.collection_select :carrosserie, ['Break', 'Familialle'], :to_s, :titleize, { prompt: 'Sélectionner la carrosserie' } %>
+      <%= f.collection_select :carrosserie, ['Break', 'Familialle','Berline' ,'Hatchback' ,'Coupé' ,'Cabriolet' ,'SUV' ,'Crossover' ,'Multi-Purpose' ,'Berline de luxe' ,'Sport' ,'Électrique' ,'Hybride' ].sort_by(&:downcase), :to_s, :titleize, { prompt: 'Sélectionner la carrosserie' } %>
       <%= f.input :proprietaires, placeholder: 'proprietaires' %>
       <%= f.input :dioxy, placeholder: 'dioxy' %>
       <%= f.input :portes, placeholder: 'portes' %>
