@@ -262,6 +262,16 @@ ball {
   height: 70vh;
 }
 
+.scroll-text {
+
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.scroll-text.show {
+  transform: translateX(30px);
+  opacity: 1;
+}
 // carrou!!!!!!!!!!!
 
 .carrou-body {

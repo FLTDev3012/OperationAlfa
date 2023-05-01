@@ -36,8 +36,15 @@
 <div class="who-container">
 
   <div class="who-titre">
-    <h2 id="scroll-text" class="hid-scroll-text">Texte à afficher</h2>
+
+    <div class="scroll-container">
+      <div class="scroll-text">
+        <h2>Texte à afficher</h2>
+      </div>
+    </div>
+
   </div>
+
 
   <div class="who-gauche-droite">
 
@@ -56,11 +63,12 @@
 <script>
   window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
-    var scrollText = document.getElementById('scroll-text');
+    var scrollText = document.querySelector('.scroll-text');
 
-    if (scrollPosition > 450) {
-      scrollText.classList.remove('hid-scroll-text');
-      scrollText.classList.add('show-scroll-text');
+    if (scrollPosition > 300) {
+      scrollText.classList.add('show');
+    } else {
+      scrollText.classList.remove('show');
     }
   });
 </script>
