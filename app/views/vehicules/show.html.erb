@@ -15,6 +15,12 @@
         <p>Image non disponible</p>
       <% end %>
 
+      <% @vehicule.pictures.each do |picture| %>
+        <%= cl_image_tag picture.key, height: 40, width: 56, crop: :fill %>
+      <% end %>
+
+
+
       <div class="vshow560">
         <div class="vshow-prix">
           <p><%= number_with_delimiter(@vehicule.prix.to_i, delimiter: ' ') %> €</p>
@@ -68,5 +74,4 @@
     </div>
 
   </div>
-
 </div>

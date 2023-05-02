@@ -1,6 +1,7 @@
 class Vehicule < ApplicationRecord
   belongs_to :user
   has_one_attached :photo
+  has_many_attached :pictures
   validates :kilometrage, presence: true
   validates :prix, presence: true
   validates :marque, presence: true
