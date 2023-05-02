@@ -31,7 +31,7 @@
 
 
 .piece-card {
-  background-color: #ededed;
+  background-color: $grisf;
   width: 280px;
   border-radius: 10% 5%;
   margin: 20px 10px;
@@ -60,8 +60,8 @@
 
 .piece-card p {
   text-align: center;
-  color: #0C0C0C;
-  font-family: "Lobster Two" cursive;
+  color: #ffffff;
+  font-family: "Lobster Two";
   font-style: italic;
   // text-shadow: 1px 3px 3px #0C0C0C;
 
@@ -73,6 +73,7 @@
 .piece-card .piece-descrip {
   font-size: 18px;
   min-height: 5rem;
+  padding: 0 30px;
 }
 
 .piece-card .piece-prix {
