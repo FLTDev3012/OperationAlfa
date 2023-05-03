@@ -36,6 +36,8 @@
 .vshow-gauche img{
   border-radius: 20% 5%;
   box-shadow: 2px 2px 5px #0C0C0C;
+  height: 400px;
+  width: 560px;
 
 }
 
@@ -60,30 +62,79 @@
   font-family: "Lobster";
 }
 
-.vshow-gauche .vshow-back {
-  width: 100%;
+.vshow-back {
+  margin-left: 70px;
+  margin-bottom: 3rem;
 }
 
-.vshow-gauche .vshow-back i{
+.vshow-back i{
   font-size: 2rem;
   background-color:#6d2321;
   padding: 10px;
   border-radius: 5px;
 }
 
-.vshow-gauche .vshow-back i:hover{
+.vshow-back i:hover{
   background-color: #9e1716;
+}
+
+.vshow-detail-decrip {
+  display: flex;
+}
+
+.vshow-detail {
+  width: 50%;
+}
+
+.vshow-description {
+  width: 50%;
+}
+
+.vshow-titre-detail {
+  display: flex;
+  justify-content: center;
+}
+
+.vshow-titre-detail h3{
+  font-size: 35px;
+  font-family: "Lobster";
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.vshow-text-description {
+  display: flex;
+  justify-content: center;
+  border-left: 1px solid #ededed;
+}
+
+.vshow-text-description p{
+  color: #ededed;
+  font-size: 20px;
+  margin: 0 20px;
+  line-height: 32px;
+}
+
+.vshow-titre-description {
+  display: flex;
+  justify-content: center;
+}
+
+.vshow-titre-description h3 {
+  font-size: 35px;
+  font-family: "Lobster";
+  color: #fff;
+  margin-bottom: 25px;
 }
 
 .vshow-droite {
   color: #ededed;
-  width: 50%;
   display: flex;
   justify-content: center;
 }
 
 .vshow-droite  .vshow-box-droite{
-  height: 400px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -100,9 +151,10 @@
 }
 
 .vshow-droite p{
-  margin-bottom: 0;
   background-color: #6d232173;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
+  font-size: 19px;
+  padding: 3px 0;
 }
 
 .vshow-droite p:nth-child(2n){
