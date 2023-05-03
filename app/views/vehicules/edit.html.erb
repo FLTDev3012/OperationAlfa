@@ -26,6 +26,8 @@
       <%= f.input :dioxy, placeholder: 'dioxy' %>
       <%= f.input :portes, placeholder: 'portes' %>
       <%= f.input :places, placeholder: 'places' %>
+      <p>Description *</p>
+      <%= f.text_area :description, placeholder: 'Votre text...', class: "com-textarea" %>
       <%= f.input :photo, as: :file %>
       <%= f.input :pictures, as: :file, input_html: { multiple: true } %>
 

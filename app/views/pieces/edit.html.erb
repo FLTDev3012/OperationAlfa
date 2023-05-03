@@ -1,9 +1,19 @@
-<h1>modifier piece</h1>
+<div class="form-container">
 
-<%= simple_form_for @piece do |f| %>
-  <%= f.input :nom, placeholder: 'Nom' %>
-  <%= f.input :description, placeholder: 'Description' %>
-  <%= f.input :prix, placeholder: 'Prix' %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+  <div class="form-titre">
+    <h1>Modifiez votre pièce</h1>
+  </div>
+
+  <div class="form-formulaire">
+    <%= simple_form_for @piece do |f| %>
+      <%= f.input :nom, placeholder: 'Nom' %>
+      <%= f.input :description, placeholder: 'Description' %>
+      <%= f.input :prix, placeholder: 'Prix' %>
+      <%= f.input :photo, as: :file %>
+      <div class="form-input">
+        <%= f.button :submit, value: 'Validation' %>
+      </div>
+    <% end %>
+  </div>
+
+</div>
