@@ -28,6 +28,8 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+        <% elsif @vehicule.photo.present?%>
+          <%= cl_image_tag @vehicule.photo.key, height: 400, width: 560, crop: :fill %>
         <% else %>
           <p>Image non disponible</p>
         <% end %>
