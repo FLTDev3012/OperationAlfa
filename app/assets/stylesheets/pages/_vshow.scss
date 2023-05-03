@@ -36,6 +36,8 @@
 .vshow-gauche img{
   border-radius: 20% 5%;
   box-shadow: 2px 2px 5px #0C0C0C;
+  height: 400px;
+  width: 560px;
 
 }
 
@@ -60,18 +62,18 @@
   font-family: "Lobster";
 }
 
-.vshow-gauche .vshow-back {
-  width: 100%;
+.vshow-back {
+  margin-left: 70px;
 }
 
-.vshow-gauche .vshow-back i{
+.vshow-back i{
   font-size: 2rem;
   background-color:#6d2321;
   padding: 10px;
   border-radius: 5px;
 }
 
-.vshow-gauche .vshow-back i:hover{
+.vshow-back i:hover{
   background-color: #9e1716;
 }
 
