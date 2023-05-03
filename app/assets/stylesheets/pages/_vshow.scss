@@ -64,6 +64,7 @@
 
 .vshow-back {
   margin-left: 70px;
+  margin-bottom: 3rem;
 }
 
 .vshow-back i{
@@ -77,6 +78,20 @@
   background-color: #9e1716;
 }
 
+
+.vshow-titre-detail {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.vshow-titre-detail h3{
+  font-size: 20px;
+  font-family: "Lobster";
+  color: #fff;
+  margin-bottom: 5px;
+}
+
 .vshow-droite {
   color: #ededed;
   width: 50%;
@@ -85,7 +100,7 @@
 }
 
 .vshow-droite  .vshow-box-droite{
-  height: 400px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -104,7 +119,8 @@
 .vshow-droite p{
   margin-bottom: 0;
   background-color: #6d232173;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-size: 19px;
 }
 
 .vshow-droite p:nth-child(2n){
