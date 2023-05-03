@@ -215,6 +215,7 @@ ball {
   height: 90vh;
   width: 100vw;
   background-color: $grisf;
+  position: relative;
 }
 
 
@@ -274,7 +275,9 @@ ball {
   align-items: center;
 }
 
-
+.home-who-text-rouge {
+  color: $rouge !important;
+}
 
 .scroll-text {
 
@@ -314,11 +317,11 @@ ball {
 .who-droite-text {
   opacity: 0;
   transition: all 0.6s ease-in-out;
-  transform: translateX(-30px);
+  // transform: translateX(-30px);
 }
 
 .who-droite-text.show {
-  transform: translateX(0px);
+  // transform: translateX(0px);
   opacity: 1;
 }
 
