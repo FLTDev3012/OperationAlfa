@@ -21,8 +21,9 @@
   font-size: 43px;
 }
 
-.vshow-droite-gauche {
+.vshow-contener-carrou {
   display: flex;
+  justify-content: center;
 }
 
 .vshow-gauche {
