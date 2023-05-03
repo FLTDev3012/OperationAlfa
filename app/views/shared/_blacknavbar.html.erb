@@ -1,12 +1,12 @@
 <div class="blacknav-container">
 
   <div class="blacknav-gauche">
-    <%= image_tag("logoRondTrans.png", alt: "Supprimer", size: "60x60") %>
+    <a href="/"><%= image_tag("logoRondTrans.png", alt: "Supprimer", size: "60x60") %></a>
   </div>
 
   <div class="nvrainav-container">
     <%= link_to "Accueil", root_path, class: ("active" if current_page?(root_path)) %>
-    <%= link_to "Les occasions", vehicules_path, class: ("active" if current_page?(vehicules_path)) %>
+    <%= link_to "Nos Véhicules", vehicules_path, class: ("active" if current_page?(vehicules_path)) %>
     <%= link_to "Nos piéces", pieces_path, class: ("active" if current_page?(pieces_path)) %>
     <%= link_to "Commentaires", commentaires_path, class: ("active" if current_page?(commentaires_path)) %>
     <%= link_to "Notre équipe", members_path, class: ("active" if current_page?(members_path)) %>
