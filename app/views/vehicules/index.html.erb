@@ -119,7 +119,7 @@
 
         <div class="index-card">
 
-          <div class="index-vendu">
+          <div class="index-vendu <%= 'd-none' unless vehicule.vendu %>">
             <span>vendu</span>
           </div>
           <% if vehicule.photo.present? %>
