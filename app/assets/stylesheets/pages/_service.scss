@@ -1,0 +1,46 @@
+.service-contener {
+  background-color: $grisf;
+  min-height: 80vh;
+  padding-bottom: 1rem;
+}
+
+.service-titre {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation:  apparitionn 0.6s 0.1s ease-out forwards;
+
+}
+
+.service-titre h1 {
+  animation: flasht 4s;
+  animation-iteration-count: infinite;
+  color: #fff;
+  // font-family: 'Great Vibes', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 55px;
+
+}
+
+
+.service-contener h2 {
+  color: #ededed;
+  font-size: 40px;
+  padding: 25px 40px;
+  text-shadow: 3px 3px 3px #111;
+  font-family: "Lobster";
+  margin-bottom: 3rem;
+}
+
+.service-contener p {
+  color: #ededed;
+  font-size: 23px;
+  text-shadow: 3px 3px 3px #111;
+  margin: 0 3rem;
+}
+
+.service-block {
+  margin: 0rem 0rem 6rem 0rem;
+}
