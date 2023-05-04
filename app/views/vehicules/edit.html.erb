@@ -8,6 +8,12 @@
 
   <div class="form-formulaire">
     <%= simple_form_for @vehicule do |f| %>
+
+    <div class="form-group">
+      <%= f.label :vendu %>
+      <%= f.check_box :vendu %>
+    </div>
+
       <p>Marque *</p>
       <%= f.collection_select :marque, ['Abarth', 'Alfa Romeo', "Fiat", "Ford", "Jeep", "Suzuki"], :to_s, :titleize, { prompt: 'Sélectionner la marque' } %>
       <%= f.input :modele, placeholder: 'Modele' %>
