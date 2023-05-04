@@ -18,4 +18,6 @@ class PagesController < ApplicationController
     @members = Member.all
   end
 
+
+
 end
