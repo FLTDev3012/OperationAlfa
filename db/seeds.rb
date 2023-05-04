@@ -137,7 +137,7 @@ piece1.save
 
 
 file = URI.open("https://careconord-pieces-occasion.fr/13159362-large_default/boite-a-vitesse-mecanique.jpg")
-piece2 = Piece.create(nom: "Piece2", description: "Magnifique piece blabla blablabla blabla blablabla blabla blablabla blabla blablabla blabla blablabla blabla blablabla blabla blablabla blabla blablabla", prix: 45)
+piece2 = Piece.create(nom: "Piece2", description: "Magnifique piece blabla blablabla blabla blablabla blabla blablabla blabla blablabla blabla blablabla blabla ", prix: 45)
 piece2.photo.attach(io: file, filename: "p2.png", content_type: "image/png")
 piece2.save
 
