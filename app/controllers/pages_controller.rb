@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [ :home, :services ]
 
   def home
     @vehicules = Vehicule.order(:created_at).last(5)
@@ -16,6 +16,9 @@ class PagesController < ApplicationController
     @commentaires = Commentaire.all.order(created_at: :desc)
     @pieces = Piece.all
     @members = Member.all
+  end
+
+  def services
   end
 
 
