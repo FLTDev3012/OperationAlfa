@@ -28,10 +28,9 @@
 .service-contener h2 {
   color: #fff;
   font-size: 40px;
-  padding: 25px 40px;
   text-shadow: 3px 3px 3px #111;
   font-family: "Lobster";
-  margin-bottom: 3rem;
+
 }
 
 .service-contener p {
@@ -45,10 +44,67 @@
   margin: 0rem 0rem 6rem 0rem;
 }
 
-.service-block h2 span {
-  color: #fff;
+
+
+.service-rond-titre {
+  display: flex;
+  align-items: center;
+  padding: 25px 40px;
+  margin-bottom: 3rem;
+}
+
+.service-rond {
+  width: 45px;
+  height: 45px;
   background-color: $rouge;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50px;
-  width: 300px;
-  content: "";
+  margin-right: 1rem;
+}
+
+.service-rond-titre h2{
+  margin-bottom: 0;
+}
+
+.service-titre-1 {
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  transform: translateX(-30px);
+}
+
+.service-titre-2 {
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  transform: translateX(-30px);
+}
+
+.service-titre-3 {
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  transform: translateX(-30px);
+}
+
+.service-titre-4 {
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  transform: translateX(-30px);
+}
+
+.service-titre-5 {
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  transform: translateX(-30px);
+}
+
+.service-titre-6 {
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  transform: translateX(-30px);
+}
+
+.show {
+  transform: translateX(0px);
+  opacity: 1;
 }

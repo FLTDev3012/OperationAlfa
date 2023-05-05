@@ -3,54 +3,172 @@
     <h1>Nos Services</h1>
   </div>
 
-  <div class="service-block">
-    <div></div>
-    <h2> Reprogrammation</h2>
-    <p>Nous offrons un service de reprogrammation qui comprend:</p>
-    <br>
-    <p>- La conversion bio éthanol.</p>
-    <p>- L'optimisation de la puissance/couple.</p>
-    <p>- La reprogrammation du calculateur.</p>
-    <br>
-    <p>Avec notre équipe de professionnels, vous pouvez être assuré d'obtenir les meilleures performances de votre véhicule.</p>
-  </div>
 
   <div class="service-block">
-    <h2><span>2</span> Clé de voiture</h2>
+    <div class="service-rond-titre service-titre-1">
+      <div class="service-rond">
+        <h2>1</h2>
+      </div>
+      <h2>Reprogrammation</h2>
+    </div>
+    <div class="service-text-1">
+      <p>Nous offrons un service de reprogrammation qui comprend:</p>
+      <br>
+      <p>- La conversion bio éthanol.</p>
+      <p>- L'optimisation de la puissance/couple.</p>
+      <p>- La reprogrammation du calculateur.</p>
+      <br>
+      <p>Avec notre équipe de professionnels, vous pouvez être assuré d'obtenir les meilleures performances de votre véhicule.</p>
+    </div>
+  </div>
+
+
+
+
+  <div class="service-block">
+    <div class="service-rond-titre service-titre-2">
+      <div class="service-rond">
+        <h2>2</h2>
+      </div>
+      <h2>Service carte grise #logo habiliatation siv ants</h2>
+    </div>
+
+    <div class="service-text-2">
+      <p>Nous offrons également un service de carte grise qui comprend:</p>
+      <br>
+      <p>- le changement de titulaire</p>
+      <p>- le changement d'état civil ou d'adresse.</p>
+      <p>- la demande de duplicata en cas de perte/vol.</p>
+      <p>- la demande de démarche de COC ou de véhicule de collection.</p>
+      <p>- le changement de carburant et le jeu de plaque.</p>
+      <p>- Nous pouvons vous aider à obtenir rapidement et facilement votre nouvelle carte grise.</p>
+    </div>
+  </div>
+
+
+
+
+  <div class="service-block">
+    <div class="service-rond-titre service-titre-3">
+      <div class="service-rond">
+        <h2>3</h2>
+      </div>
+      <h2>Extension de garantie</h2>
+    </div>
+    <p>Nous offrons la possibilité d'étendre votre garantie de voiture jusqu'à 48 mois.</p>
+    <p>Vous pouvez être tranquille en sachant que votre véhicule est couvert contre les pannes et les dommages pendant une période prolongée.</p>
+  </div>
+
+
+
+  <div class="service-block">
+    <div class="service-rond-titre service-titre-4">
+      <div class="service-rond">
+        <h2>4</h2>
+      </div>
+      <h2>Clé de voiture</h2>
+    </div>
     <p>Nous proposons également des services de clé de voiture tels que:</p>
     <br>
     <p>- La duplication de clé.</p>
     <p>- La résolution des problèmes de perte problèmes de (codage/décodage) pour toutes les marques et modèles de voitures.</p>
   </div>
 
-  <div class="service-block">
-    <h2><span>3</span> Extension de garantie</h2>
-    <p>Nous offrons la possibilité d'étendre votre garantie de voiture jusqu'à 48 mois.</p>
-    <p>Vous pouvez être tranquille en sachant que votre véhicule est couvert contre les pannes et les dommages pendant une période prolongée.</p>
-  </div>
+
 
   <div class="service-block">
-    <h2><span>4</span> Préparation pré-contrôle technique</h2>
+    <div class="service-rond-titre service-titre-5">
+      <div class="service-rond">
+        <h2>5</h2>
+      </div>
+      <h2>Préparation pré-contrôle technique</h2>
+    </div>
     <p>Nous offrons un service de préparation pré-contrôle technique pour aider à garantir que votre voiture passe son contrôle technique sans aucune difficulté.</p>
     <br>
     <p>Nous effectuons un contrôle complet de votre voiture et apportons les modifications nécessaires pour qu'elle soit prête pour le contrôle technique.</p>
   </div>
 
-  <div class="service-block">
-    <h2><span>5</span> #logo habiliatation siv ants Service carte grise</h2>
-    <p>Nous offrons également un service de carte grise qui comprend:</p>
-    <br>
-    <p>- le changement de titulaire</p>
-    <p>- le changement d'état civil ou d'adresse.</p>
-    <p>- la demande de duplicata en cas de perte/vol.</p>
-    <p>- la demande de démarche de COC ou de véhicule de collection.</p>
-    <p>- le changement de carburant et le jeu de plaque.</p>
-    <p>- Nous pouvons vous aider à obtenir rapidement et facilement votre nouvelle carte grise.</p>
-  </div>
+
 
   <div class="service-block">
-    <h2><span>6</span> Financement avec Financo</h2>
+    <div class="service-rond-titre service-titre-6">
+      <div class="service-rond">
+        <h2>6</h2>
+      </div>
+      <h2>Financement avec Financo</h2>
+    </div>
     <p>Nous sommes fiers de travailler en partenariat avec Financo pour offrir des solutions de financement pour l'achat de votre véhicule. Nous offrons des taux compétitifs et des conditions de remboursement flexibles pour aider à rendre l'achat de votre voiture plus accessible.</p>
   </div>
 
 </div>
+
+
+<script>
+
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var scrollServiceTitreUn = document.querySelector('.service-titre-1');
+
+    if (scrollPosition > 1) {
+      scrollServiceTitreUn.classList.add('show');
+    } else {
+      scrollServiceTitreUn.classList.remove('show');
+    }
+  });
+
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var scrollServiceTitreDeux = document.querySelector('.service-titre-2');
+
+    if (scrollPosition > 22) {
+      scrollServiceTitreDeux.classList.add('show');
+    } else {
+      scrollServiceTitreDeux.classList.remove('show');
+    }
+  });
+
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var scrollServiceTitreTrois = document.querySelector('.service-titre-3');
+
+    if (scrollPosition > 558) {
+      scrollServiceTitreTrois.classList.add('show');
+    } else {
+      scrollServiceTitreTrois.classList.remove('show');
+    }
+  });
+
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var scrollServiceTitreQuatre = document.querySelector('.service-titre-4');
+
+    if (scrollPosition > 910) {
+      scrollServiceTitreQuatre.classList.add('show');
+    } else {
+      scrollServiceTitreQuatre.classList.remove('show');
+    }
+  });
+
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var scrollServiceTitreCinq = document.querySelector('.service-titre-5');
+
+    if (scrollPosition > 1322) {
+      scrollServiceTitreCinq.classList.add('show');
+    } else {
+      scrollServiceTitreCinq.classList.remove('show');
+    }
+  });
+
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var scrollServiceTitreSix = document.querySelector('.service-titre-6');
+
+    if (scrollPosition > 1700) {
+      scrollServiceTitreSix.classList.add('show');
+    } else {
+      scrollServiceTitreSix.classList.remove('show');
+    }
+  });
+
+</script>
