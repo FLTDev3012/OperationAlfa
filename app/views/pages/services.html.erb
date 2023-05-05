@@ -113,18 +113,8 @@
 
 <script>
 
-  // tout les titres
+  // tout les titres sauf n1 qui est un temps
 
-  window.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY;
-    var scrollServiceTitreUn = document.querySelector('.service-titre-1');
-
-    if (scrollPosition > 1) {
-      scrollServiceTitreUn.classList.add('show');
-    } else {
-      scrollServiceTitreUn.classList.remove('show');
-    }
-  });
 
   window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
@@ -181,18 +171,9 @@
     }
   });
 
-  // tout les texts
+  // tout les texts sauf n1
 
-  window.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY;
-    var scrollServiceTextUn = document.querySelector('.service-text-1');
 
-    if (scrollPosition > 10) {
-      scrollServiceTextUn.classList.add('show');
-    } else {
-      scrollServiceTextUn.classList.remove('show');
-    }
-  });
 
   window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
