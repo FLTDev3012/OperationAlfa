@@ -26,7 +26,7 @@
 
 
 .service-contener h2 {
-  color: #ededed;
+  color: #fff;
   font-size: 40px;
   padding: 25px 40px;
   text-shadow: 3px 3px 3px #111;
@@ -43,4 +43,12 @@
 
 .service-block {
   margin: 0rem 0rem 6rem 0rem;
+}
+
+.service-block h2 span {
+  color: #fff;
+  background-color: $rouge;
+  border-radius: 50px;
+  width: 300px;
+  content: "";
 }
