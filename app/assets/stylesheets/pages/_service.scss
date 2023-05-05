@@ -104,6 +104,36 @@
   transform: translateX(-30px);
 }
 
+.service-text-1 {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.service-text-2 {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.service-text-3 {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.service-text-4 {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.service-text-5 {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.service-text-6 {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
 .show {
   transform: translateX(0px);
   opacity: 1;

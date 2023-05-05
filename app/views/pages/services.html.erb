@@ -55,8 +55,10 @@
       </div>
       <h2>Extension de garantie</h2>
     </div>
-    <p>Nous offrons la possibilité d'étendre votre garantie de voiture jusqu'à 48 mois.</p>
-    <p>Vous pouvez être tranquille en sachant que votre véhicule est couvert contre les pannes et les dommages pendant une période prolongée.</p>
+    <div class="service-text-3">
+      <p>Nous offrons la possibilité d'étendre votre garantie de voiture jusqu'à 48 mois.</p>
+      <p>Vous pouvez être tranquille en sachant que votre véhicule est couvert contre les pannes et les dommages pendant une période prolongée.</p>
+    </div>
   </div>
 
 
@@ -68,10 +70,12 @@
       </div>
       <h2>Clé de voiture</h2>
     </div>
-    <p>Nous proposons également des services de clé de voiture tels que:</p>
-    <br>
-    <p>- La duplication de clé.</p>
-    <p>- La résolution des problèmes de perte problèmes de (codage/décodage) pour toutes les marques et modèles de voitures.</p>
+    <div class="service-text-4">
+      <p>Nous proposons également des services de clé de voiture tels que:</p>
+      <br>
+      <p>- La duplication de clé.</p>
+      <p>- La résolution des problèmes de perte problèmes de (codage/décodage) pour toutes les marques et modèles de voitures.</p>
+    </div>
   </div>
 
 
@@ -83,9 +87,11 @@
       </div>
       <h2>Préparation pré-contrôle technique</h2>
     </div>
-    <p>Nous offrons un service de préparation pré-contrôle technique pour aider à garantir que votre voiture passe son contrôle technique sans aucune difficulté.</p>
-    <br>
-    <p>Nous effectuons un contrôle complet de votre voiture et apportons les modifications nécessaires pour qu'elle soit prête pour le contrôle technique.</p>
+    <div class="service-text-5">
+      <p>Nous offrons un service de préparation pré-contrôle technique pour aider à garantir que votre voiture passe son contrôle technique sans aucune difficulté.</p>
+      <br>
+      <p>Nous effectuons un contrôle complet de votre voiture et apportons les modifications nécessaires pour qu'elle soit prête pour le contrôle technique.</p>
+    </div>
   </div>
 
 
@@ -97,13 +103,17 @@
       </div>
       <h2>Financement avec Financo</h2>
     </div>
-    <p>Nous sommes fiers de travailler en partenariat avec Financo pour offrir des solutions de financement pour l'achat de votre véhicule. Nous offrons des taux compétitifs et des conditions de remboursement flexibles pour aider à rendre l'achat de votre voiture plus accessible.</p>
+    <div class="service-text-6">
+      <p>Nous sommes fiers de travailler en partenariat avec Financo pour offrir des solutions de financement pour l'achat de votre véhicule. Nous offrons des taux compétitifs et des conditions de remboursement flexibles pour aider à rendre l'achat de votre voiture plus accessible.</p>
+    </div>
   </div>
 
 </div>
 
 
 <script>
+
+  // tout les titres
 
   window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
@@ -171,4 +181,71 @@
     }
   });
 
+  // tout les texts
+
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var scrollServiceTextUn = document.querySelector('.service-text-1');
+
+    if (scrollPosition > 10) {
+      scrollServiceTextUn.classList.add('show');
+    } else {
+      scrollServiceTextUn.classList.remove('show');
+    }
+  });
+
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var scrollServiceTextDeux = document.querySelector('.service-text-2');
+
+    if (scrollPosition > 130) {
+      scrollServiceTextDeux.classList.add('show');
+    } else {
+      scrollServiceTextDeux.classList.remove('show');
+    }
+  });
+
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var scrollServiceTextTrois = document.querySelector('.service-text-3');
+
+    if (scrollPosition > 668) {
+      scrollServiceTextTrois.classList.add('show');
+    } else {
+      scrollServiceTextTrois.classList.remove('show');
+    }
+  });
+
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var scrollServiceTextQuatre = document.querySelector('.service-text-4');
+
+    if (scrollPosition > 1020) {
+      scrollServiceTextQuatre.classList.add('show');
+    } else {
+      scrollServiceTextQuatre.classList.remove('show');
+    }
+  });
+
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var scrollServiceTextCinq = document.querySelector('.service-text-5');
+
+    if (scrollPosition > 1432) {
+      scrollServiceTextCinq.classList.add('show');
+    } else {
+      scrollServiceTextCinq.classList.remove('show');
+    }
+  });
+
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var scrollServiceTextSix = document.querySelector('.service-text-6');
+
+    if (scrollPosition > 1810) {
+      scrollServiceTextSix.classList.add('show');
+    } else {
+      scrollServiceTextSix.classList.remove('show');
+    }
+  });
 </script>
