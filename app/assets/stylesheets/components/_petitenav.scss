@@ -4,9 +4,7 @@
   display: none;
 }
 
-.navbar-petit-format {
-  display: none;
-}
+
 
 
 
@@ -15,6 +13,10 @@
 
   .blacknav-container {
     display: none;
+  }
+
+  .navking {
+    position: relative;
   }
 
   .petit-nav-king {
@@ -86,10 +88,10 @@
     height: 100vh;
     width: 100vw;
     background-color: rgba(255, 166, 0, 0.498);
-    z-index: 1000;
     position: sticky;
     top: 0;
-    display: none;
+    z-index: 10000;
+
   }
 
 
