@@ -1,11 +1,30 @@
-<div class="navbar-fav-container">
-  <div class="nav-button-nav">
-    <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+
+<div class="petit-nav-king">
+  <div class="petit-blacknav-container">
+
+    <div class="blacknav-gauche">
+      <a href="/"><%= image_tag("logoRondTrans.png", alt: "Supprimer", size: "60x60") %></a>
+    </div>
+
+
+    <div class="navbar-fav-container">
+      <div class="nav-button-nav">
+        <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+      </div>
+    </div>
+
+
+
+    <div class="blacknav-droite">
+      <p>Contact:</p>
+      <h4>03 21 89 56 00</h4>
+    </div>
+
   </div>
 </div>
 
+
 <div class="navbar-petit-format">
-  <ul>
     <%= link_to "Accueil", root_path, class: ("active" if current_page?(root_path)) %>
     <%= link_to "Nos Véhicules", vehicules_path, class: ("active" if current_page?(vehicules_path)) %>
     <%= link_to "Nos piéces", pieces_path, class: ("active" if current_page?(pieces_path)) %>
@@ -15,5 +34,4 @@
     <% if user_signed_in? %>
       <%= link_to "Dashboard", dashboard_path, class: ("active" if current_page?(dashboard_path)) %>
     <% end %>
-  </ul>
 </div>

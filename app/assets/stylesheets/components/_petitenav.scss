@@ -1,4 +1,6 @@
-.nav-button-nav {
+
+
+.petit-nav-king {
   display: none;
 }
 
@@ -6,42 +8,92 @@
   display: none;
 }
 
+
+
 @media only screen and (max-width: 1370px) {
   /* styles à appliquer ici */
 
-  .nvrainav-container {
+  .blacknav-container {
     display: none;
   }
 
-  .navbar-fav-container {
-    height: 12vh;
-    background-color: orange;
+  .petit-nav-king {
+    position: sticky;
+    top: 0;
+    display: block;
+    width: 100%;
     z-index: 100;
+
+
   }
 
-  .nav-button-nav {
-    display: block;
+  .petit-blacknav-container {
+    background-color: $noir;
+    color: $blanc;
+    min-height: 10vh;
+    width: 100%;
+    padding: 0px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 4px solid $rouge;
+    position: relative;
+
+  }
+
+
+
+
+  .petit-blacknav-container h4{
+    font-size: 18px;
+    font-family: "Lobster" !important;
+  }
+
+  .petit-blacknav-container p{
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+
+  .petit-blacknav-droite {
+    border-left: solid 1px $rouge;
+    padding-left: 10px;
+    font-family: "Lobster" !important;
+  }
+
+
+
+
+
+  .navbar-fav-container {
+    background-color: rgb(255, 4, 0);
     position: absolute;
     right: 200px;
-    transform: translate(0px, -7.5vh);
   }
 
-  .nav-button-nav:hover {
+  .navbar-fav-container:hover {
     cursor: pointer;
   }
 
   .nav-button-nav i {
     font-size: 28px;
-
   }
 
+
+
+  // FULL SCREEN
 
   .navbar-petit-format {
-    height: 100%;
-    width: 100%;
-    background-color: orange;
-    z-index: 10000;
-    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 166, 0, 0.498);
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    display: none;
   }
+
+
+
+
 
 }
