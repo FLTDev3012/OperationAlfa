@@ -119,9 +119,14 @@
 
         <div class="index-card">
 
+          <div class="index-vendu <%= 'd-none' unless vehicule.reservation %>">
+            <span>reservée</span>
+          </div>
+
           <div class="index-vendu <%= 'd-none' unless vehicule.vendu %>">
             <span>vendu</span>
           </div>
+
           <% if vehicule.photo.present? %>
             <%= cl_image_tag vehicule.photo.key, height: 200, width: 280, crop: :fill, class: "index-img" %>
           <% else %>

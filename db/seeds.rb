@@ -33,7 +33,7 @@ user2 = User.create(email: "dorian2@gmail.com", password: "coucou")
 p "------ #{User.count} user created ----------"
 
 file = URI.open("https://lh3.googleusercontent.com/d9iOns4Q6RQl4ozES9D1hsaSfTad0b1LLYX64K1u9x9PuFcMa61uhw6K_IS8ukm6yKSZJOfC-nhnPuEAFCSmuRZQISzV3a1gm843UZWTrs6huQ=s750")
-vehicule1 = Vehicule.create(marque: "Alfa Romeo", modele: "350z", user_id: user1.id, enregistrement: "2017", kilometrage: 37500, taille: 2.3, puissancech: 120, puissancecv: 5, carburant: "Diesel", boite: "Automatique", prix: 23006.67, carrosserie: "Break", couleur: "Rouge", proprietaires: 2, dioxy: 5, portes: 5, places: 5 , description: "L'Alfa Romeo Giulia est une voiture qui ne manque pas de style et de puissance. Avec son design dynamique et agressif, cette voiture attire l'attention sur la route. Sous le capot, la Giulia est équipée d'un moteur turbo essence de 2,0 litres ou d'un moteur diesel de 2,2 litres, qui fournissent tous les deux une puissance impressionnante et une accélération rapide. L'intérieur de la Giulia est également très impressionnant, avec des sièges en cuir confortables et une technologie de pointe qui inclut un système d'infodivertissement de 8,8 pouces avec navigation GPS, ainsi que des capteurs de stationnement et une caméra de recul. Les équipements de sécurité incluent des freins à disque de haute performance, des airbags frontaux et latéraux, ainsi que des systèmes d'assistance à la conduite tels que la détection de collision avant. En résumé, l'Alfa Romeo Giulia est une voiture qui allie style, puissance et technologie de pointe pour offrir une expérience de conduite exceptionnelle. Si vous recherchez une voiture qui vous procure une sensation de sportivité et d'élégance, la Giulia est un excellent choix.")
+vehicule1 = Vehicule.create(marque: "Alfa Romeo", modele: "350z", user_id: user1.id, enregistrement: "2017", kilometrage: 37500, taille: 2.3, puissancech: 120, puissancecv: 5, carburant: "Diesel", boite: "Automatique", prix: 23006.67, carrosserie: "Break", couleur: "Rouge", proprietaires: 2, dioxy: 5,reservation: true, portes: 5, places: 5 , description: "L'Alfa Romeo Giulia est une voiture qui ne manque pas de style et de puissance. Avec son design dynamique et agressif, cette voiture attire l'attention sur la route. Sous le capot, la Giulia est équipée d'un moteur turbo essence de 2,0 litres ou d'un moteur diesel de 2,2 litres, qui fournissent tous les deux une puissance impressionnante et une accélération rapide. L'intérieur de la Giulia est également très impressionnant, avec des sièges en cuir confortables et une technologie de pointe qui inclut un système d'infodivertissement de 8,8 pouces avec navigation GPS, ainsi que des capteurs de stationnement et une caméra de recul. Les équipements de sécurité incluent des freins à disque de haute performance, des airbags frontaux et latéraux, ainsi que des systèmes d'assistance à la conduite tels que la détection de collision avant. En résumé, l'Alfa Romeo Giulia est une voiture qui allie style, puissance et technologie de pointe pour offrir une expérience de conduite exceptionnelle. Si vous recherchez une voiture qui vous procure une sensation de sportivité et d'élégance, la Giulia est un excellent choix.")
 vehicule1.photo.attach(io: file, filename: "v1.png", content_type: "image/png")
 vehicule1.save
 
@@ -128,32 +128,35 @@ commentaire5 = Commentaire.create(nom: "andre", prenom: "philippe", email: "andr
 p "------ #{Commentaire.count} commentaire created ----------"
 
 
-file = URI.open("https://careconord-pieces-occasion.fr/13159362-large_default/boite-a-vitesse-mecanique.jpg")
+file = URI.open("https://media.istockphoto.com/id/1059972498/fr/photo/pistons-de-moteur-m%C3%A9canisme-de-vilebrequin-rendu-3d.jpg?s=612x612&w=0&k=20&c=tt-hhMhs4lAD1PlZLFn7Hev9GS9gva705_n5GTqcvBw=")
 piece1 = Piece.create(nom: "Piece1", description: "Magnifique piece", prix: 35)
 piece1.photo.attach(io: file, filename: "p1.png", content_type: "image/png")
 piece1.save
 
 
 
-
-file = URI.open("https://careconord-pieces-occasion.fr/13159362-large_default/boite-a-vitesse-mecanique.jpg")
+file = URI.open("https://media.istockphoto.com/id/1059972498/fr/photo/pistons-de-moteur-m%C3%A9canisme-de-vilebrequin-rendu-3d.jpg?s=612x612&w=0&k=20&c=tt-hhMhs4lAD1PlZLFn7Hev9GS9gva705_n5GTqcvBw=")
 piece2 = Piece.create(nom: "Piece2", description: "Magnifique piece blabla blablabla blabla blablabla blabla blablabla blabla blablabla blabla blablabla blabla ", prix: 45)
 piece2.photo.attach(io: file, filename: "p2.png", content_type: "image/png")
 piece2.save
 
 
 
-file = URI.open("https://www.mikadoracing.com/annonces/images/2018_05/7dab62a9cbfc7006d4ee87308fff20e3.jpg")
+file = URI.open("https://media.istockphoto.com/id/1059972498/fr/photo/pistons-de-moteur-m%C3%A9canisme-de-vilebrequin-rendu-3d.jpg?s=612x612&w=0&k=20&c=tt-hhMhs4lAD1PlZLFn7Hev9GS9gva705_n5GTqcvBw=")
 piece3 = Piece.create(nom: "Piece3", description: "Magnifique piece", prix: 550)
 piece3.photo.attach(io: file, filename: "p3.png", content_type: "image/png")
 piece3.save
 
-file = URI.open("https://www.mikadoracing.com/annonces/images/2018_05/7dab62a9cbfc7006d4ee87308fff20e3.jpg")
+
+
+file = URI.open("https://media.istockphoto.com/id/1059972498/fr/photo/pistons-de-moteur-m%C3%A9canisme-de-vilebrequin-rendu-3d.jpg?s=612x612&w=0&k=20&c=tt-hhMhs4lAD1PlZLFn7Hev9GS9gva705_n5GTqcvBw=")
 piece4 = Piece.create(nom: "Piece3", description: "Magnifique piece", prix: 550)
 piece4.photo.attach(io: file, filename: "p3.png", content_type: "image/png")
 piece4.save
 
-file = URI.open("https://www.mikadoracing.com/annonces/images/2018_05/7dab62a9cbfc7006d4ee87308fff20e3.jpg")
+
+
+file = URI.open("https://media.istockphoto.com/id/1059972498/fr/photo/pistons-de-moteur-m%C3%A9canisme-de-vilebrequin-rendu-3d.jpg?s=612x612&w=0&k=20&c=tt-hhMhs4lAD1PlZLFn7Hev9GS9gva705_n5GTqcvBw=")
 piece5 = Piece.create(nom: "Piece3", description: "Magnifique piece", prix: 550)
 piece5.photo.attach(io: file, filename: "p3.png", content_type: "image/png")
 piece5.save
