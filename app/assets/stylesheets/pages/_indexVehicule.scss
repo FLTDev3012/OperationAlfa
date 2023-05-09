@@ -328,3 +328,14 @@ a.link-card {
     margin: 1rem;
   }
 }
+
+@media only screen and (max-width: 550px) {
+
+  .carrou-body h2 {
+    text-align: center;
+  }
+
+  .who-titre h2 {
+    text-align: center;
+  }
+}
