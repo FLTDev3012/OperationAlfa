@@ -169,3 +169,30 @@
 .blanc {
   color: #fff;
 }
+
+@media only screen and (max-width: 600px) {
+
+
+  .com-droite-gauche-content {
+    flex-direction: column-reverse;
+    margin: 0px 20px;
+  }
+
+  .com-part-gauche {
+    width: 100%;
+    margin: 60px 0px;
+  }
+
+}
+
+
+@media only screen and (max-width: 492px) {
+
+  .com-titre {
+    text-align: center;
+  }
+
+
+
+
+}
