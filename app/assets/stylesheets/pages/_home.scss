@@ -597,10 +597,46 @@ label img {
 
 }
 
+@media only screen and (max-width: 1370px) {
+  .container {
+    max-width: 670px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .container {
+    max-width: 590px;
+  }
+}
+
+
+@media only screen and (max-width: 900px) {
+  .container {
+    max-width: 515px;
+    max-height: 400px;;
+  }
+
+  .player {
+    bottom: -1rem;
+  }
+}
+
 @media only screen and (max-width: 700px) {
 
   .text-sur-video {
     margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+
+  .container {
+    max-width: 400px;
+    max-height: 287px;
+  }
+
+  .player {
+    bottom: -3rem;
   }
 }
 
@@ -635,4 +671,17 @@ label img {
   }
 
 
+
+}
+
+@media only screen and (max-width: 475px) {
+
+  .container {
+    max-width: 330px;
+    max-height: 270px;
+  }
+
+  .player {
+    bottom: -4rem;
+  }
 }
