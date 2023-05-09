@@ -171,3 +171,53 @@
   width: 200px;
 
 }
+
+@media only screen and (max-width: 1185px) {
+  .vshow-detail-decrip {
+    display: block;
+  }
+
+  .vshow-description {
+    width: 100%;
+    padding: 60px;
+  }
+
+  .vshow-detail {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 622px) {
+  .vshow-gauche {
+    width: 100%;
+  }
+
+  .vshow-gauche img {
+    height: 80%;
+    width: 80%;
+  }
+
+  .vshow560 {
+    width: 80%;
+  }
+
+  .vshow-back {
+    margin-left: 40px;
+  }
+
+}
+
+@media only screen and (max-width: 610px) {
+  .vshow-end {
+    text-align: end;
+  }
+
+  .vshow-end p{
+    padding-right: 30px;
+  }
+
+  .vshow-box-droite:first-child {
+    z-index: 2;
+  }
+}
