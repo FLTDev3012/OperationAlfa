@@ -307,3 +307,24 @@ a.link-card {
 .grisclair {
   color: $grisc !important;
 }
+
+
+@media only screen and (max-width: 930px) {
+  .content-filter {
+    display: block;
+  }
+
+  .index-filter-content {
+    height: auto;
+    width: auto;
+  }
+
+  .filter-part-1 {
+    margin: 1rem;
+    align-items: center;
+  }
+
+  .filter-part-2 {
+    margin: 1rem;
+  }
+}
