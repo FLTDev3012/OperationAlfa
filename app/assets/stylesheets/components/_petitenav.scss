@@ -16,15 +16,16 @@
   }
 
   .navking {
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
   }
 
   .petit-nav-king {
-    position: sticky;
-    top: 0;
+    position: relative;
     display: block;
     width: 100%;
-    z-index: 100;
 
 
   }
@@ -85,13 +86,30 @@
   // FULL SCREEN
 
   .navbar-petit-format {
+
+    display: block;
     height: 100vh;
-    width: 100vw;
-    background-color: rgba(255, 166, 0, 0.498);
+    width: 100%;
+    background-color: $grisf;
     position: sticky;
     top: 0;
     z-index: 10000;
 
+  }
+
+  .navbar-petit-format-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .navbar-petit-format a {
+    color: #fff;
+    font-size: 24px;
+    margin: 17px 0;
+    font-family: "Lobster";
   }
 
 
