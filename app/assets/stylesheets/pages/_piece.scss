@@ -125,3 +125,12 @@ a.link-card {
   margin-bottom: 0;
   color: #fff;
 }
+
+@media only screen and (max-width: 594px) {
+
+  .piece-banner-info-content {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+}
