@@ -103,3 +103,28 @@
 .footer-bas p{
   margin-bottom: 0rem;
 }
+
+@media only screen and (max-width: 530px) {
+
+  .footer-container {
+    padding-top: 0;
+  }
+
+
+  .footer-haut {
+    display: block;
+    padding: 0 2rem;
+
+  }
+
+  .footer-adresse {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .footer-calendrier {
+      width: 100%;
+      padding: 1rem 0;
+
+  }
+}
