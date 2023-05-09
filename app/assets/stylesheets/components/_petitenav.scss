@@ -1,0 +1,118 @@
+
+
+.petit-nav-king {
+  display: none;
+}
+
+
+
+
+
+@media only screen and (max-width: 1370px) {
+  /* styles à appliquer ici */
+
+  .blacknav-container {
+    display: none;
+  }
+
+  .navking {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+  }
+
+  .petit-nav-king {
+    position: relative;
+    display: block;
+    width: 100%;
+
+
+  }
+
+  .petit-blacknav-container {
+    background-color: $noir;
+    color: $blanc;
+    min-height: 10vh;
+    width: 100%;
+    padding: 0px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 4px solid $rouge;
+    position: relative;
+
+  }
+
+
+
+
+  .petit-blacknav-container h4{
+    font-size: 18px;
+    font-family: "Lobster" !important;
+  }
+
+  .petit-blacknav-container p{
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+
+  .petit-blacknav-droite {
+    border-left: solid 1px $rouge;
+    padding-left: 10px;
+    font-family: "Lobster" !important;
+  }
+
+
+
+
+
+  .navbar-fav-container {
+    position: absolute;
+    right: 200px;
+  }
+
+  .navbar-fav-container:hover {
+    cursor: pointer;
+  }
+
+  .nav-button-nav i {
+    font-size: 28px;
+  }
+
+
+
+  // FULL SCREEN
+
+  .navbar-petit-format {
+
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background-color: $grisf;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+
+  }
+
+  .navbar-petit-format-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .navbar-petit-format a {
+    color: #fff;
+    font-size: 24px;
+    margin: 17px 0;
+    font-family: "Lobster";
+  }
+
+
+
+
+
+}
