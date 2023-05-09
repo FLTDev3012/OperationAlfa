@@ -88,3 +88,20 @@
 .member-card-description p {
   text-shadow: 1px 3px 3px $noir;
 }
+
+
+@media only screen and (max-width: 727px) {
+
+  .member-titre {
+    text-align: center;
+  }
+
+}
+
+@media only screen and (max-width: 470px) {
+
+  .member-container {
+    padding: 0 20px;
+  }
+
+}
