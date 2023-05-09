@@ -588,11 +588,13 @@ label img {
     height: 100%;
   }
 
+  .who-droite p {
+    font-size: 33px;
+  }
+
   // carrou
 
-  .container {
-    max-width: 90%;
-  }
+
 }
 
 @media only screen and (max-width: 700px) {
@@ -622,6 +624,14 @@ label img {
 
   .text-sur-video h1 span {
     font-size: 6rem;
+  }
+
+  .carrou-body h2 {
+    margin: 3rem;
+  }
+
+  .player {
+    bottom: -2rem;
   }
 
 
