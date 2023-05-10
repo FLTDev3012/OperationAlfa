@@ -52,6 +52,11 @@
   color: #fff;
   margin-left: 120px;
   margin-top: 50px;
+
+}
+
+.text-sur-video div {
+  display: block ruby;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
@@ -666,6 +671,23 @@ label img {
 
   .hero-video video {
     display: none;
+  }
+
+  .text-sur-video div {
+    display: block;
+  }
+
+  .text-sur-video {
+    margin-left: 28px;
+    text-align: initial;
+  }
+
+  .text-sur-video h1{
+    font-size: 7rem;
+  }
+
+  .text-sur-video h1 span{
+    font-size: 8rem;
   }
 
 
