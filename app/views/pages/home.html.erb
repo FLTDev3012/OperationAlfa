@@ -1,32 +1,33 @@
-<% if video_path("mainvideo.mp4").present? %>
 
-  <div class="hero-video">
-    <%= video_tag "mainvideo.mp4", type: "video/mp4", autoplay: true, loop: true, muted: true, id: "home-videoo", preload: "auto", playsinline: true %>
 
-    <div class="text-sur-video">
-      <h1>Planète <span>a</span>lfa</h1>
-      <h2>Cucq</h2>
-    </div>
+<div class="hero-video">
+  <%= video_tag "mainvideo.mp4", type: "video/mp4", autoplay: true, loop: true, muted: true, id: "home-videoo", preload: "auto", playsinline: true %>
 
-    <div class="ball-big-contener">
-      <div class="ball-contener">
-        <div class="ball">
-          <a href="#who" class="cheveron-down">
-            <i class="fa-solid fa-chevron-down" style="color: #ffffff;"></i>
-          </a>
-        </div>
+
+
+
+  <div class="text-sur-video">
+    <h1>Planète <span>a</span>lfa</h1>
+    <h2>Cucq</h2>
+  </div>
+
+  <div class="ball-big-contener">
+    <div class="ball-contener">
+      <div class="ball">
+        <a href="#who" class="cheveron-down">
+          <i class="fa-solid fa-chevron-down" style="color: #ffffff;"></i>
+        </a>
       </div>
     </div>
-
-    <div class="home-gray-bar">
-    </div>
   </div>
 
-<% else %>
-  <div class="hero-image">
-    <%= image_tag "alfaMainImg.jpg" %>
+  <div class="home-gray-bar">
   </div>
-<% end %>
+</div>
+
+
+
+
 
 
 <!-- Qui sommes nous ? (who) + carrou pour bgc -->
