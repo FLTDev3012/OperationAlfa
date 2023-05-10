@@ -656,6 +656,19 @@ label img {
 
 @media only screen and (max-width: 500px) {
 
+  .hero-video {
+    background-image: url(asset_path('alfaMainImg.jpg'));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(59%);
+  }
+
+  .hero-video video {
+    display: none;
+  }
+
+
 
 }
 
