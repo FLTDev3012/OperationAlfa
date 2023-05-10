@@ -359,3 +359,65 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media only screen and (max-width: 1060px) {
+
+
+  .dash-piece-desc {
+    display: none;
+  }
+
+  .dash-piece-prix {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+
+  .dash-all-vehicules {
+    width: 80%;
+  }
+
+  .dash-member-name {
+    display: none;
+  }
+
+
+
+
+}
+
+
+@media only screen and (max-width: 660px) {
+
+  .dash-titre-haut h1 {
+    text-align: center;
+  }
+
+
+  .dash-icon-circle {
+    margin: 0px 10px;
+  }
+
+}
+
+
+@media only screen and (max-width: 540px) {
+
+  .dash-nom {
+    display: none;
+  }
+
+  .testdash img {
+    margin-right: 50px;
+  }
+
+  .dash-all-com {
+    margin: 0px 20px;
+  }
+
+  .dash-titre-bas {
+    width: 80%;
+  }
+
+}
