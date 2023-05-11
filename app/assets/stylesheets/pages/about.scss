@@ -24,7 +24,7 @@
 
 .about-info-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .about-map {
@@ -60,6 +60,37 @@
 }
 
 .about-jour p {
-  margin-bottom: 0.2rem;
-  margin-top: 0.2rem;
+  margin-bottom: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.about-adrss-longue p {
+  color: #fff;
+}
+
+.about-local i {
+  margin-right: 20px;
+  min-width: 16px;
+}
+
+.about-local {
+  margin-bottom: 30px;
+}
+
+.about-address-container {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-address {
+  width: 80%;
+}
+
+.about-address a {
+  color: #BDC1FF;
+}
+
+.about-map canvas {
+  border-radius: 5px;
 }
