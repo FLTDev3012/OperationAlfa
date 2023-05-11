@@ -42,6 +42,8 @@ gem "jbuilder"
 
 gem "cloudinary"
 
+gem "geocoder"
+
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

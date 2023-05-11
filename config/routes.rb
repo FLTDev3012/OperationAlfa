@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :flats
 
   devise_for :users
 
@@ -6,6 +7,7 @@ Rails.application.routes.draw do
 
   get "dashboard", to: "pages#dashboard"
   get "services", to: "pages#services"
+  get "about", to: "pages#about"
 
 
 
