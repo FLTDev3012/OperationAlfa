@@ -613,6 +613,18 @@ label img {
   }
 }
 
+
+@media only screen and (max-width: 640px) {
+
+  .who-gauche img {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+}
+
+
+
 @media only screen and (max-width: 620px) {
 
   .container {
@@ -634,6 +646,13 @@ label img {
   .song-info .title {
     font-size: 17px;
   }
+
+  .who-gauche img {
+
+    width: 90%;
+    height: 90%;
+  }
+
 }
 
 

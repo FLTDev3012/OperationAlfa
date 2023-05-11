@@ -82,17 +82,20 @@
       }
     });
 
+    if (window.innerWidth > 640) {
+      window.addEventListener('scroll', function() {
+        var scrollPosition = window.scrollY;
+        var scrollImg = document.querySelector('.who-gauche img');
 
-    window.addEventListener('scroll', function() {
-      var scrollPosition = window.scrollY;
-      var scrollImg = document.querySelector('.who-gauche img');
+        if (scrollPosition > 390) {
+          scrollImg.classList.add('show');
+        } else {
+          scrollImg.classList.remove('show');
+        }
+      });
+    }
 
-      if (scrollPosition > 390) {
-        scrollImg.classList.add('show');
-      } else {
-        scrollImg.classList.remove('show');
-      }
-    });
+
 
     window.addEventListener('scroll', function() {
       var scrollPosition = window.scrollY;
