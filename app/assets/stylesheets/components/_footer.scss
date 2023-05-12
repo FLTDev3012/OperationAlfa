@@ -104,15 +104,11 @@
   margin-bottom: 0rem;
 }
 
-@media only screen and (max-width: 530px) {
-
-  .footer-container {
-    padding-top: 0;
-  }
-
+@media only screen and (max-width: 680px) {
 
   .footer-haut {
-    display: block;
+    width: 100%;
+    flex-direction: column;
     padding: 0 2rem;
 
   }
@@ -123,8 +119,12 @@
   }
 
   .footer-calendrier {
-      width: 100%;
-      padding: 1rem 0;
+    width: 100% !important;
+    padding: 1rem 0;
 
+  }
+
+  .footer-container {
+    padding-top: 0;
   }
 }
