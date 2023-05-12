@@ -27,7 +27,7 @@
   justify-content: space-around;
 }
 
-.about-map {
+.map-container {
   width: 40%;
 }
 
@@ -110,4 +110,38 @@
 
 .email:hover {
   color: #ecedff;
+}
+
+
+//780
+
+// .about-info-content { block
+
+@media only screen and (max-width: 780px) {
+  .about-info-content {
+    display: block;
+  }
+
+  .about-address-container {
+    width: 100%;
+  }
+
+  .map-container {
+    width: 100%;
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center
+  }
+
+  .about-map {
+    width: 90%;
+  }
+
+  .about-map-king {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+
 }
