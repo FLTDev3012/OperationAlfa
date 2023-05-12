@@ -188,3 +188,5 @@ member5 = Member.create(nom: "Iop", prenom: "Feu", job: "exemple", description: 
 member5.photo.attach(io: file, filename: "m5.png", content_type: "image/png")
 member5.save
 p "------ #{Member.count} member created ----------"
+
+# Flat.create(address: "801 Avenue Maxence Van Der Meersch, 62780 Cucq", name: "PlanéteAlfa")
