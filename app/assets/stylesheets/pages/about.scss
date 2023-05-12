@@ -112,7 +112,21 @@
   color: #ecedff;
 }
 
+.mapboxgl-popup-content {
+  background-color: $grisf !important;
+  color: #fff;
+  border-radius: 5px !important;
+}
 
+.mapboxgl-popup-content h2 {
+  font-family: "Lobster";
+}
+
+.mapboxgl-popup-close-button {
+  background-color: #f9f9f900 !important;
+  color: #fff !important;
+  margin-right: 11px !important;
+}
 //780
 
 // .about-info-content { block
