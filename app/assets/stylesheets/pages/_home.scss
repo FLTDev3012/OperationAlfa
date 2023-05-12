@@ -246,6 +246,7 @@ ball {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .who-gauche img{
@@ -253,6 +254,8 @@ ball {
   border-radius: 35% 5%;
   box-shadow: 2px 4px 10px $noir;
 }
+
+
 
 .who-droite {
   // background-color: #50b300;
