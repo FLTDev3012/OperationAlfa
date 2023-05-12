@@ -55,8 +55,13 @@
 
 }
 
-.text-sur-video div {
-  display: block ruby;
+.text-sur-video-div-a-flex {
+  display: flex;
+  align-items: baseline;
+}
+
+.text-sur-video-planete {
+  margin-right: 2rem;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
@@ -608,7 +613,7 @@ label img {
 @media only screen and (max-width: 700px) {
 
   .text-sur-video {
-    margin-left: 0px;
+    margin-left: 30px;
     text-align: center;
   }
 }
