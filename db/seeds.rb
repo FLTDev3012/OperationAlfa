@@ -29,6 +29,8 @@ p "------  member destroy ----------"
 
 user1 = User.create(email: "dorian@gmail.com", password: "coucou")
 user2 = User.create(email: "dorian2@gmail.com", password: "coucou")
+user3 = User.create(email: "contact@planete-alfa.fr", password: "Internet@2023")
+
 
 p "------ #{User.count} user created ----------"
 
