@@ -17,15 +17,10 @@
       <%= f.input :enregistrement, placeholder: 'enregistrement' %>
       <%= f.input :puissancech, placeholder: 'puissancech' %>
       <%= f.input :puissancecv, placeholder: 'puissancecv' %>
-      <%= f.input :taille, placeholder: 'taille du moteur' %>
       <%= f.input :couleur, placeholder: 'couleur' %>
       <%= f.input :prix, placeholder: 'Prix' %>
       <p>Carrosserie *</p>
       <%= f.collection_select :carrosserie, ['Break', 'Familialle','Berline' ,'Hatchback' ,'Coupé' ,'Cabriolet' ,'SUV' ,'Crossover' ,'Multi-Purpose' ,'Berline de luxe' ,'Sport' ,'Électrique' ,'Hybride' ].sort_by(&:downcase), :to_s, :titleize, { prompt: 'Sélectionner la carrosserie' } %>
-      <%= f.input :proprietaires, placeholder: 'proprietaires' %>
-      <%= f.input :dioxy, placeholder: 'dioxy' %>
-      <%= f.input :portes, placeholder: 'portes' %>
-      <%= f.input :places, placeholder: 'places' %>
       <p>Description *</p>
       <%= f.text_area :description, placeholder: 'Votre text...', class: "com-textarea" %>
       <%= f.input :photo, as: :file %>
