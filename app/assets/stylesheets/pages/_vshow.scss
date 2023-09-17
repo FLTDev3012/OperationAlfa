@@ -161,7 +161,6 @@
   background-color: #9e171691;
 }
 
-
 // .vshow-droite p:hover{
 //   text-shadow: 2px 3px 3px $rouge;
 // }
@@ -194,9 +193,12 @@
   }
 
   .vshow-gauche img {
-    height: 80%;
-    width: 80%;
+    //height: 250px;
+    //width: 320px;
+    height: 100%;
+    width: 100%;
   }
+
 
   .vshow560 {
     width: 80%;
