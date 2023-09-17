@@ -69,7 +69,7 @@
 
         <div class="vshow-box-droite">
           <p><span class="vshow-span-tableau">Marque: </span></p>
-          <p><span class="vshow-span-tableau">Modele: </span></p>
+          <p id="div2"><span class="vshow-span-tableau">Modele: </span></p>
           <p><span class="vshow-span-tableau">Boite: </span></p>
           <p><span class="vshow-span-tableau">Carburant: </span></p>
           <p><span class="vshow-span-tableau">Kilometrage: </span></p>
@@ -82,7 +82,7 @@
 
         <div class="vshow-box-droite  vshow-end">
           <p><%= @vehicule.marque %></p>
-          <p><%= @vehicule.modele %></p>
+          <p id="div1"><%= @vehicule.modele %></p>
           <p><%= @vehicule.boite %></p>
           <p><%= @vehicule.carburant %></p>
           <p><%= number_with_delimiter(@vehicule.kilometrage.to_i, delimiter: ' ') %> km</p>
@@ -93,7 +93,16 @@
           <p><%= @vehicule.carrosserie %></p>
         </div>
       </div>
+
     </div>
+
+    <script>
+      // Récupérer la hauteur de la première div
+      var div1Height = document.getElementById('div1').offsetHeight;
+
+      // Ajouter cette hauteur à la deuxième div
+      document.getElementById('div2').style.height = div1Height + 'px';
+    </script>
 
 
     <div class="vshow-description">
