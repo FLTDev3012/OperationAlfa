@@ -1,7 +1,31 @@
 <h1>show de pieces</h1>
 
   <p> <%= @piece.nom %> </p>
-  <%= cl_image_tag @piece.photo.key, height: 200, width: 280, crop: :fill, class: "index-img" %>
+  <% if @piece.pictures.present? %>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <% @piece.pictures.each_with_index do |picture, index| %>
+          <div class="carousel-item <%= 'active' if index == 0 %>">
+            <!-- <%= cl_image_tag picture.key, height: 400, width: 560, crop: :fill %> -->
+            <%= cl_image_tag @piece.photo.key, height: 200, width: 280, crop: :fill, class: "index-img" %>
+          </div>
+        <% end %>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  <% elsif @piece.photo.present?%>
+    <!-- <%= cl_image_tag @piece.photo.key, height: 400, width: 560, crop: :fill %> -->
+    <%= cl_image_tag @piece.photo.key, height: 200, width: 280, crop: :fill, class: "index-img" %>
+  <% else %>
+    <p>Image non disponible</p>
+  <% end %>
   <p> <%= @piece.description %> </p>
   <p> <%= @piece.prix %> </p>
   <%= link_to "retour aux pieces", pieces_path %>
