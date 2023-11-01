@@ -1,7 +1,69 @@
-<h1>show de pieces</h1>
+<div class="vshow-container">
+  <div class="vshow-titre">
+    <h1><%= @piece.nom %></h1>
 
-  <p> <%= @piece.nom %> </p>
-  <%= cl_image_tag @piece.photo.key, height: 200, width: 280, crop: :fill, class: "index-img" %>
-  <p> <%= @piece.description %> </p>
-  <p> <%= @piece.prix %> </p>
-  <%= link_to "retour aux pieces", pieces_path %>
+  </div>
+
+  <div class="vshow-contener-carrou">
+
+    <div class="vshow-gauche">
+
+      <div class="vshow-gauche">
+        <% if @piece.pictures.present? %>
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <% @piece.pictures.each_with_index do |picture, index| %>
+                <div class="carousel-item <%= 'active' if index == 0 %>">
+                  <%= cl_image_tag picture.key, height: 400, width: 560, crop: :fill %>
+                </div>
+              <% end %>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <% elsif @piece.photo.present?%>
+          <%= cl_image_tag @piece.photo.key, height: 400, width: 560, crop: :fill %>
+        <% else %>
+          <p>Image non disponible</p>
+        <% end %>
+        <div class="vshow560">
+          <div class="vshow-prix">
+            <p><%= number_with_delimiter(@piece.prix.to_i, delimiter: ' ') %> €</p>
+          </div>
+
+        </div>
+      </div>
+
+      <script>
+        var carousel = document.querySelector('#carouselExampleControls')
+        var carouselInstance = new bootstrap.Carousel(carousel)
+      </script>
+
+    </div>
+
+
+
+  </div>
+
+  <div class="vshow-back">
+    <%= link_to pieces_path, class: "deco-none" do %>
+      <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i>
+    <% end %>
+  </div>
+
+  <div class="pshow-description">
+    <div class="pshow-titre-description">
+      <h3>Description</h3>
+    </div>
+    <div class="pshow-text-description">
+      <p><%= @piece.description %></p>
+    </div>
+  </div>
+
+</div>

@@ -64,7 +64,7 @@
 
 .vshow-back {
   margin-left: 70px;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .vshow-back i{
@@ -87,6 +87,10 @@
 }
 
 .vshow-description {
+  width: 50%;
+}
+
+.pshow-description {
   width: 50%;
 }
 
@@ -113,6 +117,34 @@
   font-size: 20px;
   margin: 0 20px;
   line-height: 32px;
+}
+
+.pshow-description {
+  width: 100%;
+}
+
+.pshow-text-description {
+  display: flex;
+  justify-content: center;
+}
+
+.pshow-text-description p{
+  color: #ededed;
+  font-size: 20px;
+  margin: 0 20px;
+  line-height: 32px;
+}
+
+.pshow-titre-description {
+  display: flex;
+  justify-content: center;
+}
+
+.pshow-titre-description h3 {
+  font-size: 35px;
+  font-family: "Lobster";
+  color: #fff;
+  margin-bottom: 25px;
 }
 
 .vshow-titre-description {
