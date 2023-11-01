@@ -11,7 +11,6 @@ class Vehicule < ApplicationRecord
   validates :puissancecv, presence: true
   validates :carburant, presence: true
   validates :boite, presence: true
-  validates :carrosserie, presence: true
   validates :couleur, presence: true
   validates :photo, presence: true
 end
