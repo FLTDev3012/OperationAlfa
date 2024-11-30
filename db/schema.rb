@@ -116,7 +116,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_31_231758) do
     t.integer "portes"
     t.integer "places"
     t.string "description"
-    t.boolean "vendu", default: false
+    t.boolean "vendu"
     t.boolean "reservation", default: false
     t.index ["user_id"], name: "index_vehicules_on_user_id"
   end
