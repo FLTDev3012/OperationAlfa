@@ -273,7 +273,11 @@ ball {
 
 
 .home-who-text-rouge {
-  color: #ca2b2b !important;
+  // color: #ca2b2b !important;
+  text-decoration: underline;
+  text-decoration-color: $rouge;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 .scroll-text {
@@ -304,7 +308,7 @@ ball {
 
 .who-droite p{
   color: #ededed;
-  text-align: center;
+  // text-align: center;
   font-size: 23px;
   padding: 25px 40px;
   text-shadow: 3px 3px 3px #111;
