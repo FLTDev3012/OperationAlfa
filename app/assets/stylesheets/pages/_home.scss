@@ -251,8 +251,10 @@ ball {
 
 .who-gauche img{
   // border-radius: 5px;
-  border-radius: 35% 5%;
-  box-shadow: 2px 4px 10px $noir;
+  border-radius: 30% 8% 8% 30%;
+  box-shadow: 2px 4px 10px #161618;
+  filter: drop-shadow;
+  border: 3px solid $grisc;
 }
 
 
@@ -275,7 +277,7 @@ ball {
 .home-who-text-rouge {
   // color: #ca2b2b !important;
   text-decoration: underline;
-  text-decoration-color: $rouge;
+  text-decoration-color: #BC0100AB;
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
 }
@@ -403,7 +405,7 @@ input[type=radio] {
 label img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
   object-fit: cover;
 
 }

@@ -40,17 +40,22 @@
 
 // FILTRE
 
+.petit-btn-filter-et-form {
+  margin-bottom: 2rem;
+}
+
 .petit-btn-filter {
   color: #fff;
   margin-left: 50px;
 }
 
 .petit-btn-filter span {
-  background-color: $rouge;
-  padding: 8px 16px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 3px $noir;
+  background-color: #BC0100;
+  padding: 16px 32px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px #161618;
   font-family: "Lobster";
+  margin-bottom: 2rem
 }
 
 
@@ -176,7 +181,7 @@
 .index-card {
   background-color: #ededed;
   width: 280px;
-  border-radius: 10% 5%;
+  border-radius: 8px;
   // border: 1px solid $grisc;
   margin: 20px 10px;
   transition: transform 0.3s ease;
@@ -259,7 +264,7 @@ a.link-card {
 }
 
 .index-img {
-  border-radius: 10% 5% 0 0;
+  // border-radius: 10% 5% 0 0;
 }
 
 .index-card-tag {
