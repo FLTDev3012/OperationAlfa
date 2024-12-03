@@ -194,8 +194,9 @@
   box-shadow: 1px 5px 5px #0C0C0C;
   position: relative;
   overflow: hidden;
-  box-shadow: 2px 2px 13px #FFFFFF57;
+  box-shadow: 0px 0px 11px #FFFFFF4D;
   background-color: #161618;
+  outline: 2px solid #000;
 
 }
 
@@ -302,7 +303,8 @@ a.link-card {
 
 .index-card-btn p{
 
-  background-color: #c10100;
+  background-color: #BC010082;
+
   padding-left: 0;
   margin: 5px 0;
   color: $blanc;
@@ -314,12 +316,17 @@ a.link-card {
   align-items: center;
   margin-bottom: 15px;
   border-radius: 5px;
+  transition: .3s ease-in-out;
+  border: 1px solid #9b9b9b;
 
 }
 
-.index-card-btn p:hover {
+.index-card:hover .index-card-btn p {
 
   background-color: #e20100;
+  transition: .3s ease-in-out;
+  border: 1px solid #FFF;
+
 
 
 }
