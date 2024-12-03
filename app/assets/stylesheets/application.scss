@@ -23,3 +23,17 @@ img {
 body {
   background-color: $grisf;
 }
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('testtrois.png');
+  background-repeat: repeat;
+  background-size: auto; /* Garde la taille originale */
+  opacity: 0.7; /* Applique une opacité de 50% */
+  z-index: -1; /* Place derrière le contenu */
+}

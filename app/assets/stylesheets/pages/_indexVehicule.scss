@@ -8,7 +8,7 @@
 }
 
 .index-container {
-  background-color: $grisf;
+  // background-color: $grisf;
   min-height: 80vh;
 }
 
@@ -50,18 +50,24 @@
 }
 
 .petit-btn-filter span {
-  background-color: #BC0100;
-  padding: 16px 32px;
+  background-color: #BC010082;
+  border: 1px solid #9b9b9b;
+  padding: 6px 60px;
   border-radius: 4px;
   box-shadow: 1px 1px 3px #161618;
   font-family: "Lobster";
-  margin-bottom: 2rem
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  transition: .3s ease-in-out;
+  cursor: pointer;
 }
 
 
 
 .petit-btn-filter span:hover {
-  background-color: #f10201;
+  background-color: #BC0100;
+  border: 1px solid #fff;
+  transition: .3s;
 }
 
 //
@@ -184,11 +190,12 @@
   border-radius: 8px;
   // border: 1px solid $grisc;
   margin: 20px 10px;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
   box-shadow: 1px 5px 5px #0C0C0C;
   position: relative;
   overflow: hidden;
-
+  box-shadow: 2px 2px 13px #FFFFFF57;
+  background-color: #161618;
 
 }
 
@@ -212,7 +219,8 @@
 }
 
 .index-card:hover {
-  transform: scale(1.05);
+  // transform: scale(1.05);
+  transform: translateY(-10px);
 
 
 }
@@ -243,7 +251,7 @@
 }
 
 .index-card p {
-  color: #111;
+  color: #ffffff;
   padding-left: 10px;
   margin-bottom: 0.4rem;
   font-family: 'Lobster';
