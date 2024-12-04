@@ -1,7 +1,22 @@
 .footer-container {
   background-color: $grisf;
-  padding-top: 200px;
+  margin-top: 200px;
+  position: relative;
 
+}
+
+.footer-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('testun.png');
+  background-repeat: repeat;
+  background-size: auto; /* Garde la taille originale */
+  opacity: 0.2; /* Applique une opacité de 50% */
+  z-index: 0; /* Place derrière le contenu */
 }
 
 .footer-container p{
@@ -12,6 +27,7 @@
   display: flex;
   justify-content: space-around;
   border-top: 2px solid $grisc;
+  border-bottom: 2px solid $grisc;
   padding: 25px 0;
 
 }
@@ -97,7 +113,7 @@
   justify-content: center;
   align-items: center;
   height: 60px;
-  background-color: $noir;
+  // background-color: $noir;
 }
 
 .footer-bas p{

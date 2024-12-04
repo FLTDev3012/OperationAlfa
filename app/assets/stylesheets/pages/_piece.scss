@@ -1,5 +1,4 @@
 .piece-container {
-  background-color: $grisf;
   min-height: 80vh;
 }
 
@@ -43,7 +42,7 @@
 
 .piece-nom {
   font-family: "lobster", cursive !important;
-
+  padding: 0 30px;
 }
 
 .piece-nom {
@@ -59,7 +58,7 @@
 }
 
 .piece-card p {
-  text-align: center;
+  // text-align: center;
   color: #ffffff;
   font-family: "Lobster Two";
   font-style: italic;

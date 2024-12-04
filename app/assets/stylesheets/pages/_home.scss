@@ -196,7 +196,6 @@ ball {
 // who +  carrou
 
 .home-bgc-grisf {
-  background-color: $grisf;
 }
 
 // ou sommes nous ?
@@ -205,7 +204,6 @@ ball {
 .who-container {
   height: 90vh;
   width: 100vw;
-  background-color: $grisf;
   position: relative;
   margin-top: 7.5rem;
   margin-bottom: 5rem;
@@ -351,7 +349,6 @@ ball {
 	display: flex;
   height: 90vh;
   align-items: center;
-  background-color: $grisf;
   position: relative;
 
   opacity: 0;
