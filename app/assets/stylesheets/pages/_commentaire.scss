@@ -71,7 +71,7 @@
   font-size: small;
   color: $noir;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .com-part-gauche-com-rep-seul {
@@ -95,7 +95,7 @@
 
 .com-rep-nom {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .com-admin {

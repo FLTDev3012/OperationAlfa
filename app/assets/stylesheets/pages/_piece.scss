@@ -99,13 +99,13 @@ a.link-card {
 
 .piece-prix {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-right: 10%;
 }
 
 .piece-banner-info-content {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   margin-left: 110px;
   translate: 0 -20px;
 }

@@ -720,6 +720,7 @@ label img {
 .home-ns-carre-text {
   display: flex;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .home-ns-carre{
@@ -741,6 +742,12 @@ label img {
   color: #ededed;
   font-size: 20px;
   margin-bottom: 0;
+}
+
+.home-ns-btn-container a {
+  color: #fff;
+  background-color: $rouge;
+  padding: 10px 30px;
 }
 
 // -----------------------------
