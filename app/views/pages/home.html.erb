@@ -73,6 +73,8 @@
   </div>
 
 
+
+
   <!-- script du Titre / Image / Text -->
 
   <script>
@@ -105,6 +107,86 @@
     window.addEventListener('scroll', function() {
       var scrollPosition = window.scrollY;
       var scrollText = document.querySelector('.who-droite-text');
+
+      if (scrollPosition > 600) {
+        scrollText.classList.add('show');
+      } else {
+        scrollText.classList.remove('show');
+      }
+    });
+
+
+  </script>
+
+
+  <!-- nos vehicules  -->
+
+  <div class="who-container" id="#">
+
+    <div class="who-titre">
+
+      <div class="scroll-container">
+        <div class="scroll-text text-home-vehicule">
+          <h2>Nos Vehicules</h2>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="who-gauche-droite">
+
+      <div class="who-gauche">
+        <%= image_tag "who2.jpg", height: 400, width: 560, crop: :fill, class:"home-vehi-gauche-img" %>
+      </div>
+
+      <div class="who-droite">
+        <div class="who-droite-text home-vehi-droite-text">
+          <p>Située entre <span class="home-who-text-rouge">Cucq</span> et Trépied<br>Notre concession <span class="home-who-text-rouge">Planète Alfa</span> vous accueille avec plaisir<br>au: 801 Avenue Maxence Van Der Meersch, 62780 Cucq<br></p>
+          <p>Notre équipe est à votre disposition pour répondre à toutes vos questions et vous aider à trouver <span class="home-who-text-rouge">la voiture de vos rêves</span>.</p>
+          <p>N'hésitez pas à nous rendre visite ou à nous contacter pour plus d'informations.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="home-ruban">
+    </div>
+
+  </div>
+
+  <!-- script du Titre / Image / Text -->
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var scrollPosition = window.scrollY;
+      var scrollTitre = document.querySelector('.text-home-vehicule');
+
+      if (scrollPosition > 120) {
+        scrollTitre.classList.add('show');
+      } else {
+        scrollTitre.classList.remove('show');
+      }
+    });
+
+    if (window.innerWidth > 640) {
+      window.addEventListener('scroll', function() {
+        var scrollPosition = window.scrollY;
+        var scrollImg = document.querySelector('.home-vehi-gauche-img');
+
+        if (scrollPosition > 390) {
+          scrollImg.classList.add('show');
+        } else {
+          scrollImg.classList.remove('show');
+        }
+      });
+    }
+
+
+
+    window.addEventListener('scroll', function() {
+      var scrollPosition = window.scrollY;
+      var scrollText = document.querySelector('.home-vehi-droite-text');
 
       if (scrollPosition > 600) {
         scrollText.classList.add('show');
