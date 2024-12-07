@@ -680,6 +680,33 @@ label img {
   transition: 0.2s;
 }
 
+// nos services
+.home-ns-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-ns-content {
+  width: 90%;
+}
+
+.home-ns-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  animation: flasht 4s;
+  animation-iteration-count: infinite;
+  color: #fff;
+  // font-family: 'Great Vibes', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 55px;
+}
+
+
+
 @media only screen and (max-width: 1370px) {
 
   .who-container {
