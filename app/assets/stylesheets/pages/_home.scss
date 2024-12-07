@@ -206,7 +206,6 @@ ball {
 
 
 .who-container {
-  height: 90vh;
   width: 90%;
   position: relative;
   margin-top: 7.5rem;
@@ -253,7 +252,6 @@ ball {
 .who-gauche {
   // background-color: #fc0606;
   width: 50%;
-  height: 70vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -273,7 +271,6 @@ ball {
 .who-droite {
   // background-color: #50b300;
   width: 50%;
-  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -322,7 +319,7 @@ ball {
 .who-droite p{
   color: #ededed;
   // text-align: center;
-  font-size: 23px;
+  font-size: 20px;
   margin-left: 20px;
   padding: 0px 20px;
   text-shadow: 3px 3px 3px #111;
@@ -446,7 +443,7 @@ ball {
 .home-vehicules-gauche p{
   color: #ededed;
   // text-align: center;
-  font-size: 23px;
+  font-size: 20px;
   // margin-left: 20px;
   padding: 0px 20px;
   text-shadow: 3px 3px 3px #111;
@@ -704,7 +701,6 @@ label img {
 
 .home-ns-content {
   width: 90%;
-  background-color: red;
 }
 
 .home-ns-title {
@@ -717,6 +713,28 @@ label img {
   // font-family: 'Great Vibes', cursive;
   font-family: 'Lobster', cursive;
   font-size: 55px;
+  text-decoration: underline;
+  text-decoration-color: $rouge;
+  text-underline-offset: 9px;
+  text-decoration-thickness: 4px;
+}
+
+.home-ns-carre-text {
+  display: flex;
+  align-items: center;
+}
+
+.home-ns-carre{
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: $rouge;
+  margin-right: 10px;
+}
+
+.home-ns-list-container p {
+  color: #fff;
+  margin-bottom: 0;
 }
 
 // -----------------------------
