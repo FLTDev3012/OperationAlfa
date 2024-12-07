@@ -65,9 +65,8 @@
 
       <div class="who-droite">
         <div class="who-droite-text">
-          <p>Située entre <span class="home-who-text-rouge">Cucq</span> et Trépied<br>Notre concession <span class="home-who-text-rouge">Planète Alfa</span> vous accueille avec plaisir<br>au: 801 Avenue Maxence Van Der Meersch, 62780 Cucq<br></p>
-          <p>Notre équipe est à votre disposition pour répondre à toutes vos questions et vous aider à trouver <span class="home-who-text-rouge">la voiture de vos rêves</span>.</p>
-          <p>N'hésitez pas à nous rendre visite ou à nous contacter pour plus d'informations.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quam. Fugit, impedit mollitia totam sapiente voluptatem atque ipsam quia ipsum et fugiat nihil assumenda in consectetur dolorem. Itaque, non nemo.<br></p>
+          <p>Lorem <span class="home-who-text-rouge">ipsum</span> dolor sit, amet consectetur adipisicing elit. Iure ipsa aliquam suscipit ex laboriosam officiis quisquam harum amet autem dolores accusamus nihil iste eaque quo tenetur quaerat, eveniet nobis dolore?</p>
         </div>
       </div>
 
@@ -75,7 +74,7 @@
 
   </div>
 
-  <!-- Script (title / img / txt) -->
+  <!-- SCRIPT QUI SOMMES NOUS ?? (title / img / txt) -->
 
   <script>
     window.addEventListener('scroll', function() {
@@ -141,57 +140,56 @@
 
     <div class="home-vehicules-gauche-droite">
 
-      <div class="home-vehicules-droite">
-        <div class="home-vehicules-droite-text">
-          <p>Située entre <span class="home-home-vehicules-text-rouge">Cucq</span> et Trépied<br>Notre concession <span class="home-home-vehicules-text-rouge">Planète Alfa</span> vous accueille avec plaisir<br>au: 801 Avenue Maxence Van Der Meersch, 62780 Cucq<br></p>
-          <p>Notre équipe est à votre disposition pour répondre à toutes vos questions et vous aider à trouver <span class="home-home-vehicules-text-rouge">la voiture de vos rêves</span>.</p>
-          <p>N'hésitez pas à nous rendre visite ou à nous contacter pour plus d'informations.</p>
+      <div class="home-vehicules-gauche">
+        <div class="home-vehicules-gauche-text">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quia fugit expedita perspiciatis adipisci, explicabo quos nemo corrupti facere atque nulla quis repellat quas inventore aspernatur deserunt dolore. Doloremque, maxime!<br></p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nulla quibusdam neque, tempora tenetur error, ducimus culpa, esse cumque cupiditate itaque reiciendis ratione adipisci dolorem libero perferendis ipsum? Porro, aliquam.</p>
         </div>
       </div>
 
-      <div class="home-vehicules-gauche">
-        <%= image_tag "who2.jpg", height: 400, width: 560, crop: :fill, class:"home-vehicules-gauche-img" %>
+      <div class="home-vehicules-droite">
+        <%= image_tag "who2.jpg", height: 400, width: 560, crop: :fill, class:"home-vehicules-droite-img" %>
       </div>
 
     </div>
 
   </div>
 
-  <!-- script du Titre / Image / Text -->
+  <!-- SCRIPT NOS VEHICULES (title img  txt) -->
 
   <script>
     window.addEventListener('scroll', function() {
       var scrollPosition = window.scrollY;
       var scrollTitre = document.querySelector('.text-home-vehicule');
 
-      if (scrollPosition > 120) {
+      if (scrollPosition > 1015) {
         scrollTitre.classList.add('show');
       } else {
         scrollTitre.classList.remove('show');
       }
     });
 
-    if (window.innerWidth > 640) {
-      window.addEventListener('scroll', function() {
-        var scrollPosition = window.scrollY;
-        var scrollImg = document.querySelector('.home-vehicules-gauche-img');
 
-        if (scrollPosition > 390) {
-          scrollImg.classList.add('show');
-        } else {
-          scrollImg.classList.remove('show');
-        }
-      });
-    }
+    window.addEventListener('scroll', function() {
+      var scrollPosition = window.scrollY;
+      var scrollImg = document.querySelector('.home-vehicules-droite-img');
+
+      if (scrollPosition > 1300) {
+        scrollImg.classList.add('show');
+      } else {
+        scrollImg.classList.remove('show');
+      }
+    });
+
 
 
 
     window.addEventListener('scroll', function() {
       var scrollPosition = window.scrollY;
-      var scrollText = document.querySelector('.home-vehicules-droite-text');
+      var scrollText = document.querySelector('.home-vehicules-gauche-text');
       console.log(scrollPosition);
 
-      if (scrollPosition > 600) {
+      if (scrollPosition > 1188) {
         scrollText.classList.add('show');
       } else {
         scrollText.classList.remove('show');
