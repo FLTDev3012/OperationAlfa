@@ -36,7 +36,13 @@
 
 <!-- Qui sommes nous ? (who) + carrou pour bgc -->
 <div class="home-bgc-grisf">
-  <!-- Qui sommes nous ? (who) -->
+
+
+  <!-- ---------------------------- -->
+  <!-- ---------------------------- -->
+  <!-- QUI SOMMES NOUS ?? (WHO) -->
+  <!-- ---------------------------- -->
+  <!-- ---------------------------- -->
 
   <div class="who-container" id="who">
 
@@ -67,15 +73,9 @@
 
     </div>
 
-    <div class="home-ruban">
-    </div>
-
   </div>
 
-
-
-
-  <!-- script du Titre / Image / Text -->
+  <!-- Script (title / img / txt) -->
 
   <script>
     window.addEventListener('scroll', function() {
@@ -119,14 +119,19 @@
   </script>
 
 
-  <!-- nos vehicules  -->
+  <!-- ---------------------------- -->
+  <!-- ---------------------------- -->
+  <!-- NOS VEHICULES  -->
+  <!-- ---------------------------- -->
+  <!-- ---------------------------- -->
 
-  <div class="who-container" id="#">
 
-    <div class="who-titre">
+  <div class="home-vehicules-container" id="#">
+
+    <div class="home-vehicules-titre">
 
       <div class="scroll-container">
-        <div class="scroll-text text-home-vehicule">
+        <div class="text-home-vehicule">
           <h2>Nos Vehicules</h2>
         </div>
       </div>
@@ -134,23 +139,20 @@
     </div>
 
 
-    <div class="who-gauche-droite">
+    <div class="home-vehicules-gauche-droite">
 
-      <div class="who-gauche">
-        <%= image_tag "who2.jpg", height: 400, width: 560, crop: :fill, class:"home-vehi-gauche-img" %>
-      </div>
-
-      <div class="who-droite">
-        <div class="who-droite-text home-vehi-droite-text">
-          <p>Située entre <span class="home-who-text-rouge">Cucq</span> et Trépied<br>Notre concession <span class="home-who-text-rouge">Planète Alfa</span> vous accueille avec plaisir<br>au: 801 Avenue Maxence Van Der Meersch, 62780 Cucq<br></p>
-          <p>Notre équipe est à votre disposition pour répondre à toutes vos questions et vous aider à trouver <span class="home-who-text-rouge">la voiture de vos rêves</span>.</p>
+      <div class="home-vehicules-droite">
+        <div class="home-vehicules-droite-text">
+          <p>Située entre <span class="home-home-vehicules-text-rouge">Cucq</span> et Trépied<br>Notre concession <span class="home-home-vehicules-text-rouge">Planète Alfa</span> vous accueille avec plaisir<br>au: 801 Avenue Maxence Van Der Meersch, 62780 Cucq<br></p>
+          <p>Notre équipe est à votre disposition pour répondre à toutes vos questions et vous aider à trouver <span class="home-home-vehicules-text-rouge">la voiture de vos rêves</span>.</p>
           <p>N'hésitez pas à nous rendre visite ou à nous contacter pour plus d'informations.</p>
         </div>
       </div>
 
-    </div>
+      <div class="home-vehicules-gauche">
+        <%= image_tag "who2.jpg", height: 400, width: 560, crop: :fill, class:"home-vehicules-gauche-img" %>
+      </div>
 
-    <div class="home-ruban">
     </div>
 
   </div>
@@ -172,7 +174,7 @@
     if (window.innerWidth > 640) {
       window.addEventListener('scroll', function() {
         var scrollPosition = window.scrollY;
-        var scrollImg = document.querySelector('.home-vehi-gauche-img');
+        var scrollImg = document.querySelector('.home-vehicules-gauche-img');
 
         if (scrollPosition > 390) {
           scrollImg.classList.add('show');
@@ -186,7 +188,8 @@
 
     window.addEventListener('scroll', function() {
       var scrollPosition = window.scrollY;
-      var scrollText = document.querySelector('.home-vehi-droite-text');
+      var scrollText = document.querySelector('.home-vehicules-droite-text');
+      console.log(scrollPosition);
 
       if (scrollPosition > 600) {
         scrollText.classList.add('show');

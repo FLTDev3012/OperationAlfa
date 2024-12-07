@@ -196,6 +196,10 @@ ball {
 // who +  carrou
 
 .home-bgc-grisf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 // ou sommes nous ?
@@ -203,10 +207,11 @@ ball {
 
 .who-container {
   height: 90vh;
-  width: 100vw;
+  width: 90%;
   position: relative;
   margin-top: 7.5rem;
   margin-bottom: 5rem;
+
 }
 
 
@@ -246,9 +251,9 @@ ball {
   width: 50%;
   height: 70vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   position: relative;
+  padding: 0px 20px;
 }
 
 .who-gauche img{
@@ -339,6 +344,127 @@ ball {
 }
 
 
+// home nos vehicules
+
+
+.home-vehicules-container {
+  height: 90vh;
+  width: 90%;
+  position: relative;
+  margin-top: 7.5rem;
+  margin-bottom: 5rem;
+}
+
+.home-vehicules-titre {
+  display: flex;
+  justify-content: center;
+}
+
+.home-vehicules-titre h2 {
+  // animation: flasht 4s;
+  animation-iteration-count: infinite;
+  color: #fff;
+  // font-family: 'Great Vibes', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 55px;
+  margin: 3rem;
+
+}
+
+.home-vehicules-gauche-droite {
+  display: flex;
+}
+
+.home-vehicules-gauche {
+  // background-color: #fc0606;
+  width: 50%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.home-vehicules-gauche img{
+  // border-radius: 5px;
+  border-radius: 30% 8% 8% 30%;
+  box-shadow: 2px 4px 10px #161618;
+  filter: drop-shadow;
+  border: 3px solid $grisc;
+}
+
+.home-vehicules-droite {
+  // background-color: #50b300;
+  width: 50%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-home-vehicules-text-rouge {
+  // color: #ca2b2b !important;
+  text-decoration: underline;
+  text-decoration-color: #BC0100AB;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.text-home-vehicule {
+
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  transform: translateX(-30px);
+
+}
+
+.text-home-vehicule.show {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.home-vehicules-gauche img {
+
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  transform: translateX(30px);
+
+}
+
+.home-vehicules-gauche img.show {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.home-vehicules-droite p{
+  color: #ededed;
+  // text-align: center;
+  font-size: 23px;
+  // margin-left: 20px;
+  padding: 0px 20px;
+  text-shadow: 3px 3px 3px #111;
+  margin-bottom: 0;
+  border-left: 1px solid $rouge;
+  padding-bottom: 20px;
+
+}
+
+
+
+
+
+.home-vehicules-droite-text {
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  // transform: translateX(-30px);
+}
+
+.home-vehicules-droite-text.show {
+  // transform: translateX(0px);
+  opacity: 1;
+}
+
 
 // carrou!!!!!!!!!!!
 
@@ -350,6 +476,7 @@ ball {
   height: 90vh;
   align-items: center;
   position: relative;
+  width: 100%;
 
   opacity: 0;
   transition: all 0.6s ease-in-out;
