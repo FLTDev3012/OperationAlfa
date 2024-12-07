@@ -239,6 +239,10 @@ ball {
   font-family: 'Lobster', cursive;
   font-size: 55px;
   margin: 3rem;
+  text-decoration: underline;
+  text-decoration-color: $rouge;
+  text-underline-offset: 9px;
+  text-decoration-thickness: 4px;
 
 }
 
@@ -413,7 +417,11 @@ ball {
 
   opacity: 0;
   transition: all 0.6s ease-in-out;
-  transform: translateX(-30px);
+  transform: translateX(30px);
+  text-decoration: underline;
+  text-decoration-color: $rouge;
+  text-underline-offset: 9px;
+  text-decoration-thickness: 4px;
 
 }
 
@@ -426,7 +434,7 @@ ball {
 
   opacity: 0;
   transition: all 0.6s ease-in-out;
-  transform: translateX(30px);
+  transform: translateX(-30px);
 
 }
 
@@ -494,6 +502,10 @@ ball {
   // font-family: 'Great Vibes', cursive;
   font-family: 'Lobster', cursive;
   font-size: 55px;
+  text-decoration: underline;
+  text-decoration-color: $rouge;
+  text-underline-offset: 9px;
+  text-decoration-thickness: 4px;
 }
 
 
@@ -687,10 +699,12 @@ label img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5rem;
 }
 
 .home-ns-content {
   width: 90%;
+  background-color: red;
 }
 
 .home-ns-title {
@@ -704,6 +718,12 @@ label img {
   font-family: 'Lobster', cursive;
   font-size: 55px;
 }
+
+// -----------------------------
+// -----------------------------
+// ------- MEDIA QUERY ---------
+// -----------------------------
+// -----------------------------
 
 
 
