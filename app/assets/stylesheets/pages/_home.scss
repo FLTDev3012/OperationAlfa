@@ -344,12 +344,14 @@ ball {
   opacity: 1;
 }
 
-
-// home nos vehicules
+// --------------------------
+// --------------------------
+// --- HOME NOS VEHICULES ---
+// --------------------------
+// --------------------------
 
 
 .home-vehicules-container {
-  height: 90vh;
   width: 90%;
   position: relative;
   margin-bottom: 5rem;
@@ -378,7 +380,6 @@ ball {
 .home-vehicules-droite {
   // background-color: #fc0606;
   width: 50%;
-  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -395,7 +396,6 @@ ball {
 .home-vehicules-gauche {
   // background-color: #50b300;
   width: 50%;
-  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -442,9 +442,7 @@ ball {
 
 .home-vehicules-gauche p{
   color: #ededed;
-  // text-align: center;
   font-size: 20px;
-  // margin-left: 20px;
   padding: 0px 20px;
   text-shadow: 3px 3px 3px #111;
   margin-bottom: 0;
@@ -706,7 +704,7 @@ label img {
 .home-ns-title {
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
+  margin: 3rem;
   animation: flasht 4s;
   animation-iteration-count: infinite;
   color: #fff;
@@ -732,8 +730,16 @@ label img {
   margin-right: 10px;
 }
 
+.home-ns-list-container {
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 10px;
+}
+
 .home-ns-list-container p {
-  color: #fff;
+  color: #ededed;
+  font-size: 20px;
   margin-bottom: 0;
 }
 
