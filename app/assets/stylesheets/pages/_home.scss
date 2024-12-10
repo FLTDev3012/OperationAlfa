@@ -251,7 +251,7 @@ ball {
   border-radius: 30% 8% 8% 30%;
   box-shadow: 2px 4px 10px #161618;
   filter: drop-shadow;
-  border: 3px solid $grisc;
+  border: 3px solid $blanc;
 }
 
 
@@ -308,15 +308,7 @@ ball {
 
 }
 
-.who-droite a{
-  color: $blanc;
-  font-size: 20px;
-  margin-left: 20px;
-  background-color: $rouge;
-  padding: 10px 30px;
-  margin-top: 20px;
 
-}
 
 
 
@@ -380,7 +372,7 @@ ball {
   border-radius: 8% 30% 30% 8%;
   box-shadow: 2px 4px 10px #161618;
   filter: drop-shadow;
-  border: 3px solid $grisc;
+  border: 3px solid $blanc;
   object-fit: cover;
 }
 
@@ -658,23 +650,11 @@ label img {
 }
 
 .carrou-link {
-  transform: translateY(-20px);
+  transform: translateY(-34px);
 }
 
 
 
-.carrou-link a {
-  color: $blanc;
-  background-color: $rouge;
-  padding: 8px 16px;
-  border-radius: 5px;
-  transition: 0.2s;
-}
-
-.carrou-link:hover a {
-  background-color: #ff0100;
-  transition: 0.2s;
-}
 
 // nos services
 .home-ns-container {

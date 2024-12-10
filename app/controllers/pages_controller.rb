@@ -2,10 +2,14 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home, :services, :about ]
 
   def home
-    @vehicules = Vehicule.order(:created_at).last(5)
-    @vehicule1 = Vehicule.order(:created_at).last
-    @vehicule2 = Vehicule.order(:created_at).second_to_last
-    @vehicule3 = Vehicule.order(:created_at).third_to_last
+    @vehicules = Vehicule.order(created_at: :desc).limit(7)
+    @vehicule1 = @vehicules[0]  # Le dernier véhicule
+    @vehicule2 = @vehicules[1]  # L'avant-dernier
+    @vehicule3 = @vehicules[2]  # Le troisième à partir de la fin
+    @vehicule4 = @vehicules[3]  # Le quatrième à partir de la fin
+    @vehicule5 = @vehicules[4]  # Le cinquième à partir de la fin
+    @vehicule6 = @vehicules[5]  # Le sixième à partir de la fin
+    @vehicule7 = @vehicules[6]  # Le septième à partir de la fin
   end
 
   def dashboard
