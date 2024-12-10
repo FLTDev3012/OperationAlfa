@@ -381,6 +381,7 @@ ball {
   box-shadow: 2px 4px 10px #161618;
   filter: drop-shadow;
   border: 3px solid $grisc;
+  object-fit: cover;
 }
 
 .home-vehicules-gauche {
