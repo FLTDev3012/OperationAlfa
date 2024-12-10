@@ -484,16 +484,18 @@
         carousel: ".js-carousel",
         bgImg: ".js-carousel-bg-img",
         list: ".js-carousel-list",
-        listItem: ".js-carousel-list-item"
+        listItem: ".js-carousel-list-item",
       };
 
-      this.posY = 0;
-
       this.defaults = Object.assign({}, _defaults, options);
+      this.posY = 0;
+      this.currentId = 0;
+      this.autoScrollInterval = null; // Variable pour l'intervalle automatique
 
       this.initCursor();
       this.init();
       this.bgImgController();
+      this.startAutoScroll(); // Démarre le défilement automatique
     }
 
     //region getters
@@ -513,55 +515,59 @@
       return document.querySelector(this.defaults.carousel);
     }
 
+    // Initialisation
     init() {
       TweenMax.set(this.getBgImgs(), {
         autoAlpha: 0,
-        scale: 1.05
+        scale: 1.05,
       });
 
       TweenMax.set(this.getBgImgs()[0], {
         autoAlpha: 1,
-        scale: 1
+        scale: 1,
       });
 
       this.listItems = this.getListItems().length - 1;
-
       this.listOpacityController(0);
     }
 
+    // Gestion du curseur
     initCursor() {
       const listHeight = this.getList().clientHeight;
       const carouselHeight = this.getCarousel().clientHeight;
 
       this.getCarousel().addEventListener(
         "mousemove",
-        event => {
+        (event) => {
+          this.stopAutoScroll(); // Arrête l'auto-scroll lors de l'interaction
           this.posY = event.pageY - this.getCarousel().offsetTop;
-          let offset = -this.posY / carouselHeight * listHeight;
+          let offset = (-this.posY / carouselHeight) * listHeight;
 
           TweenMax.to(this.getList(), 0.3, {
             y: offset,
-            ease: Power4.easeOut
+            ease: Power4.easeOut,
           });
         },
         false
       );
+
+      this.getCarousel().addEventListener("mouseleave", () => {
+        this.startAutoScroll(); // Redémarre l'auto-scroll lorsque la souris quitte
+      });
     }
 
+    // Contrôle des images de fond
     bgImgController() {
       for (const link of this.getListItems()) {
-        link.addEventListener("mouseenter", ev => {
+        link.addEventListener("mouseenter", (ev) => {
+          this.stopAutoScroll(); // Arrête l'auto-scroll lors de l'interaction
+
           let currentId = ev.currentTarget.dataset.itemId;
-
           this.listOpacityController(currentId);
-
-          TweenMax.to(ev.currentTarget, 0.3, {
-            autoAlpha: 1
-          });
 
           TweenMax.to(".is-visible", 0.2, {
             autoAlpha: 0,
-            scale: 1.05
+            scale: 1.05,
           });
 
           if (!this.getBgImgs()[currentId].classList.contains("is-visible")) {
@@ -570,12 +576,13 @@
 
           TweenMax.to(this.getBgImgs()[currentId], 0.6, {
             autoAlpha: 1,
-            scale: 1
+            scale: 1,
           });
         });
       }
     }
 
+    // Contrôle des opacités des éléments de liste
     listOpacityController(id) {
       id = parseInt(id);
       let aboveCurrent = this.listItems - id;
@@ -588,7 +595,7 @@
           TweenMax.to(this.getListItems()[id + i], 0.5, {
             autoAlpha: opacity,
             x: offset,
-            ease: Power3.easeOut
+            ease: Power3.easeOut,
           });
         }
       }
@@ -600,10 +607,40 @@
           TweenMax.to(this.getListItems()[id - i], 0.5, {
             autoAlpha: opacity,
             x: offset,
-            ease: Power3.easeOut
+            ease: Power3.easeOut,
           });
         }
       }
+    }
+
+    // Défilement automatique
+    startAutoScroll() {
+      if (this.autoScrollInterval) return;
+
+      this.autoScrollInterval = setInterval(() => {
+        this.currentId = (this.currentId + 1) % this.getListItems().length;
+        this.listOpacityController(this.currentId);
+
+        TweenMax.to(".is-visible", 0.2, {
+          autoAlpha: 0,
+          scale: 1.05,
+        });
+
+        if (!this.getBgImgs()[this.currentId].classList.contains("is-visible")) {
+          this.getBgImgs()[this.currentId].classList.add("is-visible");
+        }
+
+        TweenMax.to(this.getBgImgs()[this.currentId], 0.6, {
+          autoAlpha: 1,
+          scale: 1,
+        });
+      }, 3000); // Change tous les 3 secondes
+    }
+
+    // Arrête le défilement automatique
+    stopAutoScroll() {
+      clearInterval(this.autoScrollInterval);
+      this.autoScrollInterval = null;
     }
   }
 
