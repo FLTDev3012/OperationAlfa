@@ -25,5 +25,10 @@ a {
 
 
 a[href^="tel:"] {
-  color: #BDC1FF; /* ou n'importe quelle autre couleur */
+  color: $blanc;
+  text-decoration: underline;
+  text-decoration-color: $blanc;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-skip-ink: none;
 }

@@ -20,7 +20,7 @@
 }
 
 .footer-container p{
-  color:  #fff;
+  color:  $blanc;
 }
 
 .footer-haut {
@@ -99,7 +99,7 @@
 }
 
 .footer-fb {
-  color: #fff;
+  color: $blanc;
 }
 
 .footer-fb:hover {
@@ -108,12 +108,11 @@
 
 
 .footer-bas {
-  color: #fff;
+  color: $blanc;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60px;
-  // background-color: $noir;
 }
 
 .footer-bas p{
