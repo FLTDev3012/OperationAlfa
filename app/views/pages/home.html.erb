@@ -613,37 +613,31 @@
       }
     }
 
-    // Défilement automatique
+    // Défilement automatique des images
     startAutoScroll() {
-      if (this.autoScrollInterval) return;
-
       this.autoScrollInterval = setInterval(() => {
-        this.currentId = (this.currentId + 1) % this.getListItems().length;
-        this.listOpacityController(this.currentId);
-
-        TweenMax.to(".is-visible", 0.2, {
-          autoAlpha: 0,
-          scale: 1.05,
-        });
-
-        if (!this.getBgImgs()[this.currentId].classList.contains("is-visible")) {
-          this.getBgImgs()[this.currentId].classList.add("is-visible");
-        }
-
-        TweenMax.to(this.getBgImgs()[this.currentId], 0.6, {
-          autoAlpha: 1,
-          scale: 1,
-        });
-      }, 3000); // Change tous les 3 secondes
+        this.currentId++;
+        if (this.currentId > this.listItems) this.currentId = 0;
+        this.updateCarousel();
+      }, 3000); // Défilement toutes les 3 secondes
     }
 
-    // Arrête le défilement automatique
     stopAutoScroll() {
       clearInterval(this.autoScrollInterval);
-      this.autoScrollInterval = null;
+    }
+
+    updateCarousel() {
+      this.listOpacityController(this.currentId);
+      TweenMax.to(this.getBgImgs(), 0.6, {
+        autoAlpha: 0,
+        scale: 1.05,
+      });
+      TweenMax.to(this.getBgImgs()[this.currentId], 0.6, {
+        autoAlpha: 1,
+        scale: 1,
+      });
     }
   }
 
   new VerticalMouseDrivenCarousel();
-
 </script>
