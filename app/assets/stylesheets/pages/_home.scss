@@ -193,6 +193,7 @@ ball {
 
 
 
+
 // who +  carrou
 
 .home-bgc-grisf {
@@ -202,7 +203,11 @@ ball {
   width: 100%;
 }
 
-// ou sommes nous ?
+// --------------------------
+// --------------------------
+// ou sommes nous ? (planette alfa)
+// --------------------------
+// --------------------------
 
 
 .who-container {
@@ -447,8 +452,11 @@ ball {
   opacity: 1;
 }
 
-
+// --------------------------
+// --------------------------
 // carrou!!!!!!!!!!!
+// --------------------------
+// --------------------------
 
 .carrou-body {
 	margin: 0;
@@ -472,8 +480,8 @@ ball {
 
 .carrou-body h2 {
   margin-top: 3rem;
-  animation: flasht 4s;
-  animation-iteration-count: infinite;
+  // animation: flasht 4s;
+  // animation-iteration-count: infinite;
   color: $blanc;
   // font-family: 'Great Vibes', cursive;
   font-family: 'Lobster', cursive;
